@@ -1,0 +1,400 @@
+<html  style="font-size: 1.3vw;" class="stdfont">
+	<link rel="shortcut Icon" href="../Z_Images/favicon.ico">
+<header>
+	<title>not-so-flappy Dot</title>
+	<script type="text/javascript" src="Flappy_Dot_Code.js"></script>
+	<link rel="stylesheet" type="text/css" href="Flappy_Dot_Styles.css">	
+</header>
+
+<body onkeydown="whichButton(event)" onload="onPageLoad()">
+
+	<audio controls autoplay loop id="audio_1">
+		<source src="../Z_Audio/notSo_movement_a.mp3"  type="audio/mpeg">
+		
+		Your browser does not support the audio element.
+			
+	</audio>
+
+<div class="topArea" style="display:block">
+
+	<!--<button id="myBtn" onclick="openModal()">Open Modal</button>-->
+
+	<!-- The Cheat Command Box -->
+	<div class="cheatPage">
+		<div class="cheatForm">
+			<h1>Command Input</h1>
+			<form>
+				<table class="cheatTable">
+					<tr>
+						<td>Password: </td>
+						<td><input type="password" name="password"></input></td>
+					</tr>
+					<button></button>
+					<button></button>
+					<button></button>
+					<button></button>
+					<button></button>
+					<button></button>				
+				</table>
+				<br>
+				<input type="submit" value="Click to Submit" style="width:150px;height:30px;"></input>
+			</form>
+		</div>
+	</div>
+
+	<div id="output" style="font-size:10px;display:none"></div>
+</div>
+
+<div id="dieMsg">
+	<div class="DM2">
+		<button class="diebtn" onclick="back()"><b>YOU DIED</b>
+		<br><br>
+		<section class="btnDie1">Click to start again</section>
+		</button>
+	</div>
+</div>
+
+<div id="colourPicker">
+	<h3>Please Choose the colours for the Game</h3>
+	<br>
+	<form name="colourPicker" onsubmit="setColours()" style="none">
+		<table>
+			<tr>
+				<td>Select Colour for the Player:</td>
+				<td><input type="color" id="favcolor" name="pc" value="#ffa500"></td>
+			</tr>
+			
+			<tr>
+				<td>Select Colour for the Enemies:</td>
+				<td><input type="color" id="favcolor" name="ec" value="#ff0000"></td>
+			</tr>
+			
+			<tr>
+				<td>Select Colour for the Power Ups:</td>
+				<td><input type="color" id="favcolor" name="pvc" value="0000ff"></td>
+			</tr>
+			
+			<tr>
+				<td>Select Colour for the Lazers:</td>
+				<td><input type="color" id="favcolor" name="lc" value="#D23EFF"></td>
+			</tr>
+			
+			<tr>
+				<td>Select Colour for the Background:</td>
+				<td><input type="color" id="favcolor" name="backC" value="#4ef5b9"></td>
+			</tr>
+			
+		</table>
+		<br>
+		<input class="submitButton" type="submit" value="Submit">
+
+	</form>
+</div>
+
+<div id="nameInput">
+
+	<form name="hsName" onsubmit="getUserName()">
+		<h3 class="nameText">New High Score</h3>
+		<h4 class="nameText">Enter your Name</h4>
+		<br>
+		<input type="text" name="username" class="nameSub"></input>
+		<br><Br>
+		<input type="submit" name="submit" class="nameSub"></input>
+		<br>
+	</form>
+
+</div>
+
+<div id="backDiv"><!--contains the help div-->
+	<div id="help_div">
+			<div style="background-color:white;width:280;text-align:center;">
+				<h1 >Help Menu</h1><br>
+			</div>	
+			<br>
+					
+			<p>Press a button to begin </p>
+			<p>The numbers in brackets are the keyboard keys that can be pressed instead</p>
+			<p>You are the yellow <span class="player">___</span> Dot</p>
+			<p>Dodge the red dots <span class="enemy">___</span> by moving up and down</p>
+			<p>Use the arrow keys or W/S to move up and down</p>
+			<p>You can use the D key or the right arrow to make the object come faster</p>
+			<p>Hit <span class="lazer">___</span> or <span class="powerUp">___</span> to receive a power up</p>
+			<p>Power Ups include a score boost, slows down the game or a 'lazer' that remove some of the 
+			   blocks directly after it</p>
+			<p></p>
+			<p>Can you get over 200 in Extremely Hard mode?</p>
+			<br>
+
+	</div>
+</div>
+
+<div class="page">
+	<div id="setUpArea" class="textArea">
+		<div class="instructions">
+				<p><section style="float:right;margin-right:300px;">Choose a Speed to play at by pressing the buttons below</section>
+				<section  style="float:left;margin-left:50px;">Use Arrow Keys to move</section></p><br>
+		</div>
+		
+		<table>
+			<tr>
+
+				<td><button id="btn_beginer" class="speed" onclick="T_beginer()"><b>Beginner</b> (1)</button></td>
+				<td><button id="btn_easy" class="speed" onclick="T_easy()"><b>Easy</b>  (2)</button></td>
+				<td><button id="btn_med" class="speed" onclick="T_med()"><b>Medium</b>  (3)</button></td>
+				<td><button id="btn_hard" class="speed" onclick="T_hard()"><b>Hard</b>  (4)</button></td>
+				<td><button id="btn_VHard" class="speed" onclick="T_VHard()"><b>Very Hard</b>  (5)</button></td>
+				<td><button id="btn_EHard" class="speed" onclick="T_EHard()"><b>Extremely hard</b>  (6)</button></td>
+				
+				<td class="speed" id="lwich"></td>
+				
+				<td><div class="popup" id="impBtn" style="display:none">			
+					<button onmouseover="pop()" id="btn_imp"  class="speed" onclick="T_IMP()"><b>Impossible</b></button>
+					<span class="popuptext" id="myPopup">WARNING: You will die instantly</span>
+				</div></td>
+				
+				<td><button id="pause" class="speed" onclick="pause()" ><b>Pause</b>  (P)</button></td>
+				<td><button id="btn_reset" class="speed" onclick="T_reset()"><b>Reset</b> (R)</button></td>
+				<td><button id="btn_help" class="speed" onclick="showHelp()"><b>Help</b> (H)</button></td>				
+			
+			</tr>
+			
+			<tr><td> </td></tr>
+			
+			<tr id="other_btn">
+				<td>
+				<div class="popup">			
+					<button onmouseover="pop()" id="btn_imp"  class="speed" onclick="T_IMP()"><b>Impossible</b></button>
+					<span class="popuptext" id="myPopup">WARNING: You will die instantly</span>
+				</div>				
+				</td>
+				
+				<td><button id="btn_slow" class="speed" onclick="T_Slow()"><b>Slow</b></button></td>
+				<td><button id="btn_reset_highscore" class="speed" onclick="resetHighscores()"><b>Reset Highscore</b></button></td>
+				<!--
+				<td><button id="btn" class="speed"></button></td>
+				<td><button id="btn" class="speed"></button></td>
+				<td><button id="btn" class="speed"></button></td>
+				<td><button id="btn" class="speed"></button></td>
+				<td><button id="btn" class="speed"></button></td>
+				<td><button id="btn" class="speed" ></button></td>
+				<td><button id="btn" class="speed"></button></td>
+				<td><button id="btn" class="speed"></button></td>				
+				-->
+			</tr>
+
+		</table>
+	
+	</div>
+	
+
+	
+    <table id="scores">
+		<tr  id="scores">
+			<td class="stdfont" id="speedS" style="width:6rem;">Speed:</td>		
+			<td class="stdfont" id="score">Score:</td>
+			<td class="stdfont" id="highscore">Highscore:</td>
+		</tr>
+    </table>
+	<br><hr>
+	
+	<div id="playArea" >
+		
+			<table>
+				<tr class="Row1">
+					<td class="dot" id="btn1_1" ></td>
+					<td class="dot" id="btn1_2" ></td>
+					<td class="dot" id="btn1_3" ></td>
+					<td class="dot" id="btn1_4" ></td>
+					<td class="dot" id="btn1_5" ></td>
+					<td class="dot" id="btn1_6" ></td>
+					<td class="dot" id="btn1_7" ></td>
+					<td class="dot" id="btn1_8" ></td>
+					<td class="dot" id="btn1_9" ></td>
+					<td class="dot" id="btn1_10"></td>
+					<td class="dot" id="btn1_11"></td>
+					<td class="dot" id="btn1_12"></td>
+					<td class="dot" id="btn1_13"></td>
+					<td class="dot" id="btn1_14"></td>
+					<td class="dot" id="btn1_15"></td>
+					<td class="dot" id="btn1_16"></td>
+					<td class="dot" id="btn1_17"></td>
+					<td class="dot" id="btn1_18"></td>
+					<td class="dot" id="btn1_19"></td>
+					<td class="dot" id="btn1_20"></td>				
+				</tr>
+				<tr class="Row2">
+					<td class="dot" id="btn2_1" ></td>
+					<td class="dot" id="btn2_2"></td>
+					<td class="dot" id="btn2_3"></td>
+					<td class="dot" id="btn2_4"></td>
+					<td class="dot" id="btn2_5"></td>
+					<td class="dot" id="btn2_6"></td>
+					<td class="dot" id="btn2_7"></td>
+					<td class="dot" id="btn2_8"></td>
+					<td class="dot" id="btn2_9"></td>
+					<td class="dot" id="btn2_10"></td>
+					<td class="dot" id="btn2_11"></td>
+					<td class="dot" id="btn2_12"></td>
+					<td class="dot" id="btn2_13"></td>
+					<td class="dot" id="btn2_14"></td>
+					<td class="dot" id="btn2_15"></td>
+					<td class="dot" id="btn2_16"></td>
+					<td class="dot" id="btn2_17"></td>
+					<td class="dot" id="btn2_18"></td>
+					<td class="dot" id="btn2_19"></td>
+					<td class="dot" id="btn2_20"></td>		
+				</tr>
+				<tr class="Row3">
+					<td class="dot" id="btn3_1" ></td>
+					<td class="dot" id="btn3_2"></td>
+					<td class="dot" id="btn3_3"></td>
+					<td class="dot" id="btn3_4"></td>
+					<td class="dot" id="btn3_5"></td>
+					<td class="dot" id="btn3_6"></td>
+					<td class="dot" id="btn3_7"></td>
+					<td class="dot" id="btn3_8"></td>
+					<td class="dot" id="btn3_9"></td>
+					<td class="dot" id="btn3_10"></td>
+					<td class="dot" id="btn3_11"></td>
+					<td class="dot" id="btn3_12"></td>
+					<td class="dot" id="btn3_13"></td>
+					<td class="dot" id="btn3_14"></td>
+					<td class="dot" id="btn3_15"></td>
+					<td class="dot" id="btn3_16"></td>
+					<td class="dot" id="btn3_17"></td>
+					<td class="dot" id="btn3_18"></td>
+					<td class="dot" id="btn3_19"></td>
+					<td class="dot" id="btn3_20"></td>		
+				</tr>
+				<tr class="Row4">
+					<td class="dot" id="btn4_1" ></td>
+					<td class="dot" id="btn4_2"></td>
+					<td class="dot" id="btn4_3"></td>
+					<td class="dot" id="btn4_4"></td>
+					<td class="dot" id="btn4_5"></td>
+					<td class="dot" id="btn4_6"></td>
+					<td class="dot" id="btn4_7"></td>
+					<td class="dot" id="btn4_8"></td>
+					<td class="dot" id="btn4_9"></td>
+					<td class="dot" id="btn4_10"></td>
+					<td class="dot" id="btn4_11"></td>
+					<td class="dot" id="btn4_12"></td>
+					<td class="dot" id="btn4_13"></td>
+					<td class="dot" id="btn4_14"></td>
+					<td class="dot" id="btn4_15"></td>
+					<td class="dot" id="btn4_16"></td>
+					<td class="dot" id="btn4_17"></td>
+					<td class="dot" id="btn4_18"></td>
+					<td class="dot" id="btn4_19"></td>
+					<td class="dot" id="btn4_20"></td>	
+				</tr>
+				<tr class="Row5">
+					<td class="dot" id="btn5_1" ></td>
+					<td class="dot" id="btn5_2"></td>
+					<td class="dot" id="btn5_3"></td>
+					<td class="dot" id="btn5_4"></td>
+					<td class="dot" id="btn5_5"></td>
+					<td class="dot" id="btn5_6"></td>
+					<td class="dot" id="btn5_7"></td>
+					<td class="dot" id="btn5_8"></td>
+					<td class="dot" id="btn5_9"></td>
+					<td class="dot" id="btn5_10"></td>
+					<td class="dot" id="btn5_11"></td>
+					<td class="dot" id="btn5_12"></td>
+					<td class="dot" id="btn5_13"></td>
+					<td class="dot" id="btn5_14"></td>
+					<td class="dot" id="btn5_15"></td>
+					<td class="dot" id="btn5_16"></td>
+					<td class="dot" id="btn5_17"></td>
+					<td class="dot" id="btn5_18"></td>
+					<td class="dot" id="btn5_19"></td>
+					<td class="dot" id="btn5_20"></td>				
+				</tr>
+				<tr class="Row6">
+					<td class="dot" id="btn6_1" ></td>
+					<td class="dot" id="btn6_2"></td>
+					<td class="dot" id="btn6_3"></td>
+					<td class="dot" id="btn6_4"></td>
+					<td class="dot" id="btn6_5"></td>
+					<td class="dot" id="btn6_6"></td>
+					<td class="dot" id="btn6_7"></td>
+					<td class="dot" id="btn6_8"></td>
+					<td class="dot" id="btn6_9"></td>
+					<td class="dot" id="btn6_10"></td>
+					<td class="dot" id="btn6_11"></td>
+					<td class="dot" id="btn6_12"></td>
+					<td class="dot" id="btn6_13"></td>
+					<td class="dot" id="btn6_14"></td>
+					<td class="dot" id="btn6_15"></td>
+					<td class="dot" id="btn6_16"></td>
+					<td class="dot" id="btn6_17"></td>
+					<td class="dot" id="btn6_18"></td>
+					<td class="dot" id="btn6_19"></td>
+					<td class="dot" id="btn6_20"></td>			
+				</tr>
+				<tr class="Row7">
+					<td class="dot" id="btn7_1" ></td>
+					<td class="dot" id="btn7_2"></td>
+					<td class="dot" id="btn7_3"></td>
+					<td class="dot" id="btn7_4"></td>
+					<td class="dot" id="btn7_5"></td>
+					<td class="dot" id="btn7_6"></td>
+					<td class="dot" id="btn7_7"></td>
+					<td class="dot" id="btn7_8"></td>
+					<td class="dot" id="btn7_9"></td>
+					<td class="dot" id="btn7_10"></td>
+					<td class="dot" id="btn7_11"></td>
+					<td class="dot" id="btn7_12"></td>
+					<td class="dot" id="btn7_13"></td>
+					<td class="dot" id="btn7_14"></td>
+					<td class="dot" id="btn7_15"></td>
+					<td class="dot" id="btn7_16"></td>
+					<td class="dot" id="btn7_17"></td>
+					<td class="dot" id="btn7_18"></td>
+					<td class="dot" id="btn7_19"></td>
+					<td class="dot" id="btn7_20"></td>		
+				</tr>
+				<tr class="Row8">
+					<td class="dot" id="btn8_1" ></td>
+					<td class="dot" id="btn8_2"></td>
+					<td class="dot" id="btn8_3"></td>
+					<td class="dot" id="btn8_4"></td>
+					<td class="dot" id="btn8_5"></td>
+					<td class="dot" id="btn8_6"></td>
+					<td class="dot" id="btn8_7"></td>
+					<td class="dot" id="btn8_8"></td>
+					<td class="dot" id="btn8_9"></td>
+					<td class="dot" id="btn8_10"></td>
+					<td class="dot" id="btn8_11"></td>
+					<td class="dot" id="btn8_12"></td>
+					<td class="dot" id="btn8_13"></td>
+					<td class="dot" id="btn8_14"></td>
+					<td class="dot" id="btn8_15"></td>
+					<td class="dot" id="btn8_16"></td>
+					<td class="dot" id="btn8_17"></td>
+					<td class="dot" id="btn8_18"></td>
+					<td class="dot" id="btn8_19"></td>
+					<td class="dot" id="btn8_20"></td>			
+				</tr>
+
+			</table>
+
+	</div>
+
+	<div id="controlArea">
+		<button class="controls" onclick="playerUp()"    ><b>UP</b><br><br>(Up Arrow)</button>
+		<br>
+		<button class="controls" onclick="playerDown()" ><b>DOWN</B><br><Br>(Down Arrow)</button>
+	</div>
+	
+	<div id="alternative" style="display:none">
+		<button id="btn_slow" class="controls" onclick="T_Slow()"><b>Slow</b></button>
+		<br>
+		<button id="btn_reset_highscore" class="controls" onclick="resetHighscores()"><b>Reset Highscore</b></button>
+	</div>
+
+
+
+</body>
+
+</html>

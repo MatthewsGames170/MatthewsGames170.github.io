@@ -1,0 +1,31 @@
+.tableCell{
+	width:7rem;
+	height:7rem;
+	background-color:blue;
+	border:5px solid blue;
+}
+.tableCell:hover{
+
+	border: 5px solid black;
+	border-radius:6px;
+
+}
+#rightPart{
+	width:50%;
+	float:right;
+	padding:5px;
+}
+#leftPart{
+	width:50%;
+
+}
+.startButton{
+	width:90%;
+	border:none;
+	border-radius:5px;
+	background-color:#00ffff;
+	height:2rem;
+	font-size:14;
+	padding:2px:
+
+}

@@ -1,0 +1,49 @@
+.snakeDot{
+	font-size:0.0001px;
+	width:1rem;
+	height:1rem;
+	background-color:black;
+	
+}
+#snakeH{
+	height:2rem;
+}
+#snake_playTable{
+	background-color:#000000;
+	float:left;
+	margin-left:2rem;
+	margin-right:2rem;
+}
+#snake_controls{
+}
+#snake_title{
+	
+}
+#snake_startBtn{
+
+}
+.snake_btns{
+	background-color:blue;
+	border:none;
+	border-radius:5px;
+	width:24%;
+	height:3rem;
+	font-size:2.5rem;
+	color:white;	
+	
+}
+.snake_btns:hover{
+	background-color:red;
+}
+.snake_player{
+	background-color:white;	
+	border-radius:0rem;
+}
+.snake_empty{
+	background-color:black;	
+	border-radius:0rem;
+}
+.snake_fruit{
+	background-color:red;
+	border-radius:0.51rem;
+}

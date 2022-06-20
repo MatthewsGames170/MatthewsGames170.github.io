@@ -1,0 +1,43 @@
+.T_cell{
+	/*the standard styling for each table cell*/	
+	width:1rem;
+	height:1rem;
+	background-color:#0feef0;
+	border-width:0px;
+}
+.F-R_P-5{
+	float:right;
+	padding:5px;
+	height:3rem;
+}
+.F-L_P-5{
+	float:left;
+	padding:5px;
+	height:3rem;	
+}
+#playArea{
+	width:35rem;
+	margin:auto;
+}
+.p1_taken{
+	background-color:#0000ff;
+}
+.p2_taken{
+	background-color:#ff0000;
+}
+table{
+	width:100%;
+	border-collapse:collapse;
+}
+#stopGoBtn{
+	width:100%;
+	height:3rem;
+	font-size:26px;
+	background-color:black;
+	color:white;
+	border:none;
+	border-radius:10px;
+}
+#stopGoBtn:hover{
+background-color:red;
+}

@@ -1,0 +1,235 @@
+
+
+.flaging{
+	
+	background-color:#13a654;
+	background-image:url("../Z_Images/flag.jpg");
+	
+}
+.noFlag{
+	
+	
+	
+}
+#flagging{
+
+	width:3rem;
+}
+.cell{
+	width:3rem;
+	height:3rem;
+	font-size:0.02px;
+	background-color:#13a654;
+	opacity:1;
+	/*	#13a654 is the unveiwed field
+		#13ca54 is veiwed field
+	
+	*/
+}
+
+.cell:hover{
+	opacity:0.7;
+}
+
+body{
+	background-color:#006e38;
+	z-index:1;
+}
+#playArea{
+	margin-left:auto;
+	margin-right:auto;
+	margin-top:3rem;
+	width:31rem;
+	z-index:1;		
+}
+
+
+#info{z-index:1;}
+#easyTable{
+	display:none;
+	z-index:1;		
+}
+#medTable{
+	display:none;
+	z-index:1;	
+}
+
+#ddDifOptions{
+	z-index:3 ;
+	border:2px solid #efefef;
+	
+	background-color:white;
+	display:none;
+	
+	width:10rem;
+	height:15rem;
+	
+	margin-left:23rem;
+	margin-top:6rem;
+	margin-right:23rem;
+
+}
+#ddDifOptions ul{
+	list-style-type:none;
+
+}
+#ddDifOptions ul li{
+	margin-left:-2rem;
+	
+	width:97%;	
+	height:3rem;
+	
+	background-color:white;
+	color:black;
+	padding:4px;
+}
+#ddDifOptions ul li:hover{
+	background-color:#aaaaaa;
+}
+
+#pop{
+	z-index:3;
+	width:100%;
+	height:25rem;
+	display:block;
+	position:fixed;
+	top:8rem;
+
+}
+
+#popContents{
+	background-color:cyan;
+	text-align:center;
+	border:5px solid black;
+	border-radius:5px;
+	
+	margin-left:auto;
+	margin-right:auto;
+	width:20rem;
+	height:100%;
+	font-size:50px;
+	
+}
+
+.popButton{
+	width:100%;
+	height:4rem;
+	font-size:25px;
+	background-color:#00a6c9;
+	opacity:1;
+	border:none;
+}
+.popButton:hover{
+	opacity:0.8;
+	
+}
+
+
+
+.onlyOne{
+	border:none;
+	background-color:#aaffbb;	
+}
+.onlyOne:hover{
+		background-color:#99eeaa;
+	
+}
+.options{
+	border:none;
+	background-color:white;
+	
+}
+
+/*Following styles are for plotting functions*/
+.clear{
+	background-color:#e4c29f;
+	
+	font-size:30px;
+	text-align:center;
+	font-weight:bold;	
+	
+	color:red;/*add colour for each number*/	
+}
+.unopened{
+	background-color:#13a654;
+}
+
+.flagged{
+	background-color:#13a654;
+	background-image:url("../Z_Images/flag.jpg");
+}
+.mine{
+	background-color:#ff00ff;
+}
+
+.one{
+	background-color:#e4c29f;
+	font-size:30px;
+	text-align:center;
+	font-weight:bold;	
+	
+	color:blue;/*add colour for each number*/
+}
+.two{
+	background-color:#e4c29f;
+	font-size:30px;
+	text-align:center;
+	font-weight:bold;	
+	
+	color:#006400;/*add colour for each number*/	
+}
+.three{
+	background-color:#e4c29f;
+	font-size:30px;
+	text-align:center;
+	font-weight:bold;	
+	
+	color:#DC143C;/*add colour for each number*/	
+}
+.four{
+	background-color:#e4c29f;
+	font-size:30px;
+	text-align:center;
+	font-weight:bold;	
+	
+	color:#00008B;/*add colour for each number*/	
+}
+.five{
+	background-color:#e4c29f;
+	font-size:30px;
+	text-align:center;
+	font-weight:bold;	
+	
+	color:#c79900;/*add colour for each number*/	
+}
+.six{
+	background-color:#e4c29f;
+	font-size:30px;
+	text-align:center;
+	font-weight:bold;	
+	
+	color:#00BFFF;/*add colour for each number*/	
+}
+.seven{
+	background-color:#e4c29f;
+	font-size:30px;
+	text-align:center;
+	font-weight:bold;	
+	
+	color:#000000;/*add colour for each number*/	
+}
+.eight{
+	background-color:#e4c29f;
+	font-size:30px;
+	text-align:center;
+	font-weight:bold;	
+	
+	color:#9400D3;/*add colour for each number*/	
+}
+.infoCell{
+	width:16rem;
+	color:white;
+	font-size:20px;
+}
+
+

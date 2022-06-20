@@ -1,0 +1,349 @@
+<html>
+	<link rel="shortcut Icon" href="../Z_Images/favicon.ico">
+<header>
+	<title>Tetris</title>	
+	<link rel="stylesheet" type="text/css" href="Tetris_styles.css">
+	<script type="text/javascript" src="Tetris_scripts.js"></script>
+</header>
+
+<body onkeydown="whichButton()"  onload="adLoader()">
+	<audio controls autoplay loop id="audio_1">
+		<source src="../Z_Audio/.mp3"  type="audio/mpeg">
+		
+		Your browser does not support the audio element.
+			
+	</audio>
+
+
+	<div id="adverts" style="margin-top:0.1rem;">
+	
+		<div class="ad" id="ad1">
+			<br><br>
+			<h1 style="font-size:50px;">Want to Advertise Here?</h1>
+			<br><h2>This Space could be YOURS!</h2><br><br>
+			<p>£42 Billion </p>
+			<br><p>
+				Email <a href="mailto:matthews.html.css.js.games@gmail.com">matthews.html.css.js.games@gmail.com</a> for more information
+			
+			</p><br><Br>
+			<br><br><br><Br>
+			<p style="font-size:7px;">T&Cs apply</p>
+		</div>
+		
+		<div class="ad" id="ad2"><a href="https://tetris.com/play-tetris">
+			<br><br><b>
+			<p>Tried of playing this terible version of tertris?</p>
+			<p>Wish you could see what was coming?</p>
+			<br><br>
+			<p></p>
+			<h1 style="font-size:40px;">Then go to the <br><span style="font-size:60px;">Offical Tetris Website</span> <br>NOW!</h1>
+			<br></b>
+			<br>
+			<img src="../Z_IMAGES/ADs/tetrisLogo.jpg" width="100%">
+		</a></div>
+		
+		<div class="ad" id="ad3"><a href="https://www.lochlomond-trossachs.org/">
+			<br>
+			<h1>Loch Lomond and the Trossachs National Park</h1>
+			<img src="../Z_Images/ADs/ParkLogo.jpg" alt="Park Logo" style="display:block; width:100%;">
+			<br>
+			<h3></h3>
+			<h2></h2>
+
+		</a></div>
+		
+		<div class="ad" id="ad4"><a href="https://www.myworldofwork.co.uk/my-career-options/subjects?group=all&subjects=2086-2331-2551-4961-5441">
+			<!-- -->
+			<br><br>
+			<H1>STEM SUBJECTS</h1><br>
+			<h3># Exciting  Careers #</h3>
+			<img src="../Z_Images/Ads/stemLogo2.png" width="100%" alt="Stem Symbol"><br>
+			
+			<h3 style="display:none">#  #</h3><br>
+			<h3 style="display:none">#  #</h3>
+		</a></div>	
+		
+		<div class="ad" id="ad5">
+			<!-- For thomas`s Website / App -->
+		</div>	
+		
+		<div class="ad" id="ad6"><a href="http://losethegame.net/"></a></div>
+		<!--Requested by Finlay Murphy-->			
+		
+
+		
+		<div class="ad" id="ad7">		
+		
+		</div>		
+		
+		<!-- 
+		Other Possible adverts
+		#  Pac Man
+		#
+		
+		-->
+
+
+	</div>
+
+	<div id="mainArea">
+
+		<div style="float:right;margin-top:4rem;width:16rem;">
+		
+			<p class="title" id="title"><b>T  e  t  r  i  s</b></p>
+			<br>
+			<button onclick="onStart()" class="startButton"><b>Click to Start</b></button>
+			<br>
+			<br>
+			
+
+			<br><Br>
+			<p><b>High Score: <span id="HScore">25880</span></b></p>
+
+			<p><b>Score: <span id="Score">303333</span></b></p>
+		</div>		
+		
+		
+		<div id="playArea" style="float:left;margin-top:1rem;">
+
+			<table class="tablePlay">
+				<tr id='row1' style="display:none;">
+					<td class='cell' id='btn1_1' onclick='Clicked(btn1_1)'> </td>
+					<td class='cell' id='btn1_2' onclick='Clicked(btn1_2)'> </td>
+					<td class='cell' id='btn1_3' onclick='Clicked(btn1_3)'> </td>
+					<td class='cell' id='btn1_4' onclick='Clicked(btn1_4)'> </td>
+					<td class='cell' id='btn1_5' onclick='Clicked(btn1_5)'> </td>
+					<td class='cell' id='btn1_6' onclick='Clicked(btn1_6)'> </td>
+					<td class='cell' id='btn1_7' onclick='Clicked(btn1_7)'> </td>
+					<td class='cell' id='btn1_8' onclick='Clicked(btn1_8)'> </td>
+				</tr>                                                  
+				<tr id='row2'  style="display:none;">                                         
+					<td class='cell' id='btn2_1' onclick='Clicked(btn2_1)'> </td>
+					<td class='cell' id='btn2_2' onclick='Clicked(btn2_2)'> </td>
+					<td class='cell' id='btn2_3' onclick='Clicked(btn2_3)'> </td>
+					<td class='cell' id='btn2_4' onclick='Clicked(btn2_4)'> </td>
+					<td class='cell' id='btn2_5' onclick='Clicked(btn2_5)'> </td>
+					<td class='cell' id='btn2_6' onclick='Clicked(btn2_6)'> </td>
+					<td class='cell' id='btn2_7' onclick='Clicked(btn2_7)'> </td>
+					<td class='cell' id='btn2_8' onclick='Clicked(btn2_8)'> </td>
+				</tr>                                                  
+				<tr id='row3'>                                         
+					<td class='cell' id='btn3_1' onclick='Clicked(btn3_1)'> </td>
+					<td class='cell' id='btn3_2' onclick='Clicked(btn3_2)'> </td>
+					<td class='cell' id='btn3_3' onclick='Clicked(btn3_3)'> </td>
+					<td class='cell' id='btn3_4' onclick='Clicked(btn3_4)'> </td>
+					<td class='cell' id='btn3_5' onclick='Clicked(btn3_5)'> </td>
+					<td class='cell' id='btn3_6' onclick='Clicked(btn3_6)'> </td>
+					<td class='cell' id='btn3_7' onclick='Clicked(btn3_7)'> </td>
+					<td class='cell' id='btn3_8' onclick='Clicked(btn3_8)'> </td>
+				</tr>                                                   
+				<tr id='row4'>                                          
+					<td class='cell' id='btn4_1' onclick='Clicked(btn4_1)'> </td>
+					<td class='cell' id='btn4_2' onclick='Clicked(btn4_2)'> </td>
+					<td class='cell' id='btn4_3' onclick='Clicked(btn4_3)'> </td>
+					<td class='cell' id='btn4_4' onclick='Clicked(btn4_4)'> </td>
+					<td class='cell' id='btn4_5' onclick='Clicked(btn4_5)'> </td>
+					<td class='cell' id='btn4_6' onclick='Clicked(btn4_6)'> </td>
+					<td class='cell' id='btn4_7' onclick='Clicked(btn4_7)'> </td>
+					<td class='cell' id='btn4_8' onclick='Clicked(btn4_8)'> </td>
+				</tr>                                                   
+				<tr id='row5'>                                          
+					<td class='cell' id='btn5_1' onclick='Clicked(btn5_1)'> </td>
+					<td class='cell' id='btn5_2' onclick='Clicked(btn5_2)'> </td>
+					<td class='cell' id='btn5_3' onclick='Clicked(btn5_3)'> </td>
+					<td class='cell' id='btn5_4' onclick='Clicked(btn5_4)'> </td>
+					<td class='cell' id='btn5_5' onclick='Clicked(btn5_5)'> </td>
+					<td class='cell' id='btn5_6' onclick='Clicked(btn5_6)'> </td>
+					<td class='cell' id='btn5_7' onclick='Clicked(btn5_7)'> </td>
+					<td class='cell' id='btn5_8' onclick='Clicked(btn5_8)'> </td>
+				</tr>                                                  
+				<tr id='row6'>                                          
+					<td class='cell' id='btn6_1' onclick='Clicked(btn6_1)'> </td>
+					<td class='cell' id='btn6_2' onclick='Clicked(btn6_2)'> </td>
+					<td class='cell' id='btn6_3' onclick='Clicked(btn6_3)'> </td>
+					<td class='cell' id='btn6_4' onclick='Clicked(btn6_4)'> </td>
+					<td class='cell' id='btn6_5' onclick='Clicked(btn6_5)'> </td>
+					<td class='cell' id='btn6_6' onclick='Clicked(btn6_6)'> </td>
+					<td class='cell' id='btn6_7' onclick='Clicked(btn6_7)'> </td>
+					<td class='cell' id='btn6_8' onclick='Clicked(btn6_8)'> </td>
+				</tr>                                                   
+				<tr id='row7'>                                          
+					<td class='cell' id='btn7_1' onclick='Clicked(btn7_1)'></td>
+					<td class='cell' id='btn7_2' onclick='Clicked(btn7_2)'> </td>
+					<td class='cell' id='btn7_3' onclick='Clicked(btn7_3)'> </td>
+					<td class='cell' id='btn7_4' onclick='Clicked(btn7_4)'> </td>
+					<td class='cell' id='btn7_5' onclick='Clicked(btn7_5)'> </td>
+					<td class='cell' id='btn7_6' onclick='Clicked(btn7_6)'> </td>
+					<td class='cell' id='btn7_7' onclick='Clicked(btn7_7)'> </td>
+					<td class='cell' id='btn7_8' onclick='Clicked(btn7_8)'> </td>
+				</tr>                                                   
+				<tr id='row8'>                                          
+					<td class='cell' id='btn8_1' onclick='Clicked(btn8_1)'> </td>
+					<td class='cell' id='btn8_2' onclick='Clicked(btn8_2)'> </td>
+					<td class='cell' id='btn8_3' onclick='Clicked(btn8_3)'> </td>
+					<td class='cell' id='btn8_4' onclick='Clicked(btn8_4)'> </td>
+					<td class='cell' id='btn8_5' onclick='Clicked(btn8_5)'> </td>
+					<td class='cell' id='btn8_6' onclick='Clicked(btn8_6)'> </td>
+					<td class='cell' id='btn8_7' onclick='Clicked(btn8_7)'> </td>
+					<td class='cell' id='btn8_8' onclick='Clicked(btn8_8)'> </td>
+				</tr>                                                   
+				<tr id='row9'>                                          
+					<td class='cell' id='btn9_1' onclick='Clicked(btn9_1)'> </td>
+					<td class='cell' id='btn9_2' onclick='Clicked(btn9_2)'> </td>
+					<td class='cell' id='btn9_3' onclick='Clicked(btn9_3)'> </td>
+					<td class='cell' id='btn9_4' onclick='Clicked(btn9_4)'> </td>
+					<td class='cell' id='btn9_5' onclick='Clicked(btn9_5)'> </td>
+					<td class='cell' id='btn9_6' onclick='Clicked(btn9_6)'> </td>
+					<td class='cell' id='btn9_7' onclick='Clicked(btn9_7)'> </td>
+					<td class='cell' id='btn9_8' onclick='Clicked(btn9_8)'> </td>
+				</tr>
+				<tr id='row10'>
+					<td class='cell' id='btn10_1' onclick='Clicked(btn10_1') >1</td>
+					<td class='cell' id='btn10_2' onclick='Clicked(btn10_2') >1</td>
+					<td class='cell' id='btn10_3' onclick='Clicked(btn10_3') >1</td>
+					<td class='cell' id='btn10_4' onclick='Clicked(btn10_4') >1</td>
+					<td class='cell' id='btn10_5' onclick='Clicked(btn10_5') >1</td>
+					<td class='cell' id='btn10_6' onclick='Clicked(btn10_6') >1</td>
+					<td class='cell' id='btn10_7' onclick='Clicked(btn10_7') >1</td>
+					<td class='cell' id='btn10_8' onclick='Clicked(btn10_8') >1</td>
+				</tr>
+				<tr id='row11'>
+					<td class='cell' id='btn11_1' onclick='Clicked(btn11_1)' >1</td>
+					<td class='cell' id='btn11_2' onclick='Clicked(btn11_2)' >1</td>
+					<td class='cell' id='btn11_3' onclick='Clicked(btn11_3)' >1</td>
+					<td class='cell' id='btn11_4' onclick='Clicked(btn11_4)' >1</td>
+					<td class='cell' id='btn11_5' onclick='Clicked(btn11_5)' >1</td>
+					<td class='cell' id='btn11_6' onclick='Clicked(btn11_6)' >1</td>
+					<td class='cell' id='btn11_7' onclick='Clicked(btn11_7)' >1</td>
+					<td class='cell' id='btn11_8' onclick='Clicked(btn11_8)' >1</td>
+				</tr>                                                     
+				<tr id='row12'>                                           
+					<td class='cell' id='btn12_1' onclick='Clicked(btn12_1)' >1</td>
+					<td class='cell' id='btn12_2' onclick='Clicked(btn12_2)' >1</td>
+					<td class='cell' id='btn12_3' onclick='Clicked(btn12_3)' >1</td>
+					<td class='cell' id='btn12_4' onclick='Clicked(btn12_4)' >1</td>
+					<td class='cell' id='btn12_5' onclick='Clicked(btn12_5)' >1</td>
+					<td class='cell' id='btn12_6' onclick='Clicked(btn12_6)' >1</td>
+					<td class='cell' id='btn12_7' onclick='Clicked(btn12_7)' >1</td>
+					<td class='cell' id='btn12_8' onclick='Clicked(btn12_8)'>1</td>
+				</tr>                                                     
+				<tr id='row13'>                                           
+					<td class='cell' id='btn13_1' onclick='Clicked(btn13_1)' >1</td>
+					<td class='cell' id='btn13_2' onclick='Clicked(btn13_2)' >1</td>
+					<td class='cell' id='btn13_3' onclick='Clicked(btn13_3)' >1</td>
+					<td class='cell' id='btn13_4' onclick='Clicked(btn13_4)' >1</td>
+					<td class='cell' id='btn13_5' onclick='Clicked(btn13_5)' >1</td>
+					<td class='cell' id='btn13_6' onclick='Clicked(btn13_6)' >1</td>
+					<td class='cell' id='btn13_7' onclick='Clicked(btn13_7)' >1</td>
+					<td class='cell' id='btn13_8' onclick='Clicked(btn13_8)' >1</td>
+				</tr>                                                     
+				<tr id='row14'>                                           
+					<td class='cell' id='btn14_1' onclick='Clicked(btn14_1)' >1</td>
+					<td class='cell' id='btn14_2' onclick='Clicked(btn14_2)' >1</td>
+					<td class='cell' id='btn14_3' onclick='Clicked(btn14_3)' >1</td>
+					<td class='cell' id='btn14_4' onclick='Clicked(btn14_4)' >1</td>
+					<td class='cell' id='btn14_5' onclick='Clicked(btn14_5)' >1</td>
+					<td class='cell' id='btn14_6' onclick='Clicked(btn14_6)' >1</td>
+					<td class='cell' id='btn14_7' onclick='Clicked(btn14_7)' >1</td>
+					<td class='cell' id='btn14_8' onclick='Clicked(btn14_8)' >1</td>
+				</tr>                                                     
+				<tr id='row15'>                                           
+					<td class='cell' id='btn15_1' onclick='Clicked(btn15_1)' >1</td>
+					<td class='cell' id='btn15_2' onclick='Clicked(btn15_2)' >1</td>
+					<td class='cell' id='btn15_3' onclick='Clicked(btn15_3)' >1</td>
+					<td class='cell' id='btn15_4' onclick='Clicked(btn15_4)' >1</td>
+					<td class='cell' id='btn15_5' onclick='Clicked(btn15_5)' >1</td>
+					<td class='cell' id='btn15_6' onclick='Clicked(btn15_6)' >1</td>
+					<td class='cell' id='btn15_7' onclick='Clicked(btn15_7)' >1</td>
+					<td class='cell' id='btn15_8' onclick='Clicked(btn15_8)' >1</td>
+				</tr>                                                     
+				<tr id='row16'>                                           
+					<td class='cell' id='btn16_1' onclick='Clicked(btn16_1)' >1</td>
+					<td class='cell' id='btn16_2' onclick='Clicked(btn16_2)' >1</td>
+					<td class='cell' id='btn16_3' onclick='Clicked(btn16_3)' >1</td>
+					<td class='cell' id='btn16_4' onclick='Clicked(btn16_4)' >1</td>
+					<td class='cell' id='btn16_5' onclick='Clicked(btn16_5)' >1</td>
+					<td class='cell' id='btn16_6' onclick='Clicked(btn16_6)' >1</td>
+					<td class='cell' id='btn16_7' onclick='Clicked(btn16_7)' >1</td>
+					<td class='cell' id='btn16_8' onclick='Clicked(btn16_8)' >1</td>
+				</tr>                                                     
+				<tr id='row17'>                                           
+					<td class='cell' id='btn17_1' onclick='Clicked(btn17_1)' >1</td>
+					<td class='cell' id='btn17_2' onclick='Clicked(btn17_2)' >1</td>
+					<td class='cell' id='btn17_3' onclick='Clicked(btn17_3)' >1</td>
+					<td class='cell' id='btn17_4' onclick='Clicked(btn17_4)' >1</td>
+					<td class='cell' id='btn17_5' onclick='Clicked(btn17_5)' >1</td>
+					<td class='cell' id='btn17_6' onclick='Clicked(btn17_6)' >1</td>
+					<td class='cell' id='btn17_7' onclick='Clicked(btn17_7)' >1</td>
+					<td class='cell' id='btn17_8' onclick='Clicked(btn17_8)' >1</td>
+				</tr>                                                     
+				<tr id='row18'>                                           
+					<td class='cell' id='btn18_1' onclick='Clicked(btn18_1)' >1</td>
+					<td class='cell' id='btn18_2' onclick='Clicked(btn18_2)' >1</td>
+					<td class='cell' id='btn18_3' onclick='Clicked(btn18_3)' >1</td>
+					<td class='cell' id='btn18_4' onclick='Clicked(btn18_4)' >1</td>
+					<td class='cell' id='btn18_5' onclick='Clicked(btn18_5)' >1</td>
+					<td class='cell' id='btn18_6' onclick='Clicked(btn18_6)' >1</td>
+					<td class='cell' id='btn18_7' onclick='Clicked(btn18_7)' >1</td>
+					<td class='cell' id='btn18_8' onclick='Clicked(btn18_8)' >1</td>
+				</tr>                                                     
+				<tr id='row19'>                                           
+					<td class='cell' id='btn19_1' onclick='Clicked(btn19_1)' >1</td>
+					<td class='cell' id='btn19_2' onclick='Clicked(btn19_2)' >1</td>
+					<td class='cell' id='btn19_3' onclick='Clicked(btn19_3)' >1</td>
+					<td class='cell' id='btn19_4' onclick='Clicked(btn19_4)' >1</td>
+					<td class='cell' id='btn19_5' onclick='Clicked(btn19_5)' >1</td>
+					<td class='cell' id='btn19_6' onclick='Clicked(btn19_6)' >1</td>
+					<td class='cell' id='btn19_7' onclick='Clicked(btn19_7)' >1</td>
+					<td class='cell' id='btn19_8' onclick='Clicked(btn19_8)' >1</td>
+				</tr>                                                     
+				<tr id='row20'>                                           
+					<td class='cell' id='btn20_1' onclick='Clicked(btn20_1)' >1</td>
+					<td class='cell' id='btn20_2' onclick='Clicked(btn20_2)' >1</td>
+					<td class='cell' id='btn20_3' onclick='Clicked(btn20_3)' >1</td>
+					<td class='cell' id='btn20_4' onclick='Clicked(btn20_4)' >1</td>
+					<td class='cell' id='btn20_5' onclick='Clicked(btn20_5)' >1</td>
+					<td class='cell' id='btn20_6' onclick='Clicked(btn20_6)' >1</td>
+					<td class='cell' id='btn20_7' onclick='Clicked(btn20_7)' >1</td>
+					<td class='cell' id='btn20_8' onclick='Clicked(btn20_8)' >1</td>
+				</tr>                                                     
+				<tr id='row21'>                                           
+					<td class='cell' id='btn21_1' onclick='Clicked(btn21_1)' >1</td>
+					<td class='cell' id='btn21_2' onclick='Clicked(btn21_2)' >1</td>
+					<td class='cell' id='btn21_3' onclick='Clicked(btn21_3)' >1</td>
+					<td class='cell' id='btn21_4' onclick='Clicked(btn21_4)' >1</td>
+					<td class='cell' id='btn21_5' onclick='Clicked(btn21_5)' >1</td>
+					<td class='cell' id='btn21_6' onclick='Clicked(btn21_6)' >1</td>
+					<td class='cell' id='btn21_7' onclick='Clicked(btn21_7)' >1</td>
+					<td class='cell' id='btn21_8' onclick='Clicked(btn21_8)' >1</td>
+				</tr>                                                     
+				<tr id='row22'>                                           
+					<td class='cell' id='btn22_1' onclick='Clicked(btn22_1)' >1</td>
+					<td class='cell' id='btn22_2' onclick='Clicked(btn22_2)' >1</td>
+					<td class='cell' id='btn22_3' onclick='Clicked(btn22_3)' >1</td>
+					<td class='cell' id='btn22_4' onclick='Clicked(btn22_4)' >1</td>
+					<td class='cell' id='btn22_5' onclick='Clicked(btn22_5)' >1</td>
+					<td class='cell' id='btn22_6' onclick='Clicked(btn22_6)' >1</td>
+					<td class='cell' id='btn22_7' onclick='Clicked(btn22_7)' >1</td>
+					<td class='cell' id='btn22_8' onclick='Clicked(btn22_8)' >1</td>
+				</tr>                                                     
+				<tr id='row23'>                                           
+					<td class='cell' id='btn23_1' onclick='Clicked(btn23_1)' >1</td>
+					<td class='cell' id='btn23_2' onclick='Clicked(btn23_2)' >1</td>
+					<td class='cell' id='btn23_3' onclick='Clicked(btn23_3)' >1</td>
+					<td class='cell' id='btn23_4' onclick='Clicked(btn23_4)' >1</td>
+					<td class='cell' id='btn23_5' onclick='Clicked(btn23_5)' >1</td>
+					<td class='cell' id='btn23_6' onclick='Clicked(btn23_6)' >1</td>
+					<td class='cell' id='btn23_7' onclick='Clicked(btn23_7)' >1</td>
+					<td class='cell' id='btn23_8' onclick='Clicked(btn23_8)' >1</td>
+				</tr>
+			</table>
+
+		</div>
+
+
+		
+	</div>
+
+</body>
+</html>

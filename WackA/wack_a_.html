@@ -1,0 +1,89 @@
+<html>
+	<link rel="shortcut Icon" href="../Z_Images/favicon.ico">
+<header>
+	<title>Wack-a-character</title>
+	<script type="text/javascript" src="wack_a_scripts.js"></script>
+	<script>
+	
+
+	</script>
+	
+	<link rel="stylesheet" type="text/css" href="wack_a_Styles.css">	
+
+</header>
+
+<body onkeydown="whichButton()">
+
+<div id="rightPart">
+	
+	<p>Your score is: <span id="scoreOutput"></span></p><br>
+	<button onclick="begin()" class="startButton"><b>Click or press B to begin<b></button>
+	<br>
+	
+	<div id="charSelect" style="display:none">
+		<h4>Select Your character</h4>
+		
+		<img src=".jpg" alt="" usemap="#" width="550rem" height="300rem">
+
+		<map name="">
+		<!--
+			map area is 'roughly' 90mm high 180mm wide
+			
+			so each character could be 24mm high and wide, with 6mm gap in each direction between each one 
+			ie; each character takes up 30 along x and 30 up y
+			
+			so a 6 by 3 grid so maximum 24 characters   
+			
+			alternatively, just have a table with each character in and adjust their background to b relevant
+			but using a map would be fun
+		-->
+			<area shape="rect" coords="1,1,4,4" alt="Character 1" href="#">
+			<area shape="rect" coords="1,1,4,4" alt="Character 1" href="#">
+			<area shape="rect" coords="1,1,4,4" alt="Character 1" href="#">
+			<area shape="rect" coords="1,1,4,4" alt="Character 1" href="#">
+			<area shape="rect" coords="1,1,4,4" alt="Character 1" href="#">
+
+		</map>
+		
+	</div>
+	<br>
+	<div id="outArea"></div>
+	
+</div>
+
+<div id="leftPart">
+	<table>
+
+		<tr>
+			<td onclick="Clkd('btn_1_1')" id="btn_1_1"class="tableCell"></td>
+			<td onclick="Clkd('btn_2_1')" id="btn_2_1"class="tableCell"></td>
+			<td onclick="Clkd('btn_3_1')" id="btn_3_1"class="tableCell"></td>
+			<td onclick="Clkd('btn_4_1')" id="btn_4_1"class="tableCell"></td>
+		</td>
+		<tr>
+			<td onclick="Clkd('btn_1_2')" id="btn_1_2"class="tableCell"></td>
+			<td onclick="Clkd('btn_2_2')" id="btn_2_2"class="tableCell"></td>
+			<td onclick="Clkd('btn_3_2')" id="btn_3_2"class="tableCell"></td>
+			<td onclick="Clkd('btn_4_2')" id="btn_4_2"class="tableCell"></td>
+		</td>
+		<tr>
+			<td onclick="Clkd('btn_1_3')" id="btn_1_3"class="tableCell"></td>
+			<td onclick="Clkd('btn_2_3')" id="btn_2_3"class="tableCell"></td>
+			<td onclick="Clkd('btn_3_3')" id="btn_3_3"class="tableCell"></td>
+			<td onclick="Clkd('btn_4_3')" id="btn_4_3"class="tableCell"></td>		
+		</tr>
+		<tr>
+			<td onclick="Clkd('btn_1_4')" id="btn_1_4"class="tableCell"></td>
+			<td onclick="Clkd('btn_2_4')" id="btn_2_4"class="tableCell"></td>
+			<td onclick="Clkd('btn_3_4')" id="btn_3_4"class="tableCell"></td>
+			<td onclick="Clkd('btn_4_4')" id="btn_4_4"class="tableCell"></td>		
+		</tr>	
+		
+	</table>
+
+</div>
+<br><Br>
+
+
+</body>
+</html>

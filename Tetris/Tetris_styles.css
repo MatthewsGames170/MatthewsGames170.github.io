@@ -1,0 +1,182 @@
+.cell{
+	width:1.7rem;
+	height:1.7rem;
+	background-color:#010101;
+	font-size:0.03px;
+	border:none;
+}
+.tablePlay{
+	background-color:black;
+}
+
+.filled{
+	background-color:#00ff00;
+}
+.empty{
+	background-color:#010101;
+}
+
+.object_1_move{
+	background-color:#005aff;
+}
+.object_2_move{
+	background-color:#ff8000;
+}
+.object_3_move{
+	background-color:#9933ff;	
+}
+.object_4_move{
+	background-color:#00ff00;	
+	
+}
+.object_5_move{
+	background-color:#ff0000;	
+	
+}
+.object_6_move{
+	background-color:#ffff00;	
+	
+}
+.object_7_move{
+	background-color:#00bfff;	
+	
+}
+
+.object_1_static{
+	background-color:#005aff;	
+	
+}
+.object_2_static{
+	background-color:#ff8000;
+	
+}
+.object_3_static{
+	background-color:#9933ff;
+	
+}
+.object_4_static{
+	background-color:#00ff00;	
+	
+}
+.object_5_static{
+	background-color:#ff0000;	
+	
+}
+.object_6_static{
+	background-color:#ffff00;
+	
+}
+.object_7_static{
+	background-color:#00bfff;
+	
+}
+
+#mainArea{
+	margin-left:auto;
+	margin-right:auto;
+	width:33rem;
+	margin-top:-1rem;
+}
+#playArea{
+	margin-top:4rem;
+}
+.startButton{
+	width:100%;
+	height:4rem;
+	border:none;
+	background-color:#55ff55;
+	font-size:22px;
+	border-radius:6px;
+}
+.startButton:hover{
+	
+	background-color:#22dd22;
+	
+}
+
+.title{
+	text-align:center;
+	height:1.5rem;
+	overflow:hidden;
+	font-size:25px;
+}
+
+
+#floatRight{
+	float:right;
+	
+}
+#playArea2{
+	float:left;
+}
+
+
+#adverts{
+	transition: margin-left 5s; 
+	opacity:0;
+	display:none;
+	z-index:-9;
+	position:fixed;
+	background-color:red;
+	width:25%;
+	height:90%;
+	margin:auto;
+	
+	
+
+}
+.ad{
+	width:100%;
+	height:100%;
+	background-color:#fefefe;
+	text-align:center;
+	border:none;
+	text-decoration:none;
+	color:black;
+	display:none;
+}
+/*
+#ad1{
+	text-align:center;
+	border:1px dashed black;
+}
+#ad2{
+	text-align:center;
+	border:1px solid black;
+	text-decoration:none;
+	color:black;
+}
+*/
+
+#ad2 a {
+  text-decoration:none;
+  color:SlateBlue;
+
+}
+
+#ad3{
+/*	background-image:url();*/
+}
+#ad3 a{
+  text-decoration:none;
+  color:black;	
+  
+}
+
+#ad4{
+	text-align:center;
+	background-image:url(../Z_Images/Ads/AdFour.png);
+	width:100%;
+    background-repeat: no-repeat;
+	
+}
+#ad6 a{
+	text-decoration:none;
+    color:black;	
+  
+}
+#ad5{
+	background-image:url(../Z_Images/Ads/ad6.jpg);	
+	width:100%;
+    background-repeat: no-repeat;
+}

@@ -1,0 +1,530 @@
+<html>
+	<link rel="shortcut Icon" href="../Z_Images/favicon.ico">
+<header>
+	<title>Mine Sweaper</title>	
+	<link rel="stylesheet" type="text/css" href="MineSweaper_styles.css">
+	<script type="text/javascript" src="MineSweaper_scripts.js"></script>
+</header>
+<body onkeydown="whichButton()" oncontextmenu="mouseRight(); return false;" >
+
+	<div id="pop">
+		<div id="popContents">
+			<h3 id="popTitle">Click to Play</h3>
+			<br>
+			<button class="popButton" onclick="restart()"><b>Play</b></button>
+		</div>
+	</div>
+
+	<div id="ddDifOptions">
+		<ul>
+			<li class="options" onclick="e()">Easy		</li>
+			<li class="options" onclick="d()">Default  	</li>
+			<li class="options" onclick="m()">Medium  	</li>
+			<li class="options" onclick="h()">Hard	    </li>
+		</ul>
+	</div>
+
+	<audio controls autoplay loop id="audio_1">
+		<source src="../Z_Audio/mine_detonate.mp3"  type="audio/mpeg">
+		
+		Your browser does not support the audio element.
+			
+	</audio>
+<!-- <source src="../Z_Audio/mine_digging.mp3" type="audio/mpeg">
+
+	Audio can now be controled by javascript. 
+	
+	If a different sound is needed, change the source file.
+	hide controls
+
+
+
+-->
+
+
+
+<div id="playArea">
+
+	<table id="info">
+		<tr>
+			<td class="infoCell" id="modde">
+				<button class="onlyOne" id="mode" onclick="openOptions()">Mode: Default</button>
+			</td>
+			
+			<td class="infoCell"><b></b></td>			
+			<td id="timer" class="infoCell"><b>000</b></td>
+			<td id="flagging"></td>
+		</tr>
+		
+	</table>
+<!--   <td class='cell' id='btn1_1' onclick='mine("btn1_1")' oncontextmenu='Rmine("btn1_1")' >1</td>  -->
+	<table id="defaultTable">
+		<tr id='row1'>
+			<td class='cell' id='btn1_1' onclick='mine("btn1_1")' oncontextmenu='Rmine("btn1_1")' >1</td>
+			<td class='cell' id='btn1_2' onclick='mine("btn1_2")' oncontextmenu='Rmine("btn1_2")' >1</td>
+			<td class='cell' id='btn1_3' onclick='mine("btn1_3")' oncontextmenu='Rmine("btn1_3")' >1</td>
+			<td class='cell' id='btn1_4' onclick='mine("btn1_4")' oncontextmenu='Rmine("btn1_4")' >1</td>
+			<td class='cell' id='btn1_5' onclick='mine("btn1_5")' oncontextmenu='Rmine("btn1_5")' >1</td>
+			<td class='cell' id='btn1_6' onclick='mine("btn1_6")' oncontextmenu='Rmine("btn1_6")' >1</td>
+			<td class='cell' id='btn1_7' onclick='mine("btn1_7")' oncontextmenu='Rmine("btn1_7")' >1</td>
+			<td class='cell' id='btn1_8' onclick='mine("btn1_8")' oncontextmenu='Rmine("btn1_8")' >1</td>
+			<td class='cell' id='btn1_9' onclick='mine("btn1_9")' oncontextmenu='Rmine("btn1_9")' >1</td>
+			<td class='cell' id='btn1_10' onclick='mine("btn1_10")' oncontextmenu='Rmine("btn1_10")' >1</td>
+		</tr>
+		<tr id='row2'>
+			<td class='cell' id='btn2_1' onclick='mine("btn2_1")' oncontextmenu='Rmine("btn2_1")' >1</td>
+			<td class='cell' id='btn2_2' onclick='mine("btn2_2")' oncontextmenu='Rmine("btn2_2")' >1</td>
+			<td class='cell' id='btn2_3' onclick='mine("btn2_3")' oncontextmenu='Rmine("btn2_3")' >1</td>
+			<td class='cell' id='btn2_4' onclick='mine("btn2_4")' oncontextmenu='Rmine("btn2_4")' >1</td>
+			<td class='cell' id='btn2_5' onclick='mine("btn2_5")' oncontextmenu='Rmine("btn2_5")' >1</td>
+			<td class='cell' id='btn2_6' onclick='mine("btn2_6")' oncontextmenu='Rmine("btn2_6")' >1</td>
+			<td class='cell' id='btn2_7' onclick='mine("btn2_7")' oncontextmenu='Rmine("btn2_7")' >1</td>
+			<td class='cell' id='btn2_8' onclick='mine("btn2_8")' oncontextmenu='Rmine("btn2_8")' >1</td>
+			<td class='cell' id='btn2_9' onclick='mine("btn2_9")' oncontextmenu='Rmine("btn2_9")' >1</td>
+			<td class='cell' id='btn2_10' onclick='mine("btn2_10")' oncontextmenu='Rmine("btn2_10")' >1</td>
+		</tr>
+		<tr id='row3'>
+			<td class='cell' id='btn3_1' onclick='mine("btn3_1")' oncontextmenu='Rmine("btn3_1")' >1</td>
+			<td class='cell' id='btn3_2' onclick='mine("btn3_2")' oncontextmenu='Rmine("btn3_2")' >1</td>
+			<td class='cell' id='btn3_3' onclick='mine("btn3_3")' oncontextmenu='Rmine("btn3_3")' >1</td>
+			<td class='cell' id='btn3_4' onclick='mine("btn3_4")' oncontextmenu='Rmine("btn3_4")' >1</td>
+			<td class='cell' id='btn3_5' onclick='mine("btn3_5")' oncontextmenu='Rmine("btn3_5")' >1</td>
+			<td class='cell' id='btn3_6' onclick='mine("btn3_6")' oncontextmenu='Rmine("btn3_6")' >1</td>
+			<td class='cell' id='btn3_7' onclick='mine("btn3_7")' oncontextmenu='Rmine("btn3_7")' >1</td>
+			<td class='cell' id='btn3_8' onclick='mine("btn3_8")' oncontextmenu='Rmine("btn3_8")' >1</td>
+			<td class='cell' id='btn3_9' onclick='mine("btn3_9")' oncontextmenu='Rmine("btn3_9")' >1</td>
+			<td class='cell' id='btn3_10' onclick='mine("btn3_10")' oncontextmenu='Rmine("btn3_10")' >1</td>
+		</tr>
+		<tr id='row4'>
+			<td class='cell' id='btn4_1' onclick='mine("btn4_1")' oncontextmenu='Rmine("btn4_1")' >1</td>
+			<td class='cell' id='btn4_2' onclick='mine("btn4_2")' oncontextmenu='Rmine("btn4_2")' >1</td>
+			<td class='cell' id='btn4_3' onclick='mine("btn4_3")' oncontextmenu='Rmine("btn4_3")' >1</td>
+			<td class='cell' id='btn4_4' onclick='mine("btn4_4")' oncontextmenu='Rmine("btn4_4")' >1</td>
+			<td class='cell' id='btn4_5' onclick='mine("btn4_5")' oncontextmenu='Rmine("btn4_5")' >1</td>
+			<td class='cell' id='btn4_6' onclick='mine("btn4_6")' oncontextmenu='Rmine("btn4_6")' >1</td>
+			<td class='cell' id='btn4_7' onclick='mine("btn4_7")' oncontextmenu='Rmine("btn4_7")' >1</td>
+			<td class='cell' id='btn4_8' onclick='mine("btn4_8")' oncontextmenu='Rmine("btn4_8")' >1</td>
+			<td class='cell' id='btn4_9' onclick='mine("btn4_9")' oncontextmenu='Rmine("btn4_9")' >1</td>
+			<td class='cell' id='btn4_10' onclick='mine("btn4_10")' oncontextmenu='Rmine("btn4_10")' >1</td>
+		</tr>
+		<tr id='row5'>
+			<td class='cell' id='btn5_1' onclick='mine("btn5_1")' oncontextmenu='Rmine("btn5_1")' >1</td>
+			<td class='cell' id='btn5_2' onclick='mine("btn5_2")' oncontextmenu='Rmine("btn5_2")' >1</td>
+			<td class='cell' id='btn5_3' onclick='mine("btn5_3")' oncontextmenu='Rmine("btn5_3")' >1</td>
+			<td class='cell' id='btn5_4' onclick='mine("btn5_4")' oncontextmenu='Rmine("btn5_4")' >1</td>
+			<td class='cell' id='btn5_5' onclick='mine("btn5_5")' oncontextmenu='Rmine("btn5_5")' >1</td>
+			<td class='cell' id='btn5_6' onclick='mine("btn5_6")' oncontextmenu='Rmine("btn5_6")' >1</td>
+			<td class='cell' id='btn5_7' onclick='mine("btn5_7")' oncontextmenu='Rmine("btn5_7")' >1</td>
+			<td class='cell' id='btn5_8' onclick='mine("btn5_8")' oncontextmenu='Rmine("btn5_8")' >1</td>
+			<td class='cell' id='btn5_9' onclick='mine("btn5_9")' oncontextmenu='Rmine("btn5_9")' >1</td>
+			<td class='cell' id='btn5_10' onclick='mine("btn5_10")' oncontextmenu='Rmine("btn5_10")' >1</td>
+		</tr>
+		<tr id='row6'>
+			<td class='cell' id='btn6_1' onclick='mine("btn6_1")' oncontextmenu='Rmine("btn6_1")' >1</td>
+			<td class='cell' id='btn6_2' onclick='mine("btn6_2")' oncontextmenu='Rmine("btn6_2")' >1</td>
+			<td class='cell' id='btn6_3' onclick='mine("btn6_3")' oncontextmenu='Rmine("btn6_3")' >1</td>
+			<td class='cell' id='btn6_4' onclick='mine("btn6_4")' oncontextmenu='Rmine("btn6_4")' >1</td>
+			<td class='cell' id='btn6_5' onclick='mine("btn6_5")' oncontextmenu='Rmine("btn6_5")' >1</td>
+			<td class='cell' id='btn6_6' onclick='mine("btn6_6")' oncontextmenu='Rmine("btn6_6")' >1</td>
+			<td class='cell' id='btn6_7' onclick='mine("btn6_7")' oncontextmenu='Rmine("btn6_7")' >1</td>
+			<td class='cell' id='btn6_8' onclick='mine("btn6_8")' oncontextmenu='Rmine("btn6_8")' >1</td>
+			<td class='cell' id='btn6_9' onclick='mine("btn6_9")' oncontextmenu='Rmine("btn6_9")' >1</td>
+			<td class='cell' id='btn6_10' onclick='mine("btn6_10")' oncontextmenu='Rmine("btn6_10")' >1</td>
+		</tr>
+		<tr id='row7'>
+			<td class='cell' id='btn7_1' onclick='mine("btn7_1")' oncontextmenu='Rmine("btn7_1")' >1</td>
+			<td class='cell' id='btn7_2' onclick='mine("btn7_2")' oncontextmenu='Rmine("btn7_2")' >1</td>
+			<td class='cell' id='btn7_3' onclick='mine("btn7_3")' oncontextmenu='Rmine("btn7_3")' >1</td>
+			<td class='cell' id='btn7_4' onclick='mine("btn7_4")' oncontextmenu='Rmine("btn7_4")' >1</td>
+			<td class='cell' id='btn7_5' onclick='mine("btn7_5")' oncontextmenu='Rmine("btn7_5")' >1</td>
+			<td class='cell' id='btn7_6' onclick='mine("btn7_6")' oncontextmenu='Rmine("btn7_6")' >1</td>
+			<td class='cell' id='btn7_7' onclick='mine("btn7_7")' oncontextmenu='Rmine("btn7_7")' >1</td>
+			<td class='cell' id='btn7_8' onclick='mine("btn7_8")' oncontextmenu='Rmine("btn7_8")' >1</td>
+			<td class='cell' id='btn7_9' onclick='mine("btn7_9")' oncontextmenu='Rmine("btn7_9")' >1</td>
+			<td class='cell' id='btn7_10' onclick='mine("btn7_10")' oncontextmenu='Rmine("btn7_10")' >1</td>
+		</tr>
+		<tr id='row8'>
+			<td class='cell' id='btn8_1' onclick='mine("btn8_1")' oncontextmenu='Rmine("btn8_1")' >1</td>
+			<td class='cell' id='btn8_2' onclick='mine("btn8_2")' oncontextmenu='Rmine("btn8_2")' >1</td>
+			<td class='cell' id='btn8_3' onclick='mine("btn8_3")' oncontextmenu='Rmine("btn8_3")' >1</td>
+			<td class='cell' id='btn8_4' onclick='mine("btn8_4")' oncontextmenu='Rmine("btn8_4")' >1</td>
+			<td class='cell' id='btn8_5' onclick='mine("btn8_5")' oncontextmenu='Rmine("btn8_5")' >1</td>
+			<td class='cell' id='btn8_6' onclick='mine("btn8_6")' oncontextmenu='Rmine("btn8_6")' >1</td>
+			<td class='cell' id='btn8_7' onclick='mine("btn8_7")' oncontextmenu='Rmine("btn8_7")' >1</td>
+			<td class='cell' id='btn8_8' onclick='mine("btn8_8")' oncontextmenu='Rmine("btn8_8")' >1</td>
+			<td class='cell' id='btn8_9' onclick='mine("btn8_9")' oncontextmenu='Rmine("btn8_9")' >1</td>
+			<td class='cell' id='btn8_10' onclick='mine("btn8_10")' oncontextmenu='Rmine("btn8_10")' >1</td>
+		</tr>
+		<tr id='row9'>
+			<td class='cell' id='btn9_1' onclick='mine("btn9_1")' oncontextmenu='Rmine("btn9_1")' >1</td>
+			<td class='cell' id='btn9_2' onclick='mine("btn9_2")' oncontextmenu='Rmine("btn9_2")' >1</td>
+			<td class='cell' id='btn9_3' onclick='mine("btn9_3")' oncontextmenu='Rmine("btn9_3")' >1</td>
+			<td class='cell' id='btn9_4' onclick='mine("btn9_4")' oncontextmenu='Rmine("btn9_4")' >1</td>
+			<td class='cell' id='btn9_5' onclick='mine("btn9_5")' oncontextmenu='Rmine("btn9_5")' >1</td>
+			<td class='cell' id='btn9_6' onclick='mine("btn9_6")' oncontextmenu='Rmine("btn9_6")' >1</td>
+			<td class='cell' id='btn9_7' onclick='mine("btn9_7")' oncontextmenu='Rmine("btn9_7")' >1</td>
+			<td class='cell' id='btn9_8' onclick='mine("btn9_8")' oncontextmenu='Rmine("btn9_8")' >1</td>
+			<td class='cell' id='btn9_9' onclick='mine("btn9_9")' oncontextmenu='Rmine("btn9_9")' >1</td>
+			<td class='cell' id='btn9_10' onclick='mine("btn9_10")' oncontextmenu='Rmine("btn9_10")' >1</td>
+		</tr>
+		<tr id='row10'>
+			<td class='cell' id='btn10_1' onclick='mine("btn10_1")' oncontextmenu='Rmine("btn10_1")' >1</td>
+			<td class='cell' id='btn10_2' onclick='mine("btn10_2")' oncontextmenu='Rmine("btn10_2")' >1</td>
+			<td class='cell' id='btn10_3' onclick='mine("btn10_3")' oncontextmenu='Rmine("btn10_3")' >1</td>
+			<td class='cell' id='btn10_4' onclick='mine("btn10_4")' oncontextmenu='Rmine("btn10_4")' >1</td>
+			<td class='cell' id='btn10_5' onclick='mine("btn10_5")' oncontextmenu='Rmine("btn10_5")' >1</td>
+			<td class='cell' id='btn10_6' onclick='mine("btn10_6")' oncontextmenu='Rmine("btn10_6")' >1</td>
+			<td class='cell' id='btn10_7' onclick='mine("btn10_7")' oncontextmenu='Rmine("btn10_7")' >1</td>
+			<td class='cell' id='btn10_8' onclick='mine("btn10_8")' oncontextmenu='Rmine("btn10_8")' >1</td>
+			<td class='cell' id='btn10_9' onclick='mine("btn10_9")' oncontextmenu='Rmine("btn10_9")' >1</td>
+			<td class='cell' id='btn10_10' onclick='mine("btn10_10")' oncontextmenu='Rmine("btn10_10")' >1</td>
+		</tr>
+	</table>
+
+	<table id="easyTable">
+		<tr id='row1'>
+			<td class='cell' id='btn1_1' onclick='mine(btn1_1)' oncontextmenu='Rmine(btn1_1)' >1</td>
+			<td class='cell' id='btn1_2' onclick='mine(btn1_2)' oncontextmenu='Rmine(btn1_2)' >1</td>
+			<td class='cell' id='btn1_3' onclick='mine(btn1_3)' oncontextmenu='Rmine(btn1_3)' >1</td>
+			<td class='cell' id='btn1_4' onclick='mine(btn1_4)' oncontextmenu='Rmine(btn1_4)' >1</td>
+			<td class='cell' id='btn1_5' onclick='mine(btn1_5)' oncontextmenu='Rmine(btn1_5)' >1</td>
+		</tr>
+		<tr id='row2'>
+			<td class='cell' id='btn2_1' onclick='mine(btn2_1)'  oncontextmenu='Rmine(btn2_1)'>1</td>
+			<td class='cell' id='btn2_2' onclick='mine(btn2_2)'  oncontextmenu='Rmine(btn2_2)'>1</td>
+			<td class='cell' id='btn2_3' onclick='mine(btn2_3)'  oncontextmenu='Rmine(btn2_3)'>1</td>
+			<td class='cell' id='btn2_4' onclick='mine(btn2_4)'  oncontextmenu='Rmine(btn2_4)'>1</td>
+			<td class='cell' id='btn2_5' onclick='mine(btn2_5)'  oncontextmenu='Rmine(btn2_5)'>1</td>
+		</tr>
+		<tr id='row3'>
+			<td class='cell' id='btn3_1' onclick='mine(btn3_1)' oncontextmenu='Rmine(btn3_1)' >1</td>
+			<td class='cell' id='btn3_2' onclick='mine(btn3_2)' oncontextmenu='Rmine(btn3_2)' >1</td>
+			<td class='cell' id='btn3_3' onclick='mine(btn3_3)' oncontextmenu='Rmine(btn3_3)' >1</td>
+			<td class='cell' id='btn3_4' onclick='mine(btn3_4)' oncontextmenu='Rmine(btn3_4)' >1</td>
+			<td class='cell' id='btn3_5' onclick='mine(btn3_5)' oncontextmenu='Rmine(btn3_5)' >1</td>
+		</tr>
+		<tr id='row4'>
+			<td class='cell' id='btn4_1' onclick='mine(btn4_1)' oncontextmenu='Rmine(btn4_1)' >1</td>
+			<td class='cell' id='btn4_2' onclick='mine(btn4_2)' oncontextmenu='Rmine(btn4_2)' >1</td>
+			<td class='cell' id='btn4_3' onclick='mine(btn4_3)' oncontextmenu='Rmine(btn4_3)' >1</td>
+			<td class='cell' id='btn4_4' onclick='mine(btn4_4)' oncontextmenu='Rmine(btn4_4)' >1</td>
+			<td class='cell' id='btn4_5' onclick='mine(btn4_5)' oncontextmenu='Rmine(btn4_5)' >1</td>
+		</tr>
+		<tr id='row5'>
+			<td class='cell' id='btn5_1' onclick='mine(btn5_1)'  oncontextmenu='Rmine(btn5_1)'>1</td>
+			<td class='cell' id='btn5_2' onclick='mine(btn5_2)'  oncontextmenu='Rmine(btn5_2)'>1</td>
+			<td class='cell' id='btn5_3' onclick='mine(btn5_3)'  oncontextmenu='Rmine(btn5_3)'>1</td>
+			<td class='cell' id='btn5_4' onclick='mine(btn5_4)'  oncontextmenu='Rmine(btn5_4)'>1</td>
+			<td class='cell' id='btn5_5' onclick='mine(btn5_5)'  oncontextmenu='Rmine(btn5_5)'>1</td>
+		</tr>
+	</table>
+
+	<table id="medTable">
+		<tr id='row1'>
+			<td class='cell' id='btn1_1' onclick='mine(btn1_1' oncontextmenu='Rmine(btn1_1)' >1</td>
+			<td class='cell' id='btn1_2' onclick='mine(btn1_2' oncontextmenu='Rmine(btn1_2)' >1</td>
+			<td class='cell' id='btn1_3' onclick='mine(btn1_3' oncontextmenu='Rmine(btn1_3)' >1</td>
+			<td class='cell' id='btn1_4' onclick='mine(btn1_4' oncontextmenu='Rmine(btn1_4)' >1</td>
+			<td class='cell' id='btn1_5' onclick='mine(btn1_5' oncontextmenu='Rmine(btn1_5)' >1</td>
+			<td class='cell' id='btn1_6' onclick='mine(btn1_6' oncontextmenu='Rmine(btn1_6)' >1</td>
+			<td class='cell' id='btn1_7' onclick='mine(btn1_7' oncontextmenu='Rmine(btn1_7)' >1</td>
+			<td class='cell' id='btn1_8' onclick='mine(btn1_8' oncontextmenu='Rmine(btn1_8)' >1</td>
+			<td class='cell' id='btn1_9' onclick='mine(btn1_9' oncontextmenu='Rmine(btn1_9)' >1</td>
+			<td class='cell' id='btn1_10' onclick='mine(btn1_10' oncontextmenu='Rmine(btn1_10)' >1</td>
+			<td class='cell' id='btn1_11' onclick='mine(btn1_11' oncontextmenu='Rmine(btn1_11)' >1</td>
+			<td class='cell' id='btn1_12' onclick='mine(btn1_12' oncontextmenu='Rmine(btn1_12)' >1</td>
+			<td class='cell' id='btn1_13' onclick='mine(btn1_13' oncontextmenu='Rmine(btn1_13)' >1</td>
+			<td class='cell' id='btn1_14' onclick='mine(btn1_14' oncontextmenu='Rmine(btn1_14)' >1</td>
+			<td class='cell' id='btn1_15' onclick='mine(btn1_15' oncontextmenu='Rmine(btn1_15)' >1</td>
+			<td class='cell' id='btn1_16' onclick='mine(btn1_16' oncontextmenu='Rmine(btn1_16)' >1</td>
+			<td class='cell' id='btn1_17' onclick='mine(btn1_17' oncontextmenu='Rmine(btn1_17)' >1</td>
+			<td class='cell' id='btn1_18' onclick='mine(btn1_18' oncontextmenu='Rmine(btn1_18)' >1</td>
+		</tr>
+		<tr id='row2'>
+			<td class='cell' id='btn2_1' onclick='mine(btn2_1' oncontextmenu='Rmine(btn2_1)' >1</td>
+			<td class='cell' id='btn2_2' onclick='mine(btn2_2' oncontextmenu='Rmine(btn2_2)' >1</td>
+			<td class='cell' id='btn2_3' onclick='mine(btn2_3' oncontextmenu='Rmine(btn2_3)' >1</td>
+			<td class='cell' id='btn2_4' onclick='mine(btn2_4' oncontextmenu='Rmine(btn2_4)' >1</td>
+			<td class='cell' id='btn2_5' onclick='mine(btn2_5' oncontextmenu='Rmine(btn2_5)' >1</td>
+			<td class='cell' id='btn2_6' onclick='mine(btn2_6' oncontextmenu='Rmine(btn2_6)' >1</td>
+			<td class='cell' id='btn2_7' onclick='mine(btn2_7' oncontextmenu='Rmine(btn2_7)' >1</td>
+			<td class='cell' id='btn2_8' onclick='mine(btn2_8' oncontextmenu='Rmine(btn2_8)' >1</td>
+			<td class='cell' id='btn2_9' onclick='mine(btn2_9' oncontextmenu='Rmine(btn2_9)' >1</td>
+			<td class='cell' id='btn2_10' onclick='mine(btn2_10' oncontextmenu='Rmine(btn2_10)' >1</td>
+			<td class='cell' id='btn2_11' onclick='mine(btn2_11' oncontextmenu='Rmine(btn2_11)' >1</td>
+			<td class='cell' id='btn2_12' onclick='mine(btn2_12' oncontextmenu='Rmine(btn2_12)' >1</td>
+			<td class='cell' id='btn2_13' onclick='mine(btn2_13' oncontextmenu='Rmine(btn2_13)' >1</td>
+			<td class='cell' id='btn2_14' onclick='mine(btn2_14' oncontextmenu='Rmine(btn2_14)' >1</td>
+			<td class='cell' id='btn2_15' onclick='mine(btn2_15' oncontextmenu='Rmine(btn2_15)' >1</td>
+			<td class='cell' id='btn2_16' onclick='mine(btn2_16' oncontextmenu='Rmine(btn2_16)' >1</td>
+			<td class='cell' id='btn2_17' onclick='mine(btn2_17' oncontextmenu='Rmine(btn2_17)' >1</td>
+			<td class='cell' id='btn2_18' onclick='mine(btn2_18' oncontextmenu='Rmine(btn2_18)' >1</td>
+		</tr>
+		<tr id='row3'>
+			<td class='cell' id='btn3_1' onclick='mine(btn3_1' oncontextmenu='Rmine(btn3_1)' >1</td>
+			<td class='cell' id='btn3_2' onclick='mine(btn3_2' oncontextmenu='Rmine(btn3_2)' >1</td>
+			<td class='cell' id='btn3_3' onclick='mine(btn3_3' oncontextmenu='Rmine(btn3_3)' >1</td>
+			<td class='cell' id='btn3_4' onclick='mine(btn3_4' oncontextmenu='Rmine(btn3_4)' >1</td>
+			<td class='cell' id='btn3_5' onclick='mine(btn3_5' oncontextmenu='Rmine(btn3_5)' >1</td>
+			<td class='cell' id='btn3_6' onclick='mine(btn3_6' oncontextmenu='Rmine(btn3_6)' >1</td>
+			<td class='cell' id='btn3_7' onclick='mine(btn3_7' oncontextmenu='Rmine(btn3_7)' >1</td>
+			<td class='cell' id='btn3_8' onclick='mine(btn3_8' oncontextmenu='Rmine(btn3_8)' >1</td>
+			<td class='cell' id='btn3_9' onclick='mine(btn3_9' oncontextmenu='Rmine(btn3_9)' >1</td>
+			<td class='cell' id='btn3_10' onclick='mine(btn3_10' oncontextmenu='Rmine(btn3_10)' >1</td>
+			<td class='cell' id='btn3_11' onclick='mine(btn3_11' oncontextmenu='Rmine(btn3_11)' >1</td>
+			<td class='cell' id='btn3_12' onclick='mine(btn3_12' oncontextmenu='Rmine(btn3_12)' >1</td>
+			<td class='cell' id='btn3_13' onclick='mine(btn3_13' oncontextmenu='Rmine(btn3_13)' >1</td>
+			<td class='cell' id='btn3_14' onclick='mine(btn3_14' oncontextmenu='Rmine(btn3_14)' >1</td>
+			<td class='cell' id='btn3_15' onclick='mine(btn3_15' oncontextmenu='Rmine(btn3_15)' >1</td>
+			<td class='cell' id='btn3_16' onclick='mine(btn3_16' oncontextmenu='Rmine(btn3_16)' >1</td>
+			<td class='cell' id='btn3_17' onclick='mine(btn3_17' oncontextmenu='Rmine(btn3_17)' >1</td>
+			<td class='cell' id='btn3_18' onclick='mine(btn3_18' oncontextmenu='Rmine(btn3_18)' >1</td>
+		</tr>
+		<tr id='row4'>
+			<td class='cell' id='btn4_1' onclick='mine(btn4_1' oncontextmenu='Rmine(btn4_1)' >1</td>
+			<td class='cell' id='btn4_2' onclick='mine(btn4_2' oncontextmenu='Rmine(btn4_2)' >1</td>
+			<td class='cell' id='btn4_3' onclick='mine(btn4_3' oncontextmenu='Rmine(btn4_3)' >1</td>
+			<td class='cell' id='btn4_4' onclick='mine(btn4_4' oncontextmenu='Rmine(btn4_4)' >1</td>
+			<td class='cell' id='btn4_5' onclick='mine(btn4_5' oncontextmenu='Rmine(btn4_5)' >1</td>
+			<td class='cell' id='btn4_6' onclick='mine(btn4_6' oncontextmenu='Rmine(btn4_6)' >1</td>
+			<td class='cell' id='btn4_7' onclick='mine(btn4_7' oncontextmenu='Rmine(btn4_7)' >1</td>
+			<td class='cell' id='btn4_8' onclick='mine(btn4_8' oncontextmenu='Rmine(btn4_8)' >1</td>
+			<td class='cell' id='btn4_9' onclick='mine(btn4_9' oncontextmenu='Rmine(btn4_9)' >1</td>
+			<td class='cell' id='btn4_10' onclick='mine(btn4_10' oncontextmenu='Rmine(btn4_10)' >1</td>
+			<td class='cell' id='btn4_11' onclick='mine(btn4_11' oncontextmenu='Rmine(btn4_11)' >1</td>
+			<td class='cell' id='btn4_12' onclick='mine(btn4_12' oncontextmenu='Rmine(btn4_12)' >1</td>
+			<td class='cell' id='btn4_13' onclick='mine(btn4_13' oncontextmenu='Rmine(btn4_13)' >1</td>
+			<td class='cell' id='btn4_14' onclick='mine(btn4_14' oncontextmenu='Rmine(btn4_14)' >1</td>
+			<td class='cell' id='btn4_15' onclick='mine(btn4_15' oncontextmenu='Rmine(btn4_15)' >1</td>
+			<td class='cell' id='btn4_16' onclick='mine(btn4_16' oncontextmenu='Rmine(btn4_16)' >1</td>
+			<td class='cell' id='btn4_17' onclick='mine(btn4_17' oncontextmenu='Rmine(btn4_17)' >1</td>
+			<td class='cell' id='btn4_18' onclick='mine(btn4_18' oncontextmenu='Rmine(btn4_18)' >1</td>
+		</tr>
+		<tr id='row5'>
+			<td class='cell' id='btn5_1' onclick='mine(btn5_1' oncontextmenu='Rmine(btn5_1)' >1</td>
+			<td class='cell' id='btn5_2' onclick='mine(btn5_2' oncontextmenu='Rmine(btn5_2)' >1</td>
+			<td class='cell' id='btn5_3' onclick='mine(btn5_3' oncontextmenu='Rmine(btn5_3)' >1</td>
+			<td class='cell' id='btn5_4' onclick='mine(btn5_4' oncontextmenu='Rmine(btn5_4)' >1</td>
+			<td class='cell' id='btn5_5' onclick='mine(btn5_5' oncontextmenu='Rmine(btn5_5)' >1</td>
+			<td class='cell' id='btn5_6' onclick='mine(btn5_6' oncontextmenu='Rmine(btn5_6)' >1</td>
+			<td class='cell' id='btn5_7' onclick='mine(btn5_7' oncontextmenu='Rmine(btn5_7)' >1</td>
+			<td class='cell' id='btn5_8' onclick='mine(btn5_8' oncontextmenu='Rmine(btn5_8)' >1</td>
+			<td class='cell' id='btn5_9' onclick='mine(btn5_9' oncontextmenu='Rmine(btn5_9)' >1</td>
+			<td class='cell' id='btn5_10' onclick='mine(btn5_10' oncontextmenu='Rmine(btn5_10)' >1</td>
+			<td class='cell' id='btn5_11' onclick='mine(btn5_11' oncontextmenu='Rmine(btn5_11)' >1</td>
+			<td class='cell' id='btn5_12' onclick='mine(btn5_12' oncontextmenu='Rmine(btn5_12)' >1</td>
+			<td class='cell' id='btn5_13' onclick='mine(btn5_13' oncontextmenu='Rmine(btn5_13)' >1</td>
+			<td class='cell' id='btn5_14' onclick='mine(btn5_14' oncontextmenu='Rmine(btn5_14)' >1</td>
+			<td class='cell' id='btn5_15' onclick='mine(btn5_15' oncontextmenu='Rmine(btn5_15)' >1</td>
+			<td class='cell' id='btn5_16' onclick='mine(btn5_16' oncontextmenu='Rmine(btn5_16)' >1</td>
+			<td class='cell' id='btn5_17' onclick='mine(btn5_17' oncontextmenu='Rmine(btn5_17)' >1</td>
+			<td class='cell' id='btn5_18' onclick='mine(btn5_18' oncontextmenu='Rmine(btn5_18)' >1</td>
+		</tr>
+		<tr id='row6'>
+			<td class='cell' id='btn6_1' onclick='mine(btn6_1' oncontextmenu='Rmine(btn6_1)' >1</td>
+			<td class='cell' id='btn6_2' onclick='mine(btn6_2' oncontextmenu='Rmine(btn6_2)' >1</td>
+			<td class='cell' id='btn6_3' onclick='mine(btn6_3' oncontextmenu='Rmine(btn6_3)' >1</td>
+			<td class='cell' id='btn6_4' onclick='mine(btn6_4' oncontextmenu='Rmine(btn6_4)' >1</td>
+			<td class='cell' id='btn6_5' onclick='mine(btn6_5' oncontextmenu='Rmine(btn6_5)' >1</td>
+			<td class='cell' id='btn6_6' onclick='mine(btn6_6' oncontextmenu='Rmine(btn6_6)' >1</td>
+			<td class='cell' id='btn6_7' onclick='mine(btn6_7' oncontextmenu='Rmine(btn6_7)' >1</td>
+			<td class='cell' id='btn6_8' onclick='mine(btn6_8' oncontextmenu='Rmine(btn6_8)' >1</td>
+			<td class='cell' id='btn6_9' onclick='mine(btn6_9' oncontextmenu='Rmine(btn6_9)' >1</td>
+			<td class='cell' id='btn6_10' onclick='mine(btn6_10' oncontextmenu='Rmine(btn6_10)' >1</td>
+			<td class='cell' id='btn6_11' onclick='mine(btn6_11' oncontextmenu='Rmine(btn6_11)' >1</td>
+			<td class='cell' id='btn6_12' onclick='mine(btn6_12' oncontextmenu='Rmine(btn6_12)' >1</td>
+			<td class='cell' id='btn6_13' onclick='mine(btn6_13' oncontextmenu='Rmine(btn6_13)' >1</td>
+			<td class='cell' id='btn6_14' onclick='mine(btn6_14' oncontextmenu='Rmine(btn6_14)' >1</td>
+			<td class='cell' id='btn6_15' onclick='mine(btn6_15' oncontextmenu='Rmine(btn6_15)' >1</td>
+			<td class='cell' id='btn6_16' onclick='mine(btn6_16' oncontextmenu='Rmine(btn6_16)' >1</td>
+			<td class='cell' id='btn6_17' onclick='mine(btn6_17' oncontextmenu='Rmine(btn6_17)' >1</td>
+			<td class='cell' id='btn6_18' onclick='mine(btn6_18' oncontextmenu='Rmine(btn6_18)' >1</td>
+		</tr>
+		<tr id='row7'>
+			<td class='cell' id='btn7_1' onclick='mine(btn7_1' oncontextmenu='Rmine(btn7_1)' >1</td>
+			<td class='cell' id='btn7_2' onclick='mine(btn7_2' oncontextmenu='Rmine(btn7_2)' >1</td>
+			<td class='cell' id='btn7_3' onclick='mine(btn7_3' oncontextmenu='Rmine(btn7_3)' >1</td>
+			<td class='cell' id='btn7_4' onclick='mine(btn7_4' oncontextmenu='Rmine(btn7_4)' >1</td>
+			<td class='cell' id='btn7_5' onclick='mine(btn7_5' oncontextmenu='Rmine(btn7_5)' >1</td>
+			<td class='cell' id='btn7_6' onclick='mine(btn7_6' oncontextmenu='Rmine(btn7_6)' >1</td>
+			<td class='cell' id='btn7_7' onclick='mine(btn7_7' oncontextmenu='Rmine(btn7_7)' >1</td>
+			<td class='cell' id='btn7_8' onclick='mine(btn7_8' oncontextmenu='Rmine(btn7_8)' >1</td>
+			<td class='cell' id='btn7_9' onclick='mine(btn7_9' oncontextmenu='Rmine(btn7_9)' >1</td>
+			<td class='cell' id='btn7_10' onclick='mine(btn7_10' oncontextmenu='Rmine(btn7_10)' >1</td>
+			<td class='cell' id='btn7_11' onclick='mine(btn7_11' oncontextmenu='Rmine(btn7_11)' >1</td>
+			<td class='cell' id='btn7_12' onclick='mine(btn7_12' oncontextmenu='Rmine(btn7_12)' >1</td>
+			<td class='cell' id='btn7_13' onclick='mine(btn7_13' oncontextmenu='Rmine(btn7_13)' >1</td>
+			<td class='cell' id='btn7_14' onclick='mine(btn7_14' oncontextmenu='Rmine(btn7_14)' >1</td>
+			<td class='cell' id='btn7_15' onclick='mine(btn7_15' oncontextmenu='Rmine(btn7_15)' >1</td>
+			<td class='cell' id='btn7_16' onclick='mine(btn7_16' oncontextmenu='Rmine(btn7_16)' >1</td>
+			<td class='cell' id='btn7_17' onclick='mine(btn7_17' oncontextmenu='Rmine(btn7_17)' >1</td>
+			<td class='cell' id='btn7_18' onclick='mine(btn7_18' oncontextmenu='Rmine(btn7_18)' >1</td>
+		</tr>
+		<tr id='row8'>
+			<td class='cell' id='btn8_1' onclick='mine(btn8_1' oncontextmenu='Rmine(btn8_1)' >1</td>
+			<td class='cell' id='btn8_2' onclick='mine(btn8_2' oncontextmenu='Rmine(btn8_2)' >1</td>
+			<td class='cell' id='btn8_3' onclick='mine(btn8_3' oncontextmenu='Rmine(btn8_3)' >1</td>
+			<td class='cell' id='btn8_4' onclick='mine(btn8_4' oncontextmenu='Rmine(btn8_4)' >1</td>
+			<td class='cell' id='btn8_5' onclick='mine(btn8_5' oncontextmenu='Rmine(btn8_5)' >1</td>
+			<td class='cell' id='btn8_6' onclick='mine(btn8_6' oncontextmenu='Rmine(btn8_6)' >1</td>
+			<td class='cell' id='btn8_7' onclick='mine(btn8_7' oncontextmenu='Rmine(btn8_7)' >1</td>
+			<td class='cell' id='btn8_8' onclick='mine(btn8_8' oncontextmenu='Rmine(btn8_8)' >1</td>
+			<td class='cell' id='btn8_9' onclick='mine(btn8_9' oncontextmenu='Rmine(btn8_9)' >1</td>
+			<td class='cell' id='btn8_10' onclick='mine(btn8_10' oncontextmenu='Rmine(btn8_10)' >1</td>
+			<td class='cell' id='btn8_11' onclick='mine(btn8_11' oncontextmenu='Rmine(btn8_11)' >1</td>
+			<td class='cell' id='btn8_12' onclick='mine(btn8_12' oncontextmenu='Rmine(btn8_12)' >1</td>
+			<td class='cell' id='btn8_13' onclick='mine(btn8_13' oncontextmenu='Rmine(btn8_13)' >1</td>
+			<td class='cell' id='btn8_14' onclick='mine(btn8_14' oncontextmenu='Rmine(btn8_14)' >1</td>
+			<td class='cell' id='btn8_15' onclick='mine(btn8_15' oncontextmenu='Rmine(btn8_15)' >1</td>
+			<td class='cell' id='btn8_16' onclick='mine(btn8_16' oncontextmenu='Rmine(btn8_16)' >1</td>
+			<td class='cell' id='btn8_17' onclick='mine(btn8_17' oncontextmenu='Rmine(btn8_17)' >1</td>
+			<td class='cell' id='btn8_18' onclick='mine(btn8_18' oncontextmenu='Rmine(btn8_18)' >1</td>
+		</tr>
+		<tr id='row9'>
+			<td class='cell' id='btn9_1' onclick='mine(btn9_1' oncontextmenu='Rmine(btn9_1)' >1</td>
+			<td class='cell' id='btn9_2' onclick='mine(btn9_2' oncontextmenu='Rmine(btn9_2)' >1</td>
+			<td class='cell' id='btn9_3' onclick='mine(btn9_3' oncontextmenu='Rmine(btn9_3)' >1</td>
+			<td class='cell' id='btn9_4' onclick='mine(btn9_4' oncontextmenu='Rmine(btn9_4)' >1</td>
+			<td class='cell' id='btn9_5' onclick='mine(btn9_5' oncontextmenu='Rmine(btn9_5)' >1</td>
+			<td class='cell' id='btn9_6' onclick='mine(btn9_6' oncontextmenu='Rmine(btn9_6)' >1</td>
+			<td class='cell' id='btn9_7' onclick='mine(btn9_7' oncontextmenu='Rmine(btn9_7)' >1</td>
+			<td class='cell' id='btn9_8' onclick='mine(btn9_8' oncontextmenu='Rmine(btn9_8)' >1</td>
+			<td class='cell' id='btn9_9' onclick='mine(btn9_9' oncontextmenu='Rmine(btn9_9)' >1</td>
+			<td class='cell' id='btn9_10' onclick='mine(btn9_10' oncontextmenu='Rmine(btn9_10)' >1</td>
+			<td class='cell' id='btn9_11' onclick='mine(btn9_11' oncontextmenu='Rmine(btn9_11)' >1</td>
+			<td class='cell' id='btn9_12' onclick='mine(btn9_12' oncontextmenu='Rmine(btn9_12)' >1</td>
+			<td class='cell' id='btn9_13' onclick='mine(btn9_13' oncontextmenu='Rmine(btn9_13)' >1</td>
+			<td class='cell' id='btn9_14' onclick='mine(btn9_14' oncontextmenu='Rmine(btn9_14)' >1</td>
+			<td class='cell' id='btn9_15' onclick='mine(btn9_15' oncontextmenu='Rmine(btn9_15)' >1</td>
+			<td class='cell' id='btn9_16' onclick='mine(btn9_16' oncontextmenu='Rmine(btn9_16)' >1</td>
+			<td class='cell' id='btn9_17' onclick='mine(btn9_17' oncontextmenu='Rmine(btn9_17)' >1</td>
+			<td class='cell' id='btn9_18' onclick='mine(btn9_18' oncontextmenu='Rmine(btn9_18)' >1</td>
+		</tr>
+		<tr id='row10'>
+			<td class='cell' id='btn10_1' onclick='mine(btn10_1' oncontextmenu='Rmine(btn10_1)' >1</td>
+			<td class='cell' id='btn10_2' onclick='mine(btn10_2' oncontextmenu='Rmine(btn10_2)' >1</td>
+			<td class='cell' id='btn10_3' onclick='mine(btn10_3' oncontextmenu='Rmine(btn10_3)' >1</td>
+			<td class='cell' id='btn10_4' onclick='mine(btn10_4' oncontextmenu='Rmine(btn10_4)' >1</td>
+			<td class='cell' id='btn10_5' onclick='mine(btn10_5' oncontextmenu='Rmine(btn10_5)' >1</td>
+			<td class='cell' id='btn10_6' onclick='mine(btn10_6' oncontextmenu='Rmine(btn10_6)' >1</td>
+			<td class='cell' id='btn10_7' onclick='mine(btn10_7' oncontextmenu='Rmine(btn10_7)' >1</td>
+			<td class='cell' id='btn10_8' onclick='mine(btn10_8' oncontextmenu='Rmine(btn10_8)' >1</td>
+			<td class='cell' id='btn10_9' onclick='mine(btn10_9' oncontextmenu='Rmine(btn10_9)' >1</td>
+			<td class='cell' id='btn10_10' onclick='mine(btn10_10' oncontextmenu='Rmine(btn10_10)' >1</td>
+			<td class='cell' id='btn10_11' onclick='mine(btn10_11' oncontextmenu='Rmine(btn10_11)' >1</td>
+			<td class='cell' id='btn10_12' onclick='mine(btn10_12' oncontextmenu='Rmine(btn10_12)' >1</td>
+			<td class='cell' id='btn10_13' onclick='mine(btn10_13' oncontextmenu='Rmine(btn10_13)' >1</td>
+			<td class='cell' id='btn10_14' onclick='mine(btn10_14' oncontextmenu='Rmine(btn10_14)' >1</td>
+			<td class='cell' id='btn10_15' onclick='mine(btn10_15' oncontextmenu='Rmine(btn10_15)' >1</td>
+			<td class='cell' id='btn10_16' onclick='mine(btn10_16' oncontextmenu='Rmine(btn10_16)' >1</td>
+			<td class='cell' id='btn10_17' onclick='mine(btn10_17' oncontextmenu='Rmine(btn10_17)' >1</td>
+			<td class='cell' id='btn10_18' onclick='mine(btn10_18' oncontextmenu='Rmine(btn10_18)' >1</td>
+		</tr>
+		<tr id='row11'>
+			<td class='cell' id='btn11_1' onclick='mine(btn11_1' oncontextmenu='Rmine(btn11_1)' >1</td>
+			<td class='cell' id='btn11_2' onclick='mine(btn11_2' oncontextmenu='Rmine(btn11_2)' >1</td>
+			<td class='cell' id='btn11_3' onclick='mine(btn11_3' oncontextmenu='Rmine(btn11_3)' >1</td>
+			<td class='cell' id='btn11_4' onclick='mine(btn11_4' oncontextmenu='Rmine(btn11_4)' >1</td>
+			<td class='cell' id='btn11_5' onclick='mine(btn11_5' oncontextmenu='Rmine(btn11_5)' >1</td>
+			<td class='cell' id='btn11_6' onclick='mine(btn11_6' oncontextmenu='Rmine(btn11_6)' >1</td>
+			<td class='cell' id='btn11_7' onclick='mine(btn11_7' oncontextmenu='Rmine(btn11_7)' >1</td>
+			<td class='cell' id='btn11_8' onclick='mine(btn11_8' oncontextmenu='Rmine(btn11_8)' >1</td>
+			<td class='cell' id='btn11_9' onclick='mine(btn11_9' oncontextmenu='Rmine(btn11_9)' >1</td>
+			<td class='cell' id='btn11_10' onclick='mine(btn11_10' oncontextmenu='Rmine(btn11_10)' >1</td>
+			<td class='cell' id='btn11_11' onclick='mine(btn11_11' oncontextmenu='Rmine(btn11_11)' >1</td>
+			<td class='cell' id='btn11_12' onclick='mine(btn11_12' oncontextmenu='Rmine(btn11_12)' >1</td>
+			<td class='cell' id='btn11_13' onclick='mine(btn11_13' oncontextmenu='Rmine(btn11_13)' >1</td>
+			<td class='cell' id='btn11_14' onclick='mine(btn11_14' oncontextmenu='Rmine(btn11_14)' >1</td>
+			<td class='cell' id='btn11_15' onclick='mine(btn11_15' oncontextmenu='Rmine(btn11_15)' >1</td>
+			<td class='cell' id='btn11_16' onclick='mine(btn11_16' oncontextmenu='Rmine(btn11_16)' >1</td>
+			<td class='cell' id='btn11_17' onclick='mine(btn11_17' oncontextmenu='Rmine(btn11_17)' >1</td>
+			<td class='cell' id='btn11_18' onclick='mine(btn11_18' oncontextmenu='Rmine(btn11_18)' >1</td>
+		</tr>
+		<tr id='row12'>
+			<td class='cell' id='btn12_1' onclick='mine(btn12_1' oncontextmenu='Rmine(btn12_1)' >1</td>
+			<td class='cell' id='btn12_2' onclick='mine(btn12_2' oncontextmenu='Rmine(btn12_2)' >1</td>
+			<td class='cell' id='btn12_3' onclick='mine(btn12_3' oncontextmenu='Rmine(btn12_3)' >1</td>
+			<td class='cell' id='btn12_4' onclick='mine(btn12_4' oncontextmenu='Rmine(btn12_4)' >1</td>
+			<td class='cell' id='btn12_5' onclick='mine(btn12_5' oncontextmenu='Rmine(btn12_5)' >1</td>
+			<td class='cell' id='btn12_6' onclick='mine(btn12_6' oncontextmenu='Rmine(btn12_6)' >1</td>
+			<td class='cell' id='btn12_7' onclick='mine(btn12_7' oncontextmenu='Rmine(btn12_7)' >1</td>
+			<td class='cell' id='btn12_8' onclick='mine(btn12_8' oncontextmenu='Rmine(btn12_8)' >1</td>
+			<td class='cell' id='btn12_9' onclick='mine(btn12_9' oncontextmenu='Rmine(btn12_9)' >1</td>
+			<td class='cell' id='btn12_10' onclick='mine(btn12_10' oncontextmenu='Rmine(btn12_10)' >1</td>
+			<td class='cell' id='btn12_11' onclick='mine(btn12_11' oncontextmenu='Rmine(btn12_11)' >1</td>
+			<td class='cell' id='btn12_12' onclick='mine(btn12_12' oncontextmenu='Rmine(btn12_12)' >1</td>
+			<td class='cell' id='btn12_13' onclick='mine(btn12_13' oncontextmenu='Rmine(btn12_13)' >1</td>
+			<td class='cell' id='btn12_14' onclick='mine(btn12_14' oncontextmenu='Rmine(btn12_14)' >1</td>
+			<td class='cell' id='btn12_15' onclick='mine(btn12_15' oncontextmenu='Rmine(btn12_15)' >1</td>
+			<td class='cell' id='btn12_16' onclick='mine(btn12_16' oncontextmenu='Rmine(btn12_16)' >1</td>
+			<td class='cell' id='btn12_17' onclick='mine(btn12_17' oncontextmenu='Rmine(btn12_17)' >1</td>
+			<td class='cell' id='btn12_18' onclick='mine(btn12_18' oncontextmenu='Rmine(btn12_18)' >1</td>
+		</tr>
+		<tr id='row13'>
+			<td class='cell' id='btn13_1' onclick='mine(btn13_1' oncontextmenu='Rmine(btn13_1)' >1</td>
+			<td class='cell' id='btn13_2' onclick='mine(btn13_2' oncontextmenu='Rmine(btn13_2)' >1</td>
+			<td class='cell' id='btn13_3' onclick='mine(btn13_3' oncontextmenu='Rmine(btn13_3)' >1</td>
+			<td class='cell' id='btn13_4' onclick='mine(btn13_4' oncontextmenu='Rmine(btn13_4)' >1</td>
+			<td class='cell' id='btn13_5' onclick='mine(btn13_5' oncontextmenu='Rmine(btn13_5)' >1</td>
+			<td class='cell' id='btn13_6' onclick='mine(btn13_6' oncontextmenu='Rmine(btn13_6)' >1</td>
+			<td class='cell' id='btn13_7' onclick='mine(btn13_7' oncontextmenu='Rmine(btn13_7)' >1</td>
+			<td class='cell' id='btn13_8' onclick='mine(btn13_8' oncontextmenu='Rmine(btn13_8)' >1</td>
+			<td class='cell' id='btn13_9' onclick='mine(btn13_9' oncontextmenu='Rmine(btn13_9)' >1</td>
+			<td class='cell' id='btn13_10' onclick='mine(btn13_10' oncontextmenu='Rmine(btn13_10)' >1</td>
+			<td class='cell' id='btn13_11' onclick='mine(btn13_11' oncontextmenu='Rmine(btn13_11)' >1</td>
+			<td class='cell' id='btn13_12' onclick='mine(btn13_12' oncontextmenu='Rmine(btn13_12)' >1</td>
+			<td class='cell' id='btn13_13' onclick='mine(btn13_13' oncontextmenu='Rmine(btn13_13)' >1</td>
+			<td class='cell' id='btn13_14' onclick='mine(btn13_14' oncontextmenu='Rmine(btn13_14)' >1</td>
+			<td class='cell' id='btn13_15' onclick='mine(btn13_15' oncontextmenu='Rmine(btn13_15)' >1</td>
+			<td class='cell' id='btn13_16' onclick='mine(btn13_16' oncontextmenu='Rmine(btn13_16)' >1</td>
+			<td class='cell' id='btn13_17' onclick='mine(btn13_17' oncontextmenu='Rmine(btn13_17)' >1</td>
+			<td class='cell' id='btn13_18' onclick='mine(btn13_18' oncontextmenu='Rmine(btn13_18)' >1</td>
+		</tr>
+		<tr id='row14'>
+			<td class='cell' id='btn14_1' onclick='mine(btn14_1' oncontextmenu='Rmine(btn14_1)' >1</td>
+			<td class='cell' id='btn14_2' onclick='mine(btn14_2' oncontextmenu='Rmine(btn14_2)' >1</td>
+			<td class='cell' id='btn14_3' onclick='mine(btn14_3' oncontextmenu='Rmine(btn14_3)' >1</td>
+			<td class='cell' id='btn14_4' onclick='mine(btn14_4' oncontextmenu='Rmine(btn14_4)' >1</td>
+			<td class='cell' id='btn14_5' onclick='mine(btn14_5' oncontextmenu='Rmine(btn14_5)' >1</td>
+			<td class='cell' id='btn14_6' onclick='mine(btn14_6' oncontextmenu='Rmine(btn14_6)' >1</td>
+			<td class='cell' id='btn14_7' onclick='mine(btn14_7' oncontextmenu='Rmine(btn14_7)' >1</td>
+			<td class='cell' id='btn14_8' onclick='mine(btn14_8' oncontextmenu='Rmine(btn14_8)' >1</td>
+			<td class='cell' id='btn14_9' onclick='mine(btn14_9' oncontextmenu='Rmine(btn14_9)' >1</td>
+			<td class='cell' id='btn14_10' onclick='mine(btn14_10' oncontextmenu='Rmine(btn14_10)' >1</td>
+			<td class='cell' id='btn14_11' onclick='mine(btn14_11' oncontextmenu='Rmine(btn14_11)' >1</td>
+			<td class='cell' id='btn14_12' onclick='mine(btn14_12' oncontextmenu='Rmine(btn14_12)' >1</td>
+			<td class='cell' id='btn14_13' onclick='mine(btn14_13' oncontextmenu='Rmine(btn14_13)' >1</td>
+			<td class='cell' id='btn14_14' onclick='mine(btn14_14' oncontextmenu='Rmine(btn14_14)' >1</td>
+			<td class='cell' id='btn14_15' onclick='mine(btn14_15' oncontextmenu='Rmine(btn14_15)' >1</td>
+			<td class='cell' id='btn14_16' onclick='mine(btn14_16' oncontextmenu='Rmine(btn14_16)' >1</td>
+			<td class='cell' id='btn14_17' onclick='mine(btn14_17' oncontextmenu='Rmine(btn14_17)' >1</td>
+			<td class='cell' id='btn14_18' onclick='mine(btn14_18' oncontextmenu='Rmine(btn14_18)' >1</td>
+		</tr>
+		<tr id='row15'>
+			<td class='cell' id='btn15_1' onclick='mine(btn15_1' oncontextmenu='Rmine(btn15_1)' >1</td>
+			<td class='cell' id='btn15_2' onclick='mine(btn15_2' oncontextmenu='Rmine(btn15_2)' >1</td>
+			<td class='cell' id='btn15_3' onclick='mine(btn15_3' oncontextmenu='Rmine(btn15_3)' >1</td>
+			<td class='cell' id='btn15_4' onclick='mine(btn15_4' oncontextmenu='Rmine(btn15_4)' >1</td>
+			<td class='cell' id='btn15_5' onclick='mine(btn15_5' oncontextmenu='Rmine(btn15_5)' >1</td>
+			<td class='cell' id='btn15_6' onclick='mine(btn15_6' oncontextmenu='Rmine(btn15_6)' >1</td>
+			<td class='cell' id='btn15_7' onclick='mine(btn15_7' oncontextmenu='Rmine(btn15_7)' >1</td>
+			<td class='cell' id='btn15_8' onclick='mine(btn15_8' oncontextmenu='Rmine(btn15_8)' >1</td>
+			<td class='cell' id='btn15_9' onclick='mine(btn15_9' oncontextmenu='Rmine(btn15_9)' >1</td>
+			<td class='cell' id='btn15_10' onclick='mine(btn15_10' oncontextmenu='Rmine(btn15_10)' >1</td>
+			<td class='cell' id='btn15_11' onclick='mine(btn15_11' oncontextmenu='Rmine(btn15_11)' >1</td>
+			<td class='cell' id='btn15_12' onclick='mine(btn15_12' oncontextmenu='Rmine(btn15_12)' >1</td>
+			<td class='cell' id='btn15_13' onclick='mine(btn15_13' oncontextmenu='Rmine(btn15_13)' >1</td>
+			<td class='cell' id='btn15_14' onclick='mine(btn15_14' oncontextmenu='Rmine(btn15_14)' >1</td>
+			<td class='cell' id='btn15_15' onclick='mine(btn15_15' oncontextmenu='Rmine(btn15_15)' >1</td>
+			<td class='cell' id='btn15_16' onclick='mine(btn15_16' oncontextmenu='Rmine(btn15_16)' >1</td>
+			<td class='cell' id='btn15_17' onclick='mine(btn15_17' oncontextmenu='Rmine(btn15_17)' >1</td>
+			<td class='cell' id='btn15_18' onclick='mine(btn15_18' oncontextmenu='Rmine(btn15_18)' >1</td>
+		</tr>
+	</table>
+
+</div>
+
+
+
+</body>
+</html>

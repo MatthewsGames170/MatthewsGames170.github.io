@@ -1,0 +1,87 @@
+<html  style="font-size: 1.3vw;" class="stdfont" onload="OnL()">
+	<link rel="shortcut Icon" href="../Z_Images/favicon.ico">	
+<header>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<title>Wordle</title>
+	<script type="text/javascript" src="wordleScripts.js"></script>
+	<link rel="stylesheet" type="text/css" href="wordleStyles.css">	
+</header>
+
+<body>
+
+<!-- make it a page / div in the main website?-->
+
+<div id="WDL_wordleGameArea">
+	<h1 style="text-align:center;font-size:46px;margin-top:0px;">Wordle</h1>
+	<p id="outputArea"></p>
+	<h3 class="guessNo">Guess 1</h1>
+	<table id="WDL_guess1" class="WDL_guessRow">
+		<tr>
+			<td class="WDL_guessCellsWidthSetters"><input type="text" id="L1_G1" name="L1_G1" class="WDL_letterInputs" maxlength="1"></input></td>
+			<td class="WDL_guessCellsWidthSetters"><input type="text" id="L2_G1" name="L2_G1" class="WDL_letterInputs" maxlength="1"></input></td>
+			<td class="WDL_guessCellsWidthSetters"><input type="text" id="L3_G1" name="L3_G1" class="WDL_letterInputs" maxlength="1"></input></td>
+			<td class="WDL_guessCellsWidthSetters"><input type="text" id="L4_G1" name="L4_G1" class="WDL_letterInputs" maxlength="1"></input></td>
+			<td class="WDL_guessCellsWidthSetters"><input type="text" id="L5_G1" name="L5_G1" class="WDL_letterInputs" maxlength="1"></input></td>
+			<td class="WDL_guessCellsWidthSetters"></td>
+			<td class="WDL_guessCellsWidthSetters"><button onclick="testWord(1)" id="G1Input" class="WDL_guessInputs">Click to submit</button></td>
+		</tr>
+	</table>
+
+	<h3 class="guessNo">Guess 2</h1>
+	<table id="WDL_guess2" class="WDL_guessRow">
+		<tr>
+			<td class="WDL_guessCellsWidthSetters"><input type="text" id="L1_G2" name="L1_G2" class="WDL_letterInputs" maxlength="1"></input></td>
+			<td class="WDL_guessCellsWidthSetters"><input type="text" id="L2_G2" name="L2_G2" class="WDL_letterInputs" maxlength="1"></input></td>
+			<td class="WDL_guessCellsWidthSetters"><input type="text" id="L3_G2" name="L3_G2" class="WDL_letterInputs" maxlength="1"></input></td>
+			<td class="WDL_guessCellsWidthSetters"><input type="text" id="L4_G2" name="L4_G2" class="WDL_letterInputs" maxlength="1"></input></td>
+			<td class="WDL_guessCellsWidthSetters"><input type="text" id="L5_G2" name="L5_G2" class="WDL_letterInputs" maxlength="1"></input></td>
+			<td class="WDL_guessCellsWidthSetters"></td>
+			<td class="WDL_guessCellsWidthSetters"><button onclick="testWord(2)" id="G2Input" class="WDL_guessInputs">Click to submit</button></td>
+		</tr>
+	</table>
+
+	<h3 class="guessNo">Guess 3</h1>
+	<table id="WDL_guess3"  class="WDL_guessRow">
+		<tr>
+			<td class="WDL_guessCellsWidthSetters"><input type="text" id="L1_G3" name="L1_G3" class="WDL_letterInputs" maxlength="1"></input></td>
+			<td class="WDL_guessCellsWidthSetters"><input type="text" id="L2_G3" name="L2_G3" class="WDL_letterInputs" maxlength="1"></input></td>
+			<td class="WDL_guessCellsWidthSetters"><input type="text" id="L3_G3" name="L3_G3" class="WDL_letterInputs" maxlength="1"></input></td>
+			<td class="WDL_guessCellsWidthSetters"><input type="text" id="L4_G3" name="L4_G3" class="WDL_letterInputs" maxlength="1"></input></td>
+			<td class="WDL_guessCellsWidthSetters"><input type="text" id="L5_G3" name="L5_G3" class="WDL_letterInputs" maxlength="1"></input></td>
+			<td class="WDL_guessCellsWidthSetters"></td>
+			<td class="WDL_guessCellsWidthSetters"><button onclick="testWord(3)" id="G3Input" class="WDL_guessInputs">Click to submit</button></td>
+		</tr>
+	</table>
+
+	<h3 class="guessNo">Guess 4</h1>
+	<table id="WDL_guess4" class="WDL_guessRow">
+		<tr>
+			<td class="WDL_guessCellsWidthSetters"><input type="text" id="L1_G4" name="L1_G4" class="WDL_letterInputs" maxlength="1"></input></td>
+			<td class="WDL_guessCellsWidthSetters"><input type="text" id="L2_G4" name="L2_G4" class="WDL_letterInputs" maxlength="1"></input></td>
+			<td class="WDL_guessCellsWidthSetters"><input type="text" id="L3_G4" name="L3_G4" class="WDL_letterInputs" maxlength="1"></input></td>
+			<td class="WDL_guessCellsWidthSetters"><input type="text" id="L4_G4" name="L4_G4" class="WDL_letterInputs" maxlength="1"></input></td>
+			<td class="WDL_guessCellsWidthSetters"><input type="text" id="L5_G4" name="L5_G4" class="WDL_letterInputs" maxlength="1"></input></td>
+			<td class="WDL_guessCellsWidthSetters"></td>
+			<td class="WDL_guessCellsWidthSetters"><button onclick="testWord(4)" id="G4Input" class="WDL_guessInputs">Click to submit</button></td>
+		</tr>
+	</table>
+
+	<h3 class="guessNo">Guess 5</h1>
+	<table id="WDL_guess5" class="WDL_guessRow">
+		<tr>
+			<td class="WDL_guessCellsWidthSetters"><input type="text" id="L1_G5" name="L1_G5" class="WDL_letterInputs" maxlength="1"></input></td>
+			<td class="WDL_guessCellsWidthSetters"><input type="text" id="L2_G5" name="L2_G5" class="WDL_letterInputs" maxlength="1"></input></td>
+			<td class="WDL_guessCellsWidthSetters"><input type="text" id="L3_G5" name="L3_G5" class="WDL_letterInputs" maxlength="1"></input></td>
+			<td class="WDL_guessCellsWidthSetters"><input type="text" id="L4_G5" name="L4_G5" class="WDL_letterInputs" maxlength="1"></input></td>
+			<td class="WDL_guessCellsWidthSetters"><input type="text" id="L5_G5" name="L5_G5" class="WDL_letterInputs" maxlength="1"></input></td>
+			<td class="WDL_guessCellsWidthSetters"></td>
+			<td class="WDL_guessCellsWidthSetters"><button onclick="testWord(5)" id="G5Input" class="WDL_guessInputs">Click to submit</button></td>
+		</tr>
+	</table><br style="margin-top:0px;">
+	<button id="WDL_NGBtn" onclick="WDL_startNewGame()">Click to Start New game</button>
+</div>
+
+
+
+</body>
+</html>

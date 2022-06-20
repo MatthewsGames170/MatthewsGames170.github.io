@@ -1,0 +1,203 @@
+#playBox{
+	width:700px;
+	height:600px;
+	border: 1px solid black;
+	background-color:black;
+	overflow:hidden;
+	cursor:none;
+	float:left;
+}
+
+#controls{
+	float:right;
+	width:39%;
+	
+}
+
+
+#player1{
+	width:200px;
+	height:200px;
+	position:relative;
+	background-image:url("../Z_Images/fighter1d.png");
+    background-repeat: no-repeat;	
+	z-index:8;
+	/*
+	
+	# 00 00 00 00   - should be transpaernt colour
+
+fixed
+absolute
+sticky
+	
+	
+	*/
+}
+.amo{
+	position:relative;
+	background-image:url("../Z_Images/amo3.jpg");
+    background-repeat: no-repeat;		
+	width:20px;
+	height:20px;
+	z-index:9;
+}
+.objects{
+	position:relative;
+	top:0;
+	left:0;
+	background-repeat:no-repeat;
+
+}
+#O1{
+	background-image:url("../Z_Images/asteriod1.jpg");
+	width:235px;
+	height:215px;	
+}
+#O2{
+	background-image:url("../Z_Images/asteroid2.jpg");
+	width:100px;
+	height:100px;		
+}
+#O3{
+	background-image:url("../Z_Images/asteriod3.jpg");
+	width:175px;
+	height:175px;
+}
+#O4{
+	background-image:url("../Z_Images/asteriod4.jpg");
+	width:175px;
+	height:175px;
+}
+#O5{
+	background-image:url("../Z_Images/asteriod5.jpg");
+	width:50px;
+	height:50px;
+}
+#O6{
+	background-image:url("../Z_Images/asteriod6.jpg");
+	width:25px;
+	height:25px;
+}
+#O7{
+	background-image:url("../Z_Images/asteriod7.jpg");
+	width:0px;
+	height:0px;
+}
+#O8{
+	background-image:url("../Z_Images/asteriod8.jpg");
+	width:0px;
+	height:0px;
+}
+#O9{
+	background-image:url("../Z_Images/asteriod9.jpg");
+	width:0px;
+	height:0px;
+}
+#O10{
+	background-image:url("../Z_Images/asteriod10.jpg");
+	width:0px;
+	height:0px;
+}
+.positionSetters{
+	position:relative;
+	top:0;
+	left:0;
+
+}
+
+#PS_div_1{
+	top:0;
+}
+#PS_div_2{
+	top:0;
+}
+/*Asteriods*/
+#PS_div_3{
+	top:-225;
+	
+}
+#PS_div_4{
+	top:-445;
+	
+}
+#PS_div_5{
+	top:-580;
+	
+}
+#PS_div_6{
+	top:-745;
+	
+}
+#PS_div_7{
+	top:-875;
+	
+}
+#PS_div_8{
+	top:-935;
+	
+}
+#PS_div_9{
+	top:0;
+	
+}
+
+/*Amo s*/
+#PS_div_10{
+	top:-940;
+	
+}
+#PS_div_11{
+	top:-960;
+	
+}
+#PS_div_12{
+	top:-980;
+	
+}
+#PS_div_13{
+	top:-1000;
+	
+}
+#PS_div_14{
+	top:-1020;
+	
+}
+#PS_div_15{
+	top:-1040;
+	
+}
+#PS_div_16{
+	top:-1060;
+	
+}
+#PS_div_17{
+	top:-1080;
+	
+}
+#PS_div_18{
+	top:-1100;
+	
+}
+#PS_div_19{
+	top:-1120;
+	
+}
+#PS_div_20{
+	top:-1140;
+	
+}
+#PS_div_21{
+	top:-1160;
+}
+
+#PS_div_22{
+	top:0;
+	
+}
+#PS_div_23{
+	top:0;
+	
+}
+
+
+

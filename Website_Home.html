@@ -1,0 +1,2342 @@
+<!Doctype HTML>
+<!-- Be prepared to delete above line if issues occur-->
+<html   style="font-size: 1.3vw;" class="stdfont" onresize="resize()" >
+	<link rel="shortcut Icon" href="Z_Images/favicon.ico">	
+
+<!-- the entire website and external links comes to about 1.4 GB-->
+<header>
+	<title>Matthew's Games</title>
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="A_General_Website/homeStyles.css">
+	<link rel="stylesheet" type="text/css" href="A_General_Website/styles2.css	">
+	<script type="text/javascript" src="A_General_Website/homecode.js"></script>
+	
+	<base href="" target="_blank">
+	
+	<meta charset="UTF-8">
+	<meta name="description" content="Game">
+	<meta name="keywords" content="not-so-flappy Dot, Game">
+	<meta name="author" content="Matthew  Cole">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</header>
+
+<body onresize="resize()" onload="resize()">
+
+	<div id="header" class="mainContent">
+		<br>
+			<img id="logo" src="Z_Images/logo1.jpg" alt="Logo" style="float:right" width="100px"  onclick="login()">
+			<h1  onclick="r('My name is Matthew<br><br>and these are some games that I have made<br><br>Hence, Matthew`s games')">Matthew's Games</h1>
+		<br>
+	</div>
+
+	<div id="Navs">
+		<div id="largeTopNav">
+			<ul>
+				<li onclick="home()"  class="active">Home       </li>
+
+				<li onclick="about()" >About Us   </li>	
+				<div class="dropdown">
+				<button class="dropbtn" onclick="play()">Play
+				  <i class="fa fa-caret-down"></i>
+				</button>
+					<div class="dropdown-content">
+					  <li href="" onclick="DM()"    							target="_self">Dot Man</li>
+					  <br style="height:2rem"><li href="" onclick="notSo()"  	target="_self">Not-so-Flappy Dot</li>
+					  <br style="height:2rem"><li href="" onclick="TT()"		target="_self">Tetris</li>
+					  <br style="height:2rem"><li href="" onclick="SK()"		target="_self">Snake</li>
+					  <br style="height:2rem"><li href="" onclick="MS()"		target="_self">Minesweaper</li>
+					  <br style="height:2rem"><li href="" onclick="WD()"		target="_self">Wordle</li>
+					  <br style="height:2rem"><li href="" onclick="TN()"		target="_self">Tron</li>
+					  <br style="height:2rem"><li href="" onclick="WackA()"		target="_self">Wack-a</li>
+					  <br style="height:2rem"><li href="" onclick="spaceSTTR()"	target="_self">Space Shooter</li>
+					  
+					</div>
+				</div>
+				
+				
+				<li onclick="STEM()"	>STEM write up</li>
+				<li onclick="high()"  >High Scores</li>
+				
+				<li onclick="EP()"	  style="display:none">Expanding</li>
+				<li onclick="FB()"	 style="" >Feedback</li>			
+				<li onclick="EL()"	  >External Links</li>
+				<li onclick="login()" style="display:none"> <i class="fa fa-id-badge"></i></li>
+				<li onclick="play()"  style="display:none;">PLAY       </li>
+			</ul>
+
+		</div>
+		
+		<div id="navSmall">
+		
+			<button class="dropbtn"  onclick="hgft()"><b>More</b>
+				<i class="fa fa-caret-down" id="downIcon" style="display:none"></i>
+				<i class='fa fa-caret-left' id="leftIcon"></i>
+			</button>	
+			<!--<ul class="onlyOne">	<li onclick="home()" >Home</li></ul>-->
+			<div class="onlyOne"  onclick="home()">
+				<b>Home</b>
+			</div>		
+			<div class="smallDropDownContent" id="SDDC">
+				<ul>
+					<li onclick="about()" >About Us   </li>	
+					<li onclick="play()"  >PLAY       </li>
+					<li onclick="STEM()"	 >STEM write up</li>
+					<li onclick="high()"  >High Scores</li>
+					<li onclick="EL()"	  >External Links</li>
+					<li onclick="login()"	  >Log In</li>
+					<li onclick="EP()"	  style="display:none">Expanding</li>
+					<li onclick="FB()"	 style="" >Feedback</li>
+					
+				</ul>
+			</div>
+		</div>
+	</div>	
+	
+	<br>
+	<div id="floatingAd">
+		<div id="adverts">
+			
+			<div id="ad0" class="ads_floaters">
+				<h4>Error</h4>
+				<br>
+				<h4>Ad not found</h4>
+			</div>
+			
+			
+			<div id="ad1" class="ads_floaters">
+			<a href="https://tetris.com/play-tetris">
+				<br><br><h4>Why play this Tetris 
+				when you can play the real one!</h4>
+			
+			</a></div>
+			
+		
+			<div id="ad2" class="ads_floaters">
+			<a href="https://www.lochlomond-trossachs.org/">
+				<h4>Loch Lomond and the Trossachs National Park</h4>
+				<h4>Visit it!</h4>
+				<h6>1 Hour from Glasgow!</h6>
+				<h6>Lochs, Rivers, Mountains, Forests Cafes</h6>
+				<h6>A great day out or Perfect Holiday!</h6>
+			</a></div>
+			
+			<div id="ad3" class="ads_floaters">
+			<a href="https://www.myworldofwork.co.uk/my-career-options/subjects?group=all&subjects=2086-2331-2551-4961-5441">
+				<h3>STEM Subjects</h3>
+				<img src="Z_Images/Ads/stemLogo2.png" width="100%" alt="Stem Symbol">
+				<h3>They are the jobs that are needed in the modern world</h3>
+			</a></div>
+			
+			<div id="ad4" class="ads_floaters"><a href="mailto:matthews.html.css.js.games@gmail.com">
+				<h3>Want to Advertise here?</h3>
+				<h3>This space could be yours</h3>
+				
+				<p>Email me for more information</p>
+				<p style="font-size:7px;">T&Cs apply</p>
+			</a></div>
+		</div>	
+	</div>
+	
+<div class="mainContent"  id="MC">
+	
+	<div id="floating_Feedback" style="display:none" ><a href="mailto:matthews.html.css.js.games@gmail.com">
+		<h3>Please send me feedback</h3>
+	
+	</a></div>
+	
+	<div id="backAgain"></div>
+
+	<div id="messages" style="display:none">
+		<br><br>
+		<h1 id="ms">Why are you clicking this image?</h1>
+		<br><br>
+	</div>
+	
+	<div id="countDown" style="display:none">
+		<h1>Count Down Timer</h1>
+		<p id="timer"></p>
+		<p id="cdmww">Time till end of last Adv Higher Maths Lesson!<br><br>There is also an exam after</p>
+	
+	</div>
+	
+	<div id="edgeMessage" style="display:none;">
+		<br>
+		<h1>WHY ARE YOU USING EDGE?</h1>
+		<br>
+		<h2>EDGE IS BAD !</h2>
+		<br><br>
+		<a href="https://www.google.co.uk/chrome/"><button class="ECB"><b>Click to install chrome</b></button></a>
+		<br><br><br><br><br><br><br>
+	
+	</div>
+	
+	<div id="homePage">
+		<img style="float:right" src="Z_Images/gamePlay.jpg" width="50%" onclick="r('Why are you clicking this image?')" alt="Not-So-Flappy Dot Game play">		
+		<h1 class="pageTitle" onclick="r('Yes, That was the home page')">Home Page</h1>
+		<br>
+		<h3  onclick="r('WELCOME!')">Welcome to Matthew's Games</h3>
+		<br>
+		
+		<div id="notice">
+		<p><i  onclick="r('Notice<br><br><br><br><p  onclick='r('A link in a link...')'>Click me if you dare</p>')">
+		
+		</i></p>
+		
+		</div>
+		
+		<div id="serverLink" style="display:block;">
+			<!-- If there is ever a properly online version of this website, install link here-->
+			<p>This website is available online at <br>
+			<i><a href="https://sites.google.com/view/matthews-games-170/home">https://sites.google.com/view/matthews-games-170/home</a></i>   Or,<br>
+			<i><a href="https://matthews-games.github.io/">https://matthews-games.github.io/</a></i><br>
+			<br>
+			Both are outdated versions, but are as close as I have gotten. If a better place to put it appears, then the google one certainly will have the link to the better one.
+			</p>
+		</div>
+		
+		<p>These are games that I have made in JavaScript</p>
+		<p>There are 8 games;</p>
+		<ol><!--In order of creation -->
+			<li>Not-so-flappy Dot - A game where you dodge incoming obstacles.</li>
+			<li>Wack-a-character - Wack-a-mole, but you can change what you are whacking</li>
+			<li>Dot Man - A remake of Pac Man</li>
+			<li>Mine Sweeper - Is very similar to the game it is meant to be</li>		
+			<li>Tetris - Based of the game of the same name. </li>
+			<li>Snake - A terrible version of snake, based on the python version</li>
+			<li>Wordle - A variation of the Well known game</li>
+			<li>Tron - A two-player game, but is very simple</li>
+			<li style="display:none">Space Shooter - A cross between galiga and asteroids</li>
+			
+		</ol>
+		<br>
+		<p>
+			I would not recommend playing wack-a. I started it, but never got round to finishing it.
+		</p>
+		<p>
+			I would like to point out that, especially for Dot Man and Not-so-flappy Dot, the 'lag' 
+			/ stop-go running of the games is not your computer. 
+			The way that I designed the games to work has the side effect of this occurring. 
+		</p>
+		<br><Br>
+		<p>
+			I hope to make more games or HTML/JavaScript related Things, and add them here in the future.<br>
+			However, as the second of prelims approaches, and my time left at school running out, it 
+			is unlikely any new games or features would be added here.
+
+		</p>
+		<p>
+			This is website version 5.0.0.3
+			<!--
+		version in the form
+			# generation - there have been several different groups of this webiste, this is the third
+			# version - there are several version, 
+				  such as -D (distributable), -P (for primary school), -W (to put online / on the web)
+			# major alterations, such as a new feture increases this point
+			# minor alterations, such as a small bug fix alters this one
+			
+			an increase in one, sets all the ones after it to 1
+			
+			
+			-->
+		</p>
+		
+		<!--
+			If I ever get my own server with webiste - ensure that school copy has link to it.
+		-->
+		<!--
+		<p>
+			Other Ideas include Snake (medium)
+			maybe try and get a 3D thing? - virtual part would be easy ish but getting the display would be very hard
+		</p>
+		-->
+		<p>
+			Do note, if you do not have JavaScript enabled for your browser, please do enable it. 
+			These games need it to run.
+			<br>And if you are using Microsoft Edge - you cannot play Dot Man
+
+		</p>
+	</div>
+
+	<div id="aboutPage">
+	
+		<!-- LOTS OF SPELLING ERROS IN THIS!!!! -->
+	
+		<h1>About Us</h1>
+		
+		<div id="vcsdg">
+		
+			<p id="vcsdg">You lost the Game</p><!-- Requested by Findlay-->
+		</div>
+		
+		<section id="ABoutUsIntro">
+			<Br>
+			<p>This Website was made by <b>Matthew Cole</b> during late 2021 and early 2022</p>
+			<!--first version was made during November 2021, but was continued to be edited into December-->
+			<p>It was designed to allow the game 'not-so-flappy dot' to be 
+			connected to its random section generator, which would require pHp, but I have not done this.</p>
+			
+			<p>However, I have used the website as a platform for several other games as well.</p>
+			
+			<p>For the 'Not-so-flappy Dot' game, I would like to Give Special 
+			Thanks to Andrew Twigg, who not only Cut to code of the game 
+			down by at least 3500 lines, but he added in the High scores 
+			and, most importantly, allows the game to adjust its width 
+			depending on the screen size.
+			<br>Ultimately, this little bit of code was able to reduce 
+			the size of each of my game down quite considerably<br>
+			However, I have since found another way that I prefer to use.
+			</p>
+			
+			<p>
+				However, today, including comments and empty lines, it is about <b>22300</b> lines of code!
+			</p><!-- or, new estimates are at 9615-->
+			<!-- Dot man would have been at least 5000 lines longer, Tetris another 3500, wack-a character 200, Minesweaper 1200-->
+
+			<p>
+				I should probable also give credit to W3 Schools, 
+				a website that teaches about HTML, CSS, JavaScript, 
+				pHp and many other languages. This was where I went 
+				to find several bits of code and learned most of the 
+				JavaScript and pHp I know today. Also, most of the obscure 
+				CSS properties I found here.
+			</p>
+
+
+		</section>
+		
+		<section id="acknowledgements" style="text-align:center;display:block">
+		<br><hr style="border-top:3px dashed black"><br>			
+			<h3  id="shouldIDisplay?">Acknowledgements</h3>
+			
+			<p>
+				I would like to give a <span id="big">big</span> thank you to <b>Mr MacMillan</b> for helping me 
+				where he could with this website and teaching me through S5 and 6 computing. I could not have 
+				the skills I have today without his teaching.
+			</p>
+			
+			<p>
+				The sounds used in the games are from <a href="https://www.zapsplat.com/">https://www.zapsplat.com/</a>
+			</p>
+			
+			<section id="shouldIDisplay?" style="display:none">
+			<p>
+				<b>Mr Milligan</B>. First taught me HTML back in S3 and again for NAT 5 computing. Now I can do this. 
+			</p>
+			<p><i>I would also like to take this opertunity to thank the following teachers;</i></p>
+			<p>
+				<b onclick="TimerC()">Miss Miller</b>, Thank you for teaching me Maths at NAT 5 and <span onclick="r('James, <br><br>Change Jotters')">Advanced Higher</span>. 
+			</p>
+			<p>
+				<b>Miss Allan</b> - Physics
+				<!-- If only thie timetables or study leave had worked out better, Miss Allan would have been my first teacher at Mclaren 
+				(for a proper lesson, even if it was only 10 minutes. Period 1. Tuesday 23 August 2016.) and then my last 
+				(my S6 timetable had Physics with Miss Allan periods 6 and 7 on a monday, exams dont start till a tuesday) -->
+			</p>
+			<p>
+				<b>Dr Thompson</b>, for teaching me Senior Chemistry
+			</p>
+			<p>
+				<b>Mr Williamson</b>. Geography has always been another one of my interrests, even without him inspiring me.
+			</p>
+			<p>
+				I would also like to thank the other S6s and juniors in the STEM room for giving me feedback and opinions on my games and Webiste,
+				even if I kept asking.
+			</p>
+			</section>
+			<br><br><hr style="border-top:3px dashed black"><br>		
+			
+		</section>
+				
+		<section id="history">
+			<h2>History</h2>
+			
+			<p>The game, 'not-so-flappy' dot, was first made during June 2021. 
+			I, Matthew, created the game on a 5 by 5 pixel Microbit, and had it 
+			working well. </p>
+			
+			<p>I tried to expand the game, but was stopped by the storage limit on a Microbit</p>
+			
+			<p>This led me to think about putting it onto a webpage, using JavaScript to connected it to HTML. 
+			However, over the summer holidays, this was never made and after the summer, I did some work with pHp</p>
+			
+			<p>During October and November 2021, I began to make the website 
+			version of the game. After re-writing the entire code, as the JavaScript and the
+			Microbit code were not compatible, and a lot of frustrated staring at squares to change, I got it to work. </p>
+		</section>
+		
+		<section id="nov21">
+			
+			<h3>November 2021</h3>
+			
+			<p>The first step was getting the 20 by 8 grid of 'Dots' to exist and turn on and off. This involved the creation of a 
+			plot and unplot function which would determine the coordinate of the dot selected then toggle that one to a specified colour.
+			These 3 functions (on, off and player) each consisted of about 500 lines of code. </p>
+			
+			<p>Once these core functions were made, I had to start making them appear in a pattern, which was not so difficult as 
+			I had already done it on the Microbit. And very quickly I had a running pattern, which at the <span onclick="TimerC()">time</span> would repeat.</p>
+			
+			<p>The next step was the Player interactivity. At first this was just a few buttons on the page that you 
+			had to click with the mouse but this soon became too slow for me. I then experimented with keyboard events and was able to 
+			have the keyboard do the same job as the buttons. The Buttons still remain there, in case it is ever use on a touch 
+			screen device, making it the only one of my games that is compatible. </p>
+			
+			<p onclick="L()">As this was now working, it attracted the attention of several people.</p>
+			
+			<p>One of these people was Andrew Twigg, who has had some brilliant Ideas on how to shorten my code and make it do things 
+			I want it to do, but I had never been able to do</p>
+			
+			<p>He managed to reduce the size of my plot functions to about 5 lines of code each. He also found a way to store the high scores. 
+			I however, expanded this to create the High scores table and the names that are here today</p>
+		
+		</section>
+		
+		<section id="dec21">
+			
+			<h3>December 2021</h3>
+			
+			<p>After making 'not-so-flappy Dot', I wanted to make more of these games, so I began working on two, with two more ideas
+			in the making.</p>
+			
+			<p>The first of these, Wack-a-character, was inspired by my brothers 'Wack-a-Boris' game that he had made during his S3 
+			computing. I wanted to make something similar, but more varied, so I made wack-a-character.</p>
+			
+			<p>This, however, was left behind after getting the basic game running, which it still is at the time of writing. 
+			As Prelims had finished and now I wanted to make some sort of Pac-Man</p>
+			
+			<p>At first, no-one knew exactly what I was working on, and if asked, I would say 'Secret Project', but after the player started to work, 
+			people managed to guess it and I told them what it was. </p>
+			
+			<p>At first, there was some errors in the plotting functions, but that was overcome quickly. The main problems were the ghosts. 
+			I had no real idea on how to get them to move about, never mind going towards the player. </p>
+			
+			<p>My first step was to get 4 ghosts running around randomly, not aiming for the player at any point.
+			This helped me develop the functions to go around corners or junctions, which although it chooses a random direction, 
+			the function for the direction could be edited to make the ghost choose the direction which is heads towards the player</p>
+			
+			<img src="Z_Images/dotMan.jpg" width="49%" style="float:right;padding:5px"  onclick="r('Edge is BAD!')" alt="Dotman Game play">
+			
+			
+			<p>The first ghost to run without getting 'stuck' or produce errors first ran in late morning of the 24<sup>th</sup> of December 2021, 
+			With the other three given the same random movement later that day</p>
+			
+			<p>Over the remaining days of 2021, I managed to get the Red ghost to have a code that allowed it to follow the player.
+			This one would favour going the direction that would decrease the distance between the two of them.
+			The pink one was given a third sort of code, which was the same as the Red's code, but opposite favouring mechanisms.
+			(Where the red would favour left, the pink would favour up).
+			</p>
+			<p><i  onclick="r('<i>italics</i>')">If you wish to know how I got the ghosts to work, visit the STEM write up page or open up the file.</i></p>
+			<p>
+				During this time, I also got the 'coins' to display smaller than the player. <br>
+				This was done by giving it a radial colour - basically the colour changed. The inner 2 colours are the same,
+				and the one I want to display. The final colour is black, the background colour.
+			</p>
+			
+		</section>
+		
+		<section id="jan22">
+			<h3>January 2022</h3>
+			
+			<p>At the beginning of January, there were a few bugs to sort out, 
+			such as the ghosts would crash the game if they went too far right.
+			The ghosts were also unable to go through the teleporter.
+			</p>
+			<p>
+				Both of these were fixed as they were errors relating to the code that teleports the player.				
+			</p>
+			<p>By the 10<sup>th</sup> of this month, I started to work on the Die and power up parts of the game.<br> on this date,
+			I made functions to make the ghosts run away from the player. By accident, this was too good. it was nearly impossible 
+			for the player to ever catch the ghosts. <br>All this function was the same one of making the ghosts come towards you,
+			but every direction was reversed. if it wanted to go left, it went right.
+			</p>
+			
+			<p>
+			Before this time, Dot-Man had a playing area of the entire screen. However, when trying to add in
+			a display area for the Score and lives, I could not add them in without losing some game play area.
+			Instead, I create a smaller map. <span  onclick="r('T<br><br>T is for Tomato<br>T is for T')">T</span>his map is about halve the original size, but conveniently appears
+			to fit a very similar map to the original game. This was also the only map that I felt happy as a map, so
+			it was used.	
+			</p>
+			
+			<p>
+				On the 13<sup onclick="r('SUPER! script')">th</sup>, 'Dot-Man' became a proper game, with all unnecessary keyboard controls
+				requiring admin privileges. The game was given a high score function and a button to press play
+				the next day.
+				<br><Br>
+				This was also the same day that I stared to create a responsive navigation bar, which would 
+				adjust when the width of the screen was changed
+	
+			</p>
+			
+			<p>
+				On the 17<sup>th</sup> I managed to get the responsive navigational bar to work. This works by measuring the width of 
+				the window each time the viewport is resized. If the width is less than about 1100 pixels, it switches to the
+				smaller navigational bar. You can then click the 'More' button to have a sort of drop-down list that 
+				allows you to choose which page to access. However, on this day, the drop-down menu is not quite right. 
+				If the page is the play or code description, where there is a side menu, the side menu covers the main menu
+			</p>
+			<img src="Z_Images/minesweaper.jpg" width="49%" alt="minesweeper game play" style="float:right;padding:5px"  onclick="r('Shouldn`t you be doing some sort of revision?<br><br><br>Oh. wait...<br><br>Its me that should be doing maths revision!')"><!-- TRUE! at the time of writing, I shoudl be revision for my adv higher maths pater 2 that is tomorrow morning!-->			
+			
+			<p>
+				After this, I deemed Dot man to be complete and started working on my next project. By popular vote, it was minesweeper.
+				The main issue of this would be to have a function that cleared the tiles nearby to where you clicked.<br>
+
+			</p>
+
+			<p>
+				This was based on the actual Mine sweeper game and I think that is was a very good 
+				remake of it. This was the first project that has a actual use of a function that calls itself. This was to remove the
+				tiles around it. <br>
+			</p>
+			<p>
+				This project was working within <b  onclick="r('<B>BOLD</B>')">11</b> days!
+			</p>
+			<p>
+				I stared by using another of my simple projects that creates the HTML code for a table. After that I created the plotting functions.
+				<br>
+				The mines are hidden through a few functions that create a list of positions where mines are, then the positions are set in
+				the records that contains the actual things beneath the tiles. A third function runs to count up the numbers.
+				<br>
+				The Cascading revel function uncovers the specified position then, if and only if, it does not have a number or mine under it, 
+				it runs itself again on all the surrounding tiles. I had some issue with this at first as it did not clear the surrounding tiles and, 
+				after I solved that, it kept reoccurring until it ran out of memory
+			</p>
+			<p>
+				At the very end of January, I started to fix some of the Errors/Issues with the Minesweeper game. <br>
+				The flags could also be placed on empty tiles, and this was very quickly fixed.
+				The next issue was the fact that when you first click, the mines could be there. General feedback suggests that people do not 
+				like this so I began working to fix it.
+			
+			</p>
+		</section>
+		
+		<section id="feb22">
+			<h3>February 2022</h3>
+			<p>
+				Minesweeper had a few bugs at the beginning of the month, mainly at the end of the game. 
+				These hopefully have now been fixed. Also, from the feedback, the mines no longer seem to 
+				appear at or near where you first click. I also started to try and make new Levels, but the drop down 
+				box is not working well, so these are not in the game.
+			</p>
+			<p>
+				As a reward for reading this, I will include a way of cheating most of my games. When I was testing the 
+				game, I used the Developer tools offered by Chrome. This includes a variety of tools, such as a debugger 
+				for JavaScript. There was also the 'console' tool that errors would pop up into or you could get the code
+				to print something to it, similar to the alert function but would not stop the execution of the code.
+				This allowed me to see what the code was doing. However, it is not a one-way process. You could type in 
+				a relevant line of code, such as score = score + 1, and the code would actually execute this line of code 
+				and your score would increase by 1. So if you know a few bits of JavaScript, you could theoretically cheat. 
+				How do you think I got the high score on Dot Man to be infinity?
+			</p>
+			<p>
+				To find this, right click on the page, and click inspect. This brings up a section in the right-hand side. 
+				The bottom, empty, box is the console, type stuff here to cheat. If using Minesweeper, right-click does not 
+				bring up this menu. Instead, click the 3 dots in the top-right. Go down to more tools, then developer tools.
+				This brings up the same menu.
+			</p>
+			<p>
+				Before you question why I would include how to do such a thing, I did it so that users know that I am 
+				aware of it. I have tried to resolve the issue, but seeing as you can simple just input any command, 
+				then I cannot find a way of disabling it
+			</p>
+			<p>
+				This month, I also started making Tetris. I started by create a table and getting a group of 'dots' to 
+				move as one. This was done pretty quickly, but with some difficulty. Rotating the 'object' was the 
+				difficult part. I considered using a matrix for this, but I could not find a way to get the relevant 
+				information from the matrix and plot it. There may also be issues when getting close to stationary objects,
+				as these parts may also be turned.
+			</p>
+			<p>
+				My Solution to this was to have a different Object for each rotation of each object, although it is long, 
+				at least there are only 4 versions and 7 objects. Validation is easier for this method, and the object should 
+				not be able to go out of bounds.
+			</p>
+			<p>
+				One thing this this option, is that objects cannot rotate near an edge. In normal Tetris, the object would
+				move about so that is can rotate, but I couldn't be bothered to make it do that, so have fun with the game 
+				being harder than normal.
+			</p>
+			<p>
+				The next job was to get the objects to become part of the background. At first it was just full of errors,
+				but eventually I got the code to apparently change the colours of the object. Which of course it is not meant to do.
+			</p>
+			<p>
+				On the weekend of the 5th, I started to rearrange and re-name the website and its pages. This was because 
+				there was a chance that it would be left for others to access in years to come, so I wanted to make it as
+				organised as possible. All the 'useless' files, the notes and odd HTML documents that had been saved with 
+				this site, were removed and every page that was to be kept was given sensible names (for quite some time, 
+				the Dot Man files were named game2styles.css etc) and organised into separate folders together. This was 
+				hoped to enable any future person looking through the files would be able to find what they were looking for.
+			</p>
+			<p>
+				I also create the 'Expanding' page to provide notes on how to create more games and add them here.
+			</p>
+			<p>
+				On the same weekend, I also finally found out how to insert an image as an icon in the tab. Turns out, 
+				the image has to be a 'favicon.ico' file and its link must be placed just after the HTML tag at the beginning of the Document.
+			</p>
+			<p>
+				Tetris became rather troublesome later that month. I managed to get the object to rotate correctly, 
+				interact with blocks that are at the bottom of the game and be able to become part of the base. However, 
+				only two of these would happen at any one time, and, once part of the base, the object would rarely come 
+				back and when it did, it would not be complete.
+			</p>
+			<p>
+				The bugs were fixed by re-ordering the way some of the functions are called, and creating new ones that do
+				almost the same jobs as others. I now had a program that ran very well, but was incomplete. I then made a 
+				function to delete the bottom row if it was full, and after a timer was added, this detected when any row was 
+				full at any time.
+			</p>
+			<p>
+				At this point, the end was in reach. The February Holidays has just started when I started to play about with
+				the styling of the Tetris page. I also hopefully got the ending of Minesweeper to be detected correctly and 
+				fixed a bug with Dot Man`s play button. (You could press play multiply times to make it faster). The High scores 
+				for Dot Man, Tetris and Minesweeper was also added to the home page.
+			</p>
+			<img src="Z_Images/tetris.jpg" width="49%" style="float:right;padding:5px" alt="tetris Game play" onclick="r('Why do you keep clicking Images?')">
+			<p>
+				The <span onclick="r('Im in my final year of school')">final</span> step it would seem for Tetris was to make the game end once blocks were being placed at the top of 
+				the screen. This actually took quite a while to get it working correctly, and enable the user to restart the 
+				game by simply pressing Start again. Most of the time and error would occur as the game was trying to plot the
+				object where it was not allowed to go. This error often caused the game to 'crash', and seemingly end.
+			</p>
+			<p>
+				This was fixed though, by introducing a Boolean that stated whether the game was in play or not. Most key
+				functions have been only able to go if the variable is true. The user also cannot press down if the game is 
+				not in play, as this could cause issues if the game has finished, but the user can still press down.
+			</p>
+			<p>
+				At the time of writing, Tetris does not show what blocks are coming up. This is because I never found it to
+				be useful, and I cannot be bothered to create a different table to do so
+			</p>
+			<p>
+				After the holidays, I found a way to get JavaScript to detect which browser you are using. As Edge is the 
+				worst one, I have made my website deliberately able to disrupt Edge users. Sorry if you can only use edge,
+				but links to where Chrome can be installed have been included.
+			</p>
+			<p>
+				Also, whilst testing Tetris, I found a bug that when you tried to turn when you would collide with another
+				block, you died. I believe this issue has now been fixed, but it originates in an area that had several bugs
+				during the creation of the game, so there may still be problems with it.
+			</p>
+			<p>
+				At the end of this month, I started to move on to other stuff, such as revision, so I was ready to stop adding 
+				stuff here. Although, I did start editing the actual website for later use. The expanding page was re-made and 
+				turned into the Code description page, and more content was added there. The section below about my future Ideas 
+				was also added in case any person comes along in the future and wants to add to it, or do stuff I never did.
+			</p>
+			<p>
+				I found a way of being able to 'log in' using JavaScript. This would be used to allow a person with the relevant 
+				log in details to alter the high scores via a user friendly interface. However, as mentioned below, this would 
+				ideally be part of a server`s job for a few reasons such as the fact you can easily find unencrypted password and
+				usernames in the code. <span onclick="r('<p style='font-size:11px'>
+				My plan for a encrypt or decrypt function would be as follows<br>
+				for encrypt, It would generate a random 2-chracter number (from 00 to 99) and then convert each character of the
+				string to decrypt to ascii. Then for each character, add 1 then -1 then +2 then -2 then +3 then -3 then + 5 then -6 
+				(if going out of the ascii range at all, set it to 0 or 256 etc),  finaly converting it all beck to text. 
+				<br><br>
+				To be continued...<br>Or maybe not. I don`t want you to know how to decrypt any of my messages!
+				</p>')">In an ideal world, I would have created encrypt and decrypt functions and store a encrypted 
+				version of the password, which is passed through the decrypt function every time it is needed. There would also be
+				code to attempt to stop the console from using the decrypt function).</span>
+			</p>
+
+
+		</section>
+		
+		<p style="display:block" onclick="r('Edge is BAD<br><br>The only good microsoft search engine is Bing, and only its maps. You can add in a OS map layer')">
+			I also found a way to make this website less 'freindly' to Edge browser users. Sorry if you cannot use any other browser,
+			But it is pretty funny and I am impressed that I found out how to use it. Bascially, Dot Man will not work as it keeps 	
+			checking what browser you are using. If it is edge, then it stops, otherwise it continues as normal.
+			The main website also produces a message saying 'Stop using edge' and gives a link to the places you can install google
+			chrome.
+		</p>		
+	
+		<section id="mar22">
+			<h3>March 2022</h3>
+			<p>
+				During March 2022, I was still fixing bugs for a while, but revision for my final exams and second prelims started 
+				to take over. Some stuff was added, such as the adverts, but nothing major was done.
+			</p>
+			<p>
+				On the 14th, this site and its games become my STEM project. Before hand, it had just been a project that I started 
+				in Applied Computing that had kind of got out of hand and had lots done to it in my free time.
+			</p>
+			<p>
+				On the 22nd, This website had its first outing. It was shown to some of the older pupils of Callander primary. 
+				The general feedback was positive. A few of them asked to have it on their Chromebooks, but I didn’t really want to 
+				cause them to be missing/ignoring classes by playing these games. Minesweeper was a bit too complicated for them.
+			</p>
+			<p>
+				Towards the end of this month, I also thought of a way to get this website online, but without a pHp Sever behind it. 
+				Google Sites offers a free personal-use only website maker. But it is made for people to not have to use HTML code to 
+				do so. I could however, copy some html code into a section. My thinking is to put my entire website into one document 
+				and then copy the code into this section on google sites, and make it the full width of the page.
+			</p>
+			<p>
+				For each Game, I need to do the following.
+				<br>
+				<ul>
+					<li>Ensure not Function names clash</li>
+					<li>Ensure no Class or Ids clash</li>
+					<li>Ensure no variable names Collide</li>
+					<li>Remember  to update the new names of things across all three documents</li>
+				</ul>
+				<br>
+				My method for this is to add the game name, then '_' in front of everything I need to change. If any of them do collide, 
+				then there could be issues, such as incorrect score, the wrong function is called, and something completely different is done.
+			</p>
+			<p>
+				This idea was a fail. Google sites would not let me use the full width of the sceren, so was always on small screen mode.
+			</p>
+			<p>
+				I have also tried out using a place called tiiny.Host. Overall, I think it is what I wanted. But, due to sercurity reasons, it disliked any bits of code with
+				windows.location in. Annoyingly, this included the refresh function which was used to reload the page. This led to the new way of setting up the game after each run.
+			</p>
+			<p>
+				The most recent site used is gitHub, although it took me ages to get an account and be able to find anything. Most of it was led by Andrew Twigg again.
+				 I also find it hard to update.
+			</p>
+			<br><br><br>
+		</section>
+		
+		<section id="apr22">
+		<h3>April 2022</h3>
+		<p>
+			Really, there should not be anything here, because I should have been revising. However, the basics of snake was made on the 
+			afternoon of the 4th as I was procrastinating a lot, and ended up with most of the game after about 3 or 4 hours of work.
+		</p>
+		<p>
+			The game itself is very simple. It has the basic plotting functions, the same as every other game. The movement is very 
+			similar to Dotman, where the arrow keys change a direction variable and, on each tick, it will move in that direction.
+		</p>
+		<p>
+			The only real tricky bit was getting the tail to exist and 'grow'. I used an array to solve this. When the player moves 
+			to a new spot, it adds a new item to an array (at the bottom of it), plots the new position then unplot the first item 
+			(index 0) of the array. Then all the containers are moved up 1, replacing index 0 with a new value.
+		</p>
+		<p>
+			To extend the tail of the 'snake', I duplicate the second item in the array. This does cause the snake to not instantly 
+			grow, but I like to think of it as the fruit going through the snake. Really, it was because I though this container may 
+			get deleted / replaced when it should not be.
+		</p>
+		<p>
+			There were also issues relating to resetting the game. Trying to set every table cell to blank proved much more difficult 
+			that it should be.
+		</p>
+		<img src="Z_Images/snake.jpg" alt="Snake Game Play" width="49%" style="float:right;padding:5px"  onclick="r('Made in 6 hours')">		
+		<p>
+			The fruit also sometimes appeared on the tail of the snake, but this was fixed quickly.
+		</p>
+		<p>
+			It really surprised me how quickly it took to make snake, or at least the simple version. In total, about 6 hours of work 
+			went into the making of it before it was added to the website. A few bug fixes have since been added to it
+		</p>
+		<p>
+			Whilst looking for a contact at St Andrews university to see why I was rejected from there, I came across a way to make the 
+			standard email software be opened by clicking on a button or link in HTML. It is not what I wanted to do, but it is close 
+			enough. This was then added as the feedback page (version 2). As I would technically be storing your data, such as Email 
+			address, a made up a simple privacy policy using my knowledge form Cyber security.
+		</p>
+		<p>
+			Also this month, I started working on two more games, which I intend to release for the STEM festival. These are my version 
+			of Wordle and Space Shooter. At the time of writing, both are nowhere near completion, and I don`t know if they will even be 
+			done. Chances are they will be under extreme testing during the festival.
+		</p>
+		<p>
+			Space shooter is mentioned below in my Ideas page, but basically at this stage it is planned to be a fighter jet that you 
+			can control shooting asteroids or perhaps aliens etc. What’s different about this games is that I have decided to play 
+			about with the position property for positioning, rather than use table cells. this is mainly due to the fact that I could 
+			not get a asteroid or fighter jet to display and move correctly with table  cells.
+		</p>
+		<p>
+			Also, the ammunition would also be interesting to code. Asteroids would be simple enough to code, but having a way to detect 
+			when 'sprites' are being hit by each other would most certainly be hard
+		</p>
+		<p>
+			Space shooter seems like something that would take an hour in scratch. It seems like I am constantly trying to make scratch 
+			blocks in JavaScript, such as the 'move forward' block or 'if touching sprite' block / statement. I am attempting to make 
+			use of several div tags as my version of sprites. each div is then given its own styling to make it look like what its meant 
+			to be.
+		</p>
+				<!-- 
+				idea for first-person shooter
+				
+					view pioint first person but could seem 3D if I have several images that are places together, as you rotate, the images move left/right 
+				
+					-->
+			<section id="aprHidden">			
+				<p>
+					Wordle, or at least my version of it, will be easier to code, probably. my plan for that is to have a 5 x 5 table, 
+					where you can enter any letter (a to z) into it. A submit button will then turn each input box to either red (letter 
+					not in word), Yellow (letter in word, wrong position) or green (correct place).
+					<br>Despite it being a craze as such, I have not played wordle nor have I seen the game. I have been in the same room 
+					as several people plying it, but I have no idea how the interface works. Hence, it would be my own version on how I 
+					think thinks should be.
+				</p>
+				<p>
+					I`m now writing this after I have finished the first version of Wordle, and my only though it is:<b> Wow. </b>
+					That was simple.<br>
+					I don`t know how much code is in the actual wordle, but my version has very little. Although the file is 
+					<span onclick="r('two thousand, six hundred and twenty four')">2624</span> lines long, by the time you remove all the stored 5-letter words and comments, it is only 120 lines of
+					actual worthwhile code. Even then there are still important comments and white space along with several '}' only lines.
+					<br>Yet it appears to work.
+		
+					<br><br>
+					I have sourced the words from the following site, Accessed on 12/04/2022 at around 16:30.
+					<a href="https://eslforums.com/5-letter-words/">https://eslforums.com/5-letter-words/</a>
+					<br><br>There are ones that I have removed, mainly because I have never heard of them. If you think there are words that should be there,
+					but aren`t in my game then please send me feedback and state the word you think should be there.
+					<br><i>Along with a statement saying that you think this word should be there. Otherwise, I won`t know why you are emailing me a single word!</i>
+				</p>
+			</section>
+			
+		</section>
+		
+		<section id="may22">
+			<h3>May 2022</h3>
+			<p>
+				For the beginning of May, I did not do anything, as I had exams and I actually did revision rather than this.
+				<br>However, as my last exam was the 13<sup>th</sup>, I had nothing else better to do.
+			</p>
+			<p>
+				Whilst attempting to make space shooter, I found a way to crash the JavaScript, but sadly not enough to close the chrome tab. 
+				If you have a for loop, I was trying to find a way to make the increment in the for loop to be a decimal, so I used counter + increment.<br>
+				It would not work, not even a red error in the console. The console just stopped working.
+			</p>
+			<p>
+				The first asteriods were moving at 1100 on 18/05/2022. However, the two that did move were slow and did not show up again once they went out of bounds.
+				<br>Simple getting them to move is quite a milestone, and there was tones of bugs to fix before the code actually started to work. One of them was that 
+				I assumed a pre-defined function produced numbers in degrees rather than the radians it produced. This lead to further erros later, that would ultimatly 
+				make the asteriods move nowhere.
+			</p>
+			<p>
+				Later that day, the asteriods were all moving towards the player, as long as the player was on the right hand side of the screeen. They also all stoped early
+				<br>
+				One thing I really want to solve is how to remove the background of the images that I use for the asteroids and ship, then it would look much better. I did find 
+				a website that would do it for you, but it only worked for a few times.<br>
+				If anyone reading this is good at computer art and you are willing, please send me .jpg images of better asteroids. Please send to the listed email address.<br>
+			</p>
+			<p>
+				On the 21st, I began to work on the Ammunition, and getting it to fire. By the end of the day, I had them all working, although they do not affect the 
+				asteroids in any way yet. As there are only 12 possible ammunitions, (As each amo is a div with the styling required for it, and there is only 12 of them),
+				if you were to rapidly fire them all at once, you would use them all up. This is the reason why the game as a overheat-like aspect to it. Once all the divs 
+				are in use, then the ship no longer fires anything.
+			</p>
+			<p>
+				The 23<sup>rd</sup> was the first day of the STEM Activities. It was a medical based day, where people came in with medical equipment for people to use. 
+				This was not my cup of tea, so I did not go. Instead, I stayed at home doing my SAAS application and adding Audio to my games.
+				The first of which was Minesweeper. I added two sounds, A digging sound, for when the tiles are uncovered. And an explosion, for when you hit a mine.
+				<br><i>Warning, it is a bit loud</i>
+			</p>
+			<p>
+				Not-so-flappy Dot was given sound next. A sound for when it moves up and down, and a sound for when it dies.
+			</p>
+			<p>
+				I mentioned it above, but the sounds used in the games are from <a href="https://www.zapsplat.com/">https://www.zapsplat.com/</a>. <br>
+				Its in the Terms and Contitions that I have to states that the sounds are from them.
+			</p>
+			<p>
+				On the 27<sup>th</sup>, I began to try and make final improvements to my Website in preparation for the STEM festival. 
+				The first of which was to finaly give DotMan a better die message, rather than an alert box. It is now a HTML pop-up box.
+				<br>
+					The next day, I worked on Tetris, making it impossible for the same shape to show up more than three times in a row.
+					 Although now it rarely does it 2 times in a row.			
+				<br>
+				<i>Only read this next section if you promise not to annoy others with it.</i>
+				<button onclick="SA_dieButtons()">I agree not to annoy anyone playing these games, or tell anyone else who hasn`t agreed to the following,about the following section</button>
+				<br><section style="display:none" id="agreeZone_01">
+					<p>
+						I also made the # key an automatic die button. If any of my main games are in play mode, # will make the user die instantly. <br>
+						It was made for the festival, in case there was any one or two people always playing the games. They may say that they will go
+						when they die, and I can cause that event.
+					</p>
+				</section>
+				<br>
+			</p>
+			<p>
+				I also finally finnished minesweeper. I got it possible for you to win, as there has been a continous error that prevented you from winning.
+				There was a line or two of code that has been in existance form a ancient version of Minesweeper, and it had never been removed, which was causing all the issues.
+			</p>
+			<p>
+				Before the STEM fesitval, I was working on Space Shooter. I added it into the game, just so that I can show what I had.
+				However, It is not very good. I put a password on the game, so to veiw its page on the webiste, you need to know that it is. 
+				<br><br>
+				At the moment, the Amnumition fires, and the asteriods move. I found a way to stop all the chaotic movement and remove the need for a set coreection factor for
+				the objects positions.
+				<br>The first one was solved by using blank images. Rather than using the display = none property, which make the object have no effect on the page, the image allows ts shape to still be there.
+				The next issue was solved by putting everything in its own div, withing the main play area. these divs are positioned at teh top left corner and this move relative to them. Also chainging the z-index
+				of each item together makes this work
+			</p>
+			<p>
+				The main reason that the game does not work is becauseit is too laggy, everything is moving too slowly. The collision functions also do not work well / most of the time.
+				The asteriods also appear to to move in the dead state (explosion), even though there is code that should not allow them to move unless they are in asteriod form. 	
+			</p>
+			<p>
+				I also tried to add adverts into my main website, but came across a flaw of having everything in the same webpage.<br>
+				The is a limit to how much CSS can be in a webpage. I found this once before when making a pHp based site. Whilste making the adverts, 
+				I came across this limit for this page. After a google search, I think the limit is about 31 pages of CSS, or just over 4000 rules.
+				But as I import a styles sheet for a few symbols, then I would not know how big I can go. I got to about 700 lines before the error occured.
+				<br>Chances are, I will either stop expanding this page, or try to seperate it into differnet files.
+			</p>
+		</section>
+		<section id="jun22">
+			<h3>June 2022</h3>
+			<p>
+				A month ago I would have though I would have stopped making this Website. However, I have not it seems. 
+				At the begining of this month, I made a new Game.
+			</p>
+			<p>
+				I made Tron on the 6<sup>th</sup>, within 2 or 3 hours. (I started after Lunch and would finish it before 4).
+				It was mainly for there to be a two-player game and is basically a cross between Dotman and snake, so it was very easy to make.
+			</p>
+			<p>
+				I did find a possible way to remove the cell borders in the tables, which I think I will apply to all my other games. 
+				The only difficult part of this game was, it seems, was getting the checks to see if you should die in the correct order.
+				As I did them all in one line, the checking boundaries must be first to ensure that the next part, checking the record for
+				what it is at, is correct. Otherwise there is an error.
+			</p>
+		</section>
+		<br>
+		<p>
+			As I am going to univeristy in Spetember (2022), I am likly to stop doing this Website, at least for now, as the programing languages that Glasgow
+			use in first year are Python and Java. Both of which I have a basic understanding of, but I want to be reasonably good at them when I go off to 
+			university. Java, as the name suggests is very similar to Javascript, but is used more for server-side / back-end programing whilste Javascript is
+			for client-side. (webpages etc. The stuff you seee when veiwing the material)
+		</p>
+		<p>
+			A version 6 of this site may be made, using pHp. I have finally, after 5 months of trying, got XAMMP working on my computing. <i>XAMMP is the software I use to run pHp.</i>
+			However, It may not be for a while.
+		</p>
+		<p>
+			This is because I have started something else. When I was applying to university, they all gave me a application tracker of thier own. Edinburgh`s site was ok, but it looked old. 
+			St Andrews, I can`t remeber becuase I forgot my password and was rejected. But I think it was quite good. <br>
+			Glasgow`s, on the other hand. I though it was auwful. It was hard to navigate, styling was off, and I rarely found what I was looking for.<br>
+			So I though, once I got pHp working, to try and make my own Application tracker site, with a side for (prosporus) students to veiw thier own application and view other information. 
+			And there would be a side for staff to view every application, and make desicisons about them. Eg, reject or give them an offer.
+		</p>
+		<p>
+			This is mainly so that I can say to myself, I can make a better site than the univeristy, in my opinion.
+		</p>
+		<p>
+			I have not listed everything that I have added in this website in this description of it.<br><span onclick="r('Such as this...')">
+			Explore the website to find them all...</span><br>
+		</p>
+		<section id="future">
+			<p>
+				In case anyone wants to try and make thier own games, in these files, in the Z_other folder, there is a rough template. It is unlikly to be helpful, but its there.
+			</p>
+		
+		
+			<h3>Ideas</h3>
+			<p>
+				I do not know if I will be able to expand this website in the future, as they are 
+				mainly just a collection of files at the time of writing, and particularly as I have
+				now left school, I will be unable to update any version at school. The following 
+				section is a list of Ideas for my website that I have not done yet, or at least 
+				is not present in this current version). Feel free to try and do some of these 
+				yourself, if you can.
+			</p>
+			<p>
+				One thing that you could guess is that I want to make more games and add them here. 
+				I`m thinking a tower defence like game, as I have always liked them. Most likely
+				using the position property and end up similar to my space shooter game, but with 
+				more objects. 
+			</p>
+			<p>
+				A driving game would also be good, again with the position property, as you won’t 
+				be driving in straight lines. I think a few 2-player games would be good to 
+				included, a driving game would be an obvious one to make 2-player. Space shooter 
+				was originally meant to be two-player, but it was hard enough to make single 
+				player. 
+			</p>
+			<p>
+				One game that I would want to make, that would be 2-player, would be Connect 4. 
+				If you have ever played me, then you would know that I am very good at connect 
+				four, and I have always wanted to make a computer connect 4 game that I find 
+				difficult to beat. Of course, there would be a two-player mode as well. This could 
+				be done in the table mode. Red background, style the ‘coins’ blue and yellow with
+				a large border radius to make them look circular… I think that could be possible. 
+				Maybe not the nice animated drop of it. I want to make a 3D game as well, but 
+				getting it to display would be very, very hard. Hence, I have not tried. 
+			</p>
+			<p>
+				The biggest Idea that I would like to do to my website would make it connected to 
+				a server, ideally pHp. This way, I could (if its on the internet) update the website
+				remotely and it would forever be accessible. High scores would not be the high
+				score for your machine that you are using, but the actual high score from across 
+				the world. I would also have to then find a way to remove the cheats way of getting
+				good scores….
+			</p>
+			<p>
+				I would also like to play about with an email server, and could include this 
+				in the site, so that it sends me emails when you fill out a form. I was very 
+				close to doing this with pHp, until the error said it wanted an email server. 
+				I have included a link to a google form, and a possible email address for 
+				feedback to be sent to instead, but it’s not the same.
+			</p>
+			<p>
+				Servers could come with the possibility for file handling, so I think I could 
+				‘upload’ a new game and it would automatically appear. One of the reasons this 
+				website is in existence is to expand not-so-flappy Dot. Instead of me making 
+				hundreds of random sections for the game, users could make their own, upload it 
+				to the server where I could check if they were reasonable, or make a program to 
+				do it for me. Then, the not-so-flappy dot game would get its random sections from 
+				the server and run them. 
+			</p>
+			<p>
+				Whilst I was adding audio, which used to be in this ideas section, I was using 
+				Audacity which seemed familiar. I figured that it was the same bit of software 
+				that we used in S4 computing when we were playing with sounds. This website also
+				makes an obvious use of HTML and CSS, but there is quite a few Software development
+				aspects to it as well. If there was a database connected via a server, then this 
+				website would be a nice collection of work that represents what I`ve done in 
+				computing over the years. OK, there’s not much about binary or environmental
+				applications of computers, but they’re only small parts. With the Privacy policy,
+				there`s my Cyber security aspect.
+			</p>
+			<p>
+				If I try to make a 3D game, I think sticking to the classics would be a good idea, an then I could attempt to make cubert.
+			</p>
+			<p>
+				Finally, I would like to improve what I have, such as finish wack-a-character or 
+				make Dot/Pac Man have their moving mouth. Tetris normally have a way to see what’s
+				coming up, and I never seem to get the finishing point of Minesweeper to be right. 
+				
+			</p>
+		</section>
+		
+		<br><br>
+		<p>
+			I want to continue making this website, adding new things, making bits work again and trying things I think I can do.
+			<br>
+			Ultimately, that’s what this website it.
+		</p>
+
+		<br>
+	
+	</div>
+
+	<div id="playPage">
+	
+		<h1  class="pageTitle">PLAY</h1>	
+		<!-- Nav bar colouring/styles still need to be finished
+		
+		but used it to try and get the nav bar to wokr as you click it is becomes a differnet gamebb
+		-->
+
+		<!-- Side navigation -->
+		<div class="sidenav">
+			<a onclick="notSo()">Not-so-flappy Dot</a>
+			<a onclick="DM()">Dot Man</a>           
+			<a onclick="WackA()">Wack-a-character</a> 
+			<a onclick="MS()">Mine sweeper</a> 			
+			<a onclick="TT()" >Tertris</a> 
+			<a onclick="SK()" >Snake</a>
+			<a onclick="WD()" >Wordle</a>
+			<a onclick="TN()" >Tron</a>
+			<a onclick="spaceSTTR()" >Space Shooter</a>
+<!--To add another game add ' <a onclick="functionName()">Game Name</a> ' above   -->
+		</div>
+
+		<!-- Page content -->
+		<div class="mainplay">
+	
+			<div id="not-so-play" class="gamePlay" style="display:none;"> 
+				<h3>Not-so-flappy Dot</h3>
+				<p>Dodge the incomming red squares</p>
+				<div style="float:right;margin-right:10px">
+					<a href="Flappy_Dot/Flappy_Dot.html" target="_blank">
+						<button class="nt">Open in New Tab</button>
+					</a>
+				</div>	
+
+				<br><br>
+				<iframe width="100%" height="700px" src="Flappy_Dot/Flappy_Dot.html" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+			</div>
+		
+			<div id="wack-a-play" class="gamePlay"  style="display:none;">
+				<h3>Wack-a-character</h3>
+				<p>Not my best game, if you can call it that. I wouldn`t play it.</p>
+				<div style="float:right;margin-right:10px">
+					<a href="WackA/wack_a_.html" target="_blank">
+						<button class="nt">Open in New Tab</button>
+					</a>
+				</div>	
+
+				<br><br>
+				<iframe width="100%" height="700px" src="WackA/wack_a_.html" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+			</div>
+					
+			<div id="game2" class="gamePlay"  style="display:block;">
+				<h3>Dot Man</h3><!-- enter game Title -->
+				<p>Collect all the coins (in green) using the arrow keys to move. But watch out for the other Dots coming to get you</p>
+				<div style="float:right;margin-right:10px">
+					<a href="DotMan/DotMan.html" target="_blank"><!--  enter game file path here -->
+						<button class="nt">Open in New Tab</button>
+					</a>
+				</div>	
+				<br>
+				<br>								<!-- ^ enter game file path here -->
+				<iframe width="100%" height="700px" src="DotMan/DotMan.html" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+			</div>		
+			
+			<div id="minesweeper" class="gamePlay"  style="display:none;">
+				<h3>Mine sweeper</h3>
+				<p>Mark out where all the mines are in the field. Left-click to clear a tile. Right-click to flag where a mine may be. 
+				<br>Note: you can also use the space bar to enable the left click to also place a flag.</p>
+				<p><i>The may still be bugs in this game</i></p>
+				
+				<div style="float:right;margin-right:10px">
+					<a href="MineSweaper/MineSweaper.html" target="_blank">
+						<button class="nt">Open in New Tab</button>
+					</a>
+				</div>	
+				<br><br>								<!-- ^ enter game file path here -->
+				<iframe width="100%" height="700px" src="MineSweaper/MineSweaper.html" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+			</div>			
+			
+			<div id="tetris" class="gamePlay"  style="display:none;">
+				<h3>Tetris</h3>
+				<p>
+					Use the Arrow keys to move an object to make a completly filled row. Up rotates the object 90 degrees, 
+					left and right moves the object left and right and down makes it come down quicker
+				</p>
+				<div style="float:right;margin-right:10px">
+					<a href="Tetris/Tetris.html" target="_blank">
+						<button class="nt">Open in New Tab</button>
+					</a>
+				</div>	
+
+				<br><br>								<!-- ^ enter game file path here -->
+				<iframe width="100%" height="800px" src="Tetris/Tetris.html" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+			</div>			
+			
+			<div id="snake" class="gamePlay"  style="display:none;">
+				<h3>Snake</h3><!-- enter game Title -->
+				<p>Use the Arrow keys to move the snake to collect the red dots. Beware, not to crash into yourself or the wall</p>
+				<div style="float:right;margin-right:10px">
+					<a href="Snake/snakePage.html" target="_blank"><!--  enter game file path here -->
+						<button class="nt">Open in New Tab</button>
+					</a>
+				</div>	
+
+				<br><br>								<!-- ^ enter game file path here -->
+				<iframe width="100%" height="700px" src="Snake/snakePage.html" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+			</div>	
+
+			<div id="wordle" class="gamePlay"  style="display:none;">
+				<h3>Wordle</h3><!-- enter game Title -->
+				<div style="float:right;margin-right:10px">
+					<a href="Wordle/wordlePage.html" target="_blank"><!--  enter game file path here -->
+						<button class="nt">Open in New Tab</button>
+					</a>
+				</div>	
+
+				<br><br>								<!-- ^ enter game file path here -->
+				<iframe width="100%" height="700px" src="Wordle/wordlePage.html" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+			</div>
+			
+			<div id="tron" class="gamePlay"  style="display:none;">
+				<h3>Tron</h3><!-- enter game Title -->
+				<p>Player 1 use WASD and Player 2 use Arrow keys. Do not hit the edge or the coloured patches.</p>
+				<div style="float:right;margin-right:10px">
+					<a href="Tron/tronPage.html" target="_blank"><!--  enter game file path here -->
+						<button class="nt">Open in New Tab</button>
+					</a>
+				</div>	
+
+				<br><br>								<!-- ^ enter game file path here -->
+				<iframe width="100%" height="700px" src="Tron/tronPage.html" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+			</div>
+			
+			<div id="spaceS" class="gamePlay"  style="display:none;">
+				<h3>Space Shooter</h3><!-- enter game Title -->
+				<p>Not finished. very few things are working as wanted. most are slightly incorrect.</p>
+				<div style="float:right;margin-right:10px">
+					<a href="Space/spaceShooterPage.html" target="_blank"><!--  enter game file path here -->
+						<button class="nt">Open in New Tab</button>
+					</a>
+				</div>	
+
+				<br><br>								<!-- ^ enter game file path here -->
+				<iframe width="100%" height="700px" src="Space/spaceShooterPage.html" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+			</div>
+			
+			<!--     ^ enter the id of the game-->
+			<div id="" class="gamePlay"  style="display:none;">
+				<h3></h3><!-- enter game Title -->
+				<div style="float:right;margin-right:10px">
+					<a href="" target="_blank"><!--  enter game file path here -->
+						<button class="nt">Open in New Tab</button>
+					</a>
+				</div>	
+
+				<br><br>								<!-- ^ enter game file path here -->
+				<iframe width="100%" height="700px" src="" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+			</div>	
+			
+		</div>		
+		
+	</div>
+	
+	<div id="makePage">
+		<h1  class="pageTitle">Make Code</h1>
+		<iframe width="100%" height="700px" src="Z_Other/MakeCodePage/MakeLevelPage.html" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+	</div>
+
+	<div id="highscore" onmouseover="loadHighScores()">
+	
+		<!--<iframe src="Highscores_Page.html" width="100%" height="350px" border="none" style="display:none;"></iframe>
+		-->
+		
+
+		<div id="highscore" onmouseover="loadHighScores()" style="display:block;">
+			<h1  class="pageTitle">High Scores</h1>	<br>
+			
+			<button style="float:right;margin-right:30%;display:none;" class="updateButton">UPDATE</button>	
+			<h3 style="">Not-so-flappy Dot</h3>
+			
+			<br>	
+		
+			<table id="hsTable">
+				<tr>
+					<td ><b>Mode</b></td>
+					<td ><b>Highscore</b></td>
+					<td class="nameField" style="width:250px"><b>Name</b></td>
+				</tr>	
+				<tr >
+					<td  onclick="r('Only beginer?<br><br>TRY HARDER!')">Beginner</td>
+					<td id="begH"></td>
+					<td  class="nameField" id="begHn"></td>
+					<td ><button class="scoreChangers" class="QASWScore" id="begScoreC"     onclick="">Edit Score</button></td>					
+					<td ><button class="scoreChangers" class="QASWName"  id="begScoreNameC" onclick="">Edit Name</button></td>					
+				</tr>
+				<tr>	
+					<td>Easy</td>
+					<td id="easyH"></td>
+					<td  class="nameField" id="easyHn"></td>
+					<td ><button class="scoreChangers" class="QASWScore" id="easyScoreC"     onclick="">Edit Score</button></td>					
+					<td ><button class="scoreChangers" class="QASWName"  id="easyScoreNameC" onclick="">Edit Name</button></td>						
+				</tr>
+				<tr>			
+					<td	>Medium</td>
+					<td id="medH"></td>
+					<td  class="nameField" id="medHn"	></td>
+					<td ><button class="scoreChangers" class="QASWScore" id="medScoreC"      onclick="">Edit Score</button></td>					
+					<td ><button class="scoreChangers" class="QASWName"  id="medScoreNameC"  onclick="">Edit Name</button></td>	
+				</tr>
+				<tr >
+					<td	>Hard</td>
+					<td id="HardH"></td>
+					<td  class="nameField" id="hardHn"></td>
+					<td ><button class="scoreChangers" class="QASWScore" id="hardScoreC"      onclick="">Edit Score</button></td>					
+					<td ><button class="scoreChangers" class="QASWName"  id="hardScoreNameC" onclick="">Edit Name</button></td>	
+				</tr>
+				<tr>
+					<td >Very Hard</td>
+					<td id="VhardH"></td>
+					<td  class="nameField" id="VhardHn"></td>
+					<td ><button class="scoreChangers" class="QASWScore" id="vhScoreC"      onclick="">Edit Score</button></td>					
+					<td ><button class="scoreChangers" class="QASWName"  id="vhScoreNameC"   onclick="">Edit Name</button></td>	
+				</tr>
+				<tr>
+					<td >Extremely Hard</td>
+					<td id="EhardH"	></td>
+					<td  class="nameField" id="EhardHn"></td>
+					<td ><button class="scoreChangers" class="QASWScore" id="ehScoreC"      onclick="">Edit Score</button></td>					
+					<td ><button class="scoreChangers" class="QASWName"  id="ehScoreNameC"  onclick="">Edit Name</button></td>	
+				</tr>
+				
+				<tr style="display:none">
+					<td >Impossible</td>
+					<td id="ImpH"></td>
+					<td class="nameField" id="ImpHn"></td>
+				</tr>
+			</table>
+			<br>
+			<table>
+				<tr>
+					<td><b>Dot Man:</b></td>
+					<td></td>
+					<td id="pacManHS">Not Connected</td>
+					<td></td>
+					<td ><button class="scoreChangers" id="DMSCB" onclick="">Edit Score</button></td>							
+				</tr>
+				<tr>
+					<td><b>Mine Sweaper:</b></td>
+					<td></td>
+					<td id="MSHS">Not Connected</td>
+					<td></td>
+					<td ><button class="scoreChangers" id="MSPSCB" onclick="">Edit Score</button></td>		
+				</tr>				
+				<tr>
+					<td><b>Tetris:</b></td>
+					<td></td>
+					<td id="tetrisHS">Not Connected</td>
+					<td></td>
+					<td ><button class="scoreChangers" id="TTSSCB" onclick="">Edit Score</button></td>		
+				</tr>				
+				<tr>
+					<td><b>Snake:</b></td>
+					<td></td>
+					<td id="snakeHS">Not Connected</td>
+					<td></td>
+					<td ><button class="scoreChangers" id="SKSCB" onclick="">Edit Score</button></td>		
+				</tr>				
+			</table>
+			<br>
+			<button id="clearAll" style="display:none" onclick="clearAll()">Clear All</button>
+		</div>
+		<br><Br>
+		
+	</div>
+	
+	<div id="feedback" style="display:none;">
+		<form action="http://localhost/Game_website_feedbackAction.php" method="POST" style="border:1px solid #ccc">
+			<div class="container">
+				<h1>Feedback</h1>
+				<p>Please fill in this form to give use feedback.</p>
+				<br>
+				
+
+				<label for="email"><b>Email</b></label>
+				<input type="text" placeholder="Enter Email" name="email" required>
+
+				<br><Br>				
+				
+				<textArea id="Comment" name="comment" width="97%" required></textarea>
+				<br><br>
+				<label>
+					<input type="checkbox" checked="checked" name="agree" 
+					style="margin-bottom:15px">By creating an account you agree to
+					our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</input>
+				</label>
+
+				<br>
+				<input type="submit" value="Enter"></input>
+				
+			 </div>
+		</form>
+	</div>
+	
+	<div id="codePages">
+		<h1  class="pageTitle">Code Description</h1>	
+		
+		<iframe style="display:none" width="99.4%" height="500%" src="A_General_Website/codeDescriptionPage.html" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+
+<!--		<a href="#C4">Jump to Chapter 4</a>-->
+		<section id="bookmarks" style="display:none">
+			<h3>Click a title to skip to it</h3>
+			<ul>
+				<li><a href="#myCode">My Code</a></li>		
+				<li><a href="#structure">Structure of my Games</a></li>
+				<li><a href="#otherCode">Dot Man</a></li>
+				<li><a href="#ghostCode">Dot Man Ghosts</a></li>
+				<li><a href="#"></a></li>
+			</ul>
+		</section>
+		<p>This page contains some descriptions about my code, and ways to expand it</p>
+		
+		<section id="myCode">
+			<h3>My Coding</h3>
+			<p>
+				A few points on my coding. 
+				<ul>
+					<li onclick="r('Often becuase their ID is still run through the code and would cause an error if it disapears,<br>I then keep the ID element rather than try to track all of its occurances down and deleted it.<br><Br><br>Other times, It is an alternative verion of a section which I may use, or an old section that I would want tokeep in case I want to go back to it')"   >There are bits of code that do nothing</li>					
+					<li  onclick="r('Such as this stuff')">There are bits of code that seem to do nothing, but actually do</li>
+					<li  onclick="r('I often type too quickly')">The word 'teh' means 'the' <i>(This applies to the website too, but hopefully spellchecker caught it)</i></li>
+					<li  onclick="r('Casue I can`t be bothered to delete it.<br><br>')">If there is a comment saying something along the lines of
+				                             	'this does not work', the bit of code might work and I never deleted the comment </li>
+					<!--<li></li>-->
+				</ul>
+			</p>
+		</section>	
+		
+		<section id="structure">
+			<h3>Structure of my Games</h3>
+			<p>
+				Each of my games are made up in a similar way, with there being bits of code that are at different levels.<br>
+				There are the lowest level functions, these being the plotting functions - the ones that alter the HTML play area.
+				The next level up is the functions that are able to control the previous functions. They often are the ones that 
+				set the entire playing area to a default value or movement functions that unplot an object, do something with its values,
+				then re-place it at a new position. These middle level functions basically each have a job to do that is part of the game, 
+				but do not run the entire game<br>
+				The top-level functions are the ones that either make it a game, add additional  features or take user input. They would 
+				control the timings or update the display with the new score.
+			</p>
+		</section>
+		<br>
+		<section id="randomSections">
+			<h3>Random Sections</h3>
+			<p>
+				For Not-so-Flappy Dot, there are a series of random sections after 200 or so columns. These can be added to 
+				with some ease. Ideally, when you make a section, it would be uploaded to a server and then the game takes the
+				sections from the server. But at the current moment it does not do so. Therefore, you have to make the section
+				using one of my extra programs. It can be found in the external links section. Create your section here, 
+				entering your name if you wish.
+			</p>
+			<p>
+				Open up the file for the not-so-flappy Dot code in a suitable JavaScript editor. Scroll down to find a
+				function called <kbd>update_X_20()</kbd>. Note the very long compact if statement. Find the bottom 
+				one and the number in it, for <kbd>	}else if (R_20 == 119){update_20_for_R119();</kbd> the number would be
+				119. Duplicate this line and change the number in it by 1 Back in the Random section maker, in the number input, enter the number mentioned about <b> + 1</b>.
+				Then press Click to produce code.
+			</p>
+			<p>
+				It will give you the option to download a text file with the code in it. You can say yes, but either  way you
+				need to copy the code it makes from either the text file or the input box that appears after.
+				paste this code. ideally, above the <kbd>NoRandoms</kbd> variable  but below the rest of the random
+				sections. The variable would also have to be the same number that you entered into the form
+				<br><br>This should now be working and your section is in the game
+			</p>
+			<p>
+				If, for some reason, it does not work, here is a list of possible reason to why it is not working;
+			</p>
+			
+			<ul>
+				<li>Are you editing the same file you are loading?</li>
+				<li>Have you done everything on the list?</li>
+				<li>The else if line may be too great. You may have to find the largest function number</li>
+			</ul>
+			
+		</section>
+		<section id="altDMCD" style="display:none;">
+			<section id="otherCode">
+			<h3>Dot Man</h3>
+				<p>
+					Creating Dot Man took a while. It started off as a HTML table that was 30 cells tall and 60 cells wide. This was made before I
+					had a program that made the HTML code for me, so it took a while to insert each Id for each table cell.
+					<br><br>
+					The next 'layer' up was to create some plot and unplot functions. These functions change the class on a specified table cell
+					which allows it to change colour and, in some cases, shape. 
+					<br><br>
+					The map is stored in an array of arrays (a dictionary) that contains a single number (e.g. 0, 1, 2, 3) 
+					where each number specifies a class the cell should be. 0 is empty, 1 is for walls, 2 is coins, 3 is for power up.
+					The ghosts and players are not one of these numbers.
+					<br><br>
+					The next major function to be created was the 'loadString()'. This one takes the Dictionary that contains 
+					the map and loads it onto the table. It loops through the record and looks to see what number is in the container.
+					It then calls the appropriate plot function and passes though the X and Y of the table cell. 		
+				</p>
+				
+				<p>
+					The player is controlled by the arrow keys or WASD. When you click any key, a function, whichButton(), is called. 
+					It determines which button was pressed.
+					Most buttons do not do anything, and those that do often require admin privileges. ie. they were only for 
+					testing. 
+					<br><br>
+					The few that are available are to move the player. The arrow keys alter a variable, playerDirection, to the direction pressed.
+					The move player function takes the direction and moves player that direction each time it is run, assuming it is not blocked
+					<br>
+					After these functions, the movePayer function then calls two more functions collision() and tp().
+					<br  onclick="r('That was a line break')"><br>
+					Collision() checks to see if the player is colliding with anything, such as ghosts or coins. 
+					It uses the same string that loaded the map to see if there are any coins or power ups at their location.		
+					<br>If any of the ghost`s X and Y coordinates match, they are colliding with the player.
+					<br>If colliding with ghosts, and player does not have power up on, then he players lives are reduced by 1.
+					if no lives left, end the game.
+					<br>If the player does have power up on, eat the ghost.
+					<br><br>
+					When colliding with either coins or power up, the map location is set to 0 (empty) and the coin is removed.
+					If it was a coin, the score is increased by 1. if it was a power up, a boolean variable determining if power up is on is set to true
+					and a time out is set up to turn the power up effect off after a set time				
+					<br><br>
+					The tp() function looks to see if the player should be teleporting. if so, unplot thier position and re-plot 
+					them at the other side of the play area.
+					<br>
+					
+				</p>
+				<p>
+					When the play button is pressed, the stage, score and lives are set to their starting values, the map is loaded and 
+					the two timers are set off. These are Pticker() and Gticker(). 
+					<br><br>
+					Pticker() sets of the player function, if game play is allowed. 
+					It the sets off a time out to call itself again later. it also calls updateDisplay(), which ensues that the display that the player sees 
+					(about lives and score etc) is correct.
+					<br><br>
+					Gticker() calls the ghosts running functions similar to how the Pticker() calls the player running function.
+					However, it does  check to see if the ghosts should be running away from the player or moving towards them.
+					It should also have the capability to cause them to all move randomly if the player does not exist, for whatever reason
+				</p>
+				
+			</section>
+	  
+			<section id="ghostCode">		
+
+				<h3>The Ghosts code</h3>
+				
+				<p>
+					The Ghosts all have very similar code, so all start off the same. Here they set the local 
+					variables that are used frequently. These are variables to store the difference in the X value (dx),
+					difference in Y values (dy), the ghosts current X and Y Position, Gx and Gy - 
+					both of these are already set and stored, but their variable is long,  so I simplified it.
+					The Ghosts current direction and the players X Y are also included	
+				</p>
+				<p>
+					There is also another variable which is used to figure out if the code worked and stops some errors later
+				</p>
+				<p>
+					The first if's are mostly irrelevant. One 'kills' the ghost if they are in an invalid position - which should not occur.
+					The Second one is to encourage the ghost to go through the teleproter if it would be shorter, but only works on one map
+				</p>
+				
+				<p>
+					After this, it goes into one main if statement, with several sub-ifs.
+					The very first bit tests to see if the ghost and the player are at the same position, if so, go wherever the ghost is going
+				</p>
+				<p>
+					The next part happens if the ghost thinks it is a corner, which is done by running a separate  function to determine the amount of free spaces around the ghost. 
+					If it returns 2, then it must be a corner or a straight line. another function determines if it is a straight line or corner.<br>
+					For a corner, it finds which one is free, where it did not come from and goes that way.
+					<br>For a straight line, continue in the direction the ghost was going
+				</p>
+				<p>
+					The next bit determines if it is a dead end or junction
+					for a dead end, it turns around.
+					The methods for junctions are different for each ghost, but the general idea is 
+					presented below
+				</p>
+
+				<p>
+					When a ghost reaches a junction, tests to see if the player and it are in  straight line and tries to head directly for them.
+					if it encounters and obstacle, the ghost will choose a random direction around the wall.
+					<br>
+					Otherwise, the ghost will calculate the gradient between the player and the ghost.
+					the players X and Y and this gradient are used to determine which quadrant the player is in.
+					<br><br><i>For the next part, the gradient is assumed to be positive for the purposes of explaining, but it can be negative</i>
+					<br><br>If the gradient is less than 1 (but greater than 0), the red ghost would try to travel along the X axis. If it cannot, 
+					it would travel along the Y axis, both towards the player. 			
+				</p>
+				<p>
+					When each direction is made, the program alters dx or dy by one or -1, so when the code comes to the end,
+					it will unplot the current ghost position then see if it should teleport, if so it does so,
+					it then changes the ghost x and y position by dx and dy <b>and</b> change the ghosts official direction.
+					It then re-plots the ghost at its new position.
+				</p>
+				
+				<p>
+					If the player has eaten a power up, the ghosts use the same methods of going towards the player, but if it decides to go left, 
+					it would try and go right. 
+					
+					
+				</p>
+				<p>
+					The final step of the ghosts code is to place the ghost in its new position. This is done by unplotting the current ghost position
+					then using the enemy plot function to plot the ghosts in their new position. However, there are a few if`s between the steps to 
+					allow the ghost to teleport - if the ghosts X is less then the page, go to the other side. there is also code to stop some errors from
+					occurring. sometimes the ghost decides to go onto a wall. This is stopped here and sends the ghost back to the start.
+				</p>
+			</section>  
+		</section>
+		<br>
+		<section id="STEMV_DGD">
+			<h3>Dotman Code</h3>
+			<p>
+				To start, I Knew that I had to create a HTML table that originally filled the entire page. 
+				To do it manually would take too long, so I made another javascript program that does it for me. 
+				I can input the height and width of the table, along with a class name for each table cell, and a 
+				function for what to do on a right or left click of the mouse. The program then runs a For loop in 
+				a For loop and outputs the html code into a text box, which can be copied. I also found a way for it 
+				to be downloaded. 
+			</p>
+			<p>
+				Once the HTML and CSS was made, I moved on to making the Javascript. Firstly, It was the plotting function, 
+				the functions that receive a  coordinate point on the table to change to their colour. As each table cell has 
+				a unique ID in the form ‘btnY_X’, I can use the x and y points given to create the ID of the table cell to change. 
+				I then remove every CSS class from the given cell and replace it with the one that I want to use. There are a total 
+				of 8 of these plotting functions. The benefits of using the classList.add and .remove is that I can alter more than 
+				just its colour the Circular Dotman and ghosts is done by setting the border radius to half of its height/width.
+				<br>I then also create the function whichButton(). This is activated when a keyboard key is pressed and takes the value 
+				of the key pressed through a Large If statement to see what the program should do. This is how the arrow  keys / WASD work, as the player's direction is altered. This function is also useful for testing certain aspect of the program. 
+			</p>
+			<p>
+				The next step was to be able to save the entire background that the game has. 
+				This is done in a record (array of arrays) and a number representing what is there is stored in the record. 
+				0 is empty, 1 is a wall. The record itself is stored outside the functions so that is is a global record, 
+				being accessed by every function. A function that then goes through this large record and calls the relevant 
+				plotting function was also created.
+			</p>
+			<p>
+				After that, I started working on the player, which required the use of a few more global variables, 
+				the players X and Y coordinates and the  players direction, as pac man would not stop until you change
+				direction. the function that moves the player, movePlayer() starts by unplotting the current player 
+				position, using one of the plotting functions mentioned above. Then it goes through a if statement
+				which basically looks to see which direction the player is going and if it would still be within the 
+				boundaries of the game. It then also runs a test with the function testPosition() of where the player
+				would be if the statement was to return true. if all the statements are true, then the pliers X and Y 
+				values will change. 
+			</p>
+			<p>
+				The function testPosition() is used a lot later, but it is used to determine if the given coordinates 
+				are a wall or if it is a passable place. It looks at the containers in the record that stores what the 
+				background of the game is to see if it has the value of 1. if it does it returns false, meaning that a 
+				character cannot exist there. 
+			</p>
+			<p>
+				The function collision() is also called whilst moving the player and it looks to see if the player is 
+				colliding with a ghost, if it is, then the player dies by calling the DIE() function. Unless of course 
+				the boolean variable that states whether the player has the power up effect on is active, then the player's 
+				score increases by 50, and the ghost that got eaten is sent back to the start.
+				<br>Collision() also detects whether or not the player is touching a coin, if so increasing the score by 1 
+				at altering the record for where the coin is to be 0, empty. If the player is not touching a coin, then it 
+				might be touching a power up. If so, then the boolean variable that states if the power up is not or not is 
+				set to true and a timer is called to turn the variable back to false after a certain amount of time. This is 
+				the reason that the power ups cannot be stacked. the function that returns it to false cannot be altered once 
+				it has started.
+			</p>
+			<p>
+				After collision(), the movePLayer() function calls tp(), teleport. this is for when the player is at the edge 
+				of the screen, it sends it to the other side. It merely changes the players X and or Y coordinates, as the player 
+				is still not showing since the unplot() function was called at the beginning. The player comes back on the next 
+				and final line, which re-plots the player at the players X and Y coordinates, which may have altered during 
+				the course of the function running. 
+			</p>
+			<p>
+				The ghosts properties, such as coordinates, direction and colour are saved in a record, with each category of 
+				the record is the ghost, and the array within that part is that ghost's properties. Whenever this record is
+				used, its length is never really in the code, meaning that I can easily add more ghosts, or reduce the number 
+				of ghosts. 
+			</p>
+			<p>
+				Each of the functions that moves the ghosts are very similar, but each is slightly different. The code for 
+				the orange one, the first to move, is mostly random, hence it will not usually follow you. However, if you 
+				get within 6 or so tabl cells and are directly in a straight line towards you, it will follow you. This is 
+				where there are some bugs relating to the orange one being capable of going through walls. For the following 
+				bit, M  = gradient between the ghost and the player. The red one takes the shortest route towards you. if in 
+				a straight line, M = 0 or M = undefined, the ghost will move towards you directly, unless it is at a junction 
+				where it cannot go in your direction, then it will pick a random direction perpendicular to you. If the gradient 
+				is between -1 and 1, I will move towards you along the X axis. If the gradient is less than -1 or greater 
+				than 1, then it will move along the Y axis. This is assuming that is is able to do so. If it is at a corner 
+				or a straight line, then it will continue ‘forward’. A dead end is treated like a junction, except it can only 
+				go in one direction.
+				<br>The pink ghost is very similar to the red ghost, except at junctions. Where the option is available, the 
+				pink ghost favours going along the Y axis rather than the X axis when the gradient is between -1 and 1, and 
+				favours the X axis when the red would go along the Y. These two then create an aspect of the ghosts being
+				able to cut you off. The blue ghost however, is a combination of the red and pink ghost. Each time its functions
+				run, it picks  (at random) which function to use - the one for red or the one for pink. This is handy as there 
+				where / are areas of the game where the red and pink ghosts would end up getting stuck and going in loops should 
+				you stay still. The blue ghosts may take a while, but will get to you eventually, ensuring you can't keep going forever.
+			</p>
+			<p>
+				The ghosts, particularly the oregon one, makes use of several functions that support the decision making process. 
+				They mostly just see if the ghosts can exist at a certain position, or return a list of directions that the ghosts
+				is allowed to go. One of them is IsCorner(), and it returns the number of positions that the ghost could go. if it 
+				is 2, then the ghosts will look further to see if it is a corner or straight line. if it is 1, then it will move
+				backwards as it must be dead end. 3 or 4 are junctions and makes the above decisions to decide which way to go.
+			</p>
+			<p>
+				When you click the play button, it runs a function that is only executed at the beginning of the game, 
+				and it ensures that the game is not already running. (There were glitches for some time that if you 
+				clicked the play button too many times, the ghosts would end up going faster.)  The main purpose of this 
+				start function is to set the default values to the global variables and then start two functions which 
+				once they are finished, set a timer to recall themselves. these two are the functions that run the player 
+				and the ghosts. When, for example, the player function runs, it calls the move player function. (The move
+				player function does not call itself because it's easier to control. It also means that I can call that 
+				function more often without sleeping the game up.) Move player also then calls the function that updates
+				the display, which ensures that the score is up to date. 
+				<br>When it calls itself, it can only do so if the boolean value that shows weather or not the game is still
+				active is true. Once this value is set to false, the game will end as the functions that keep the game going 
+				will end and not restart. This means that you do not have to refresh the page to stop the timers, unlike some
+				of my other games.
+			</p>	
+		</section>
+		
+		<br>
+		<section id="newGame">	
+			<h3>Creating your own game</h3>
+			
+			<p>
+				To start off with, I will tell you the main structure of how my games run.<br>
+				They are all just a HTML table, with each square table cell having a different background colour and a unique ID. 
+				Often the ID is in the form of "btnX_Y", to make it easier to know which one I am trying to change.
+				Then, I have code that would turn a particular table cell to a differnet colour.
+				<br>
+				You may be thinking that it must have taken a very long time to make these tables, which it did for the first 2 or 3 times,
+				but then I made a program that create a table for me. I could enter the Height and Width of it, enter the function name when 
+				you click (or right clicked) the table cell, if necessary. A class name would also be added to each table cell along with its ID.
+			</p>
+			
+			<p>Click <a href="">here</a> to acess it</p>
+	
+			<p>
+				I put a lot of effort into making these games, but over 
+				time, they became easier to make. Not only was I more 
+				familiar with JavaScript, but I knew which bits of code
+				from previous games to copy over into my new one. As I 
+				have said elsewhere, Andrew Twigg helped me reduce my 
+				code down considerably for Not-So-Flappy Dot. This was 
+				because he reduced the function that plotted each point 
+				down to about 10 lines of code, no matter how big the 
+				table is. It removes a list of classes from the table 
+				cell, then adds a new one.
+				<br>If in your CSS file, you have all the necessary 
+				classes, add them in the list next to the 
+				<i>.classList.remove</i>(, in "". Then, add the class you want
+				to add in the last row, at <i>.add.</i>
+				<br>Below is the unplot function from Not-so-Flappy Dot.
+				The dots can have the classes of player, empty, enemy,
+				powerUp, lazer or slime but in this example, the dot 
+				will have the class of empty.
+			
+			</p>
+			
+			<p class="codeClip"><i>
+				function unplot(x, y) {<br>
+				document<br>
+					.querySelector(`.Row${y}`)<br>
+					.querySelectorAll(".dot")<br>
+					[x - 1].classList.remove("player", "empty","enemy","powerUp","lazer","slime");<br>
+				document<br>
+					.querySelector(`.Row${y}`)<br>
+					.querySelectorAll(".dot")<br>
+					[x - 1].classList.add("empty");<br>
+				}
+			</i></p>
+			
+			<p>
+				Or alternatively, use;
+				<br><i class="codeClip">document.getElementById(id).classList.add("coin");</i>
+				<br> OR
+				<br><i class="codeClip">document.getElementById(id).classList.add("power");</i><br>
+				<br>Where id is the id of the table cell you are trying to change.
+				<br>I would recommend  this one.
+			</p>
+			<br>
+			<p>
+				If you are making another game for this website, I would assume that the JavaScript, HTML and CSS files are all in one folder
+				this folder would be placed in the same folder as the other games, which should be the first one
+			</p>
+			<p>
+				To add our game to the same website, if you wish to do so, Open up this page (Website_Home.html) in a suitable  editor
+				and go to the div with the ID 'PLAY'. This is the section that appears as the play page.<br>
+				Firstly, you would have to add an additional 'a' tag, with and appropriate function to hide all the other games.<br>
+				As you scroll down, you should see divs with Ids of game names. At the bottom of this list is a empty div. Copy this one and fill it
+				out with the relevant information.<br><br>
+				Now try reloading the page and see if it has been added.
+			</p>
+		</section>	
+
+	</div>
+	
+	<div id="externalLinks">
+		<!--
+		Add links to the following:
+			Student Cooking website,-/
+			Input Tester
+			
+			pHp webiste..?
+		
+		-->
+		<h3><span onclick="r('Notice<br><br><br><br><p  onclick='r('A link in a link...')'>Click me if you dare</p>')">Links</span> to other Websites or Web pages</h3>
+		<p>
+			<span style="display:none">There were more links here, but one of them leads to
+			a complete Higher computing task, which I don`t really want anyone to copy for thier own work.<br>
+			Others are my pHp Website, which is not the best really.
+			<br></span>
+			<b>Note</b>: <i>All links open in a new tab</i></p>
+		<br style="display:none">
+		<br style="display:none">
+		
+		<br id="EL1_B" style="display:none">	
+				
+		<div onclick="window.open('Z_Other/Student_Cooking_Website/HTML/home.html');" 
+		onmouseover="ELC('EL1')" onmouseout="ELU('EL1')" 
+		id="EL1" class="LD" style="display:none">
+		
+		<!-- on click, load the specified page, onmouseover - change styleing-->
+			<h4>Student Cooking Website</h4>
+			<p>This website was the S5 Higher Computing HTML task  - I managed to complete it all within 12 period (600 minutes)</p>
+		</div>
+		
+		<br id="EL2_B" style="display:none">
+		<div onclick="php()" 
+		onmouseover="ELC('EL2')" onmouseout="ELU('EL2')" 
+		id="EL2"  class="LD" style="display:none">
+		
+		<!-- on click, load the specified page, onmouseover - change styleing-->
+			<h4>My pHp Website Description</h4>
+			<p>A link to a page that descripts my pHp website and its code</p>
+		</div>	
+	
+		<br id="EL3_B" style="display:none">
+		<div onclick="window.open('http://localhost/web2/Pages/NA/home.php');" 
+		onmouseover="ELC('EL3')" onmouseout="ELU('EL3')" 
+		id="EL3"  class="LD" style="display:none">
+		<!--../Other/pHp_Website/xampp/htdocs/web2/Pages/NA/home.php -- >
+		<!-- http://localhost/phpmyadmin/    - this one links to the database page-->
+		
+		<!-- on click, load the specified page, onmouseover - change styleing-->
+			<h4>pHp Website</h4>
+			<p>This is my second best website that I have made. It will likely not work, as the XAMMP files need to be running</p>
+			<p>It is a website that is connected to a database, similar to a shop website. My one 'sells' Mugs.</p>
+			<p><i>Although it is not finished, and some things do not work as intended, I still think it is good</i></p>
+			<br>
+			<p>Click the Button to view the database</p>
+		</div>	
+		<button onclick="window.open('http://localhost/phpmyadmin/')" style="display:none"><b>Database</b></button>
+		<br style="display:none">
+		
+		<br id="EL8_B" style="display:none">	
+		<div onclick="window.open('');" 
+		 style="display:none"
+		id="ADVERT"  class="advert_T1" style="display:none;padding:4px;overflow:hidden">	
+		<!-- on click, load the specified page, onmouseover - change styleing-->
+			
+			
+			<div id="ad1">
+				<h1>Get Your Advert HERE!</h1>
+				<p>£42 Billion or 1 Chocolate Bar!</p><!--Or sutible alternative-->
+				<p style="font-size:10px;">T&Cs Apply</p>
+			</div>
+			<div id="ad2">
+			
+			</div>
+			<div id="ad3">
+			
+			</div>			
+		</div>	
+		
+		<br id="EL4_B">	
+		<div onclick="window.open('https://www.w3schools.com/default.asp');" 
+		onmouseover="ELC('EL4')" onmouseout="ELU('EL4')" 
+		id="EL4"  class="LD">	
+		<!-- on click, load the specified page, onmouseover - change styleing-->
+			<h4>W3 Schools</h4>
+			<p>This Website, W3 Schools, was greatly useful throughout my time making this website and its contents. 
+			sometimes I found search within it to find a bit of code to do something particular. Other times I just 
+			looked through and found stuff I thought would be fun to add.</p>
+		</div>	
+
+		<br id="EL5_B">	
+		<div onclick="window.open('Z_Other/MakeCodePage/MakeLevelPage.html');" 
+		onmouseover="ELC('EL5')" onmouseout="ELU('EL5')" 
+		id="EL5"  class="LD">	
+		<!-- on click, load the specified page, onmouseover - change styleing-->
+			<h4>Make level for not-so-flappy Dot</h4>
+			<p>A short cut way to make the random levels at the end of Not-so-flappy Dot, in case you want to add more</p>
+		</div>			
+
+		<div onclick="window.open('A_General_Website/TableMaker.html');" 
+		onmouseover="ELC('EL6')" onmouseout="ELU('EL6')" 
+		id="EL6"  class="LD">	
+		<!-- on click, load the specified page, onmouseover - change styleing-->
+			<h4  onclick="r('<br><br><Br><br><br><br><br><br><br><Br><br><br><br><br><br><br><br><br><br><br><br>Ha<br><br>I wasted your time')">Make a table</h4>
+			<p>A program that creates a file containing the HTML for a table with each table cell having the same class, 
+			a different unique ID (which contains its coordinates), and a function that the ID is passed into on click </p>
+		</div>	
+	
+		<br id="EL7_B">	
+		<div onclick="window.open('Z_Other/MakeCodePage/MakeLevelPage.html');" 
+		onmouseover="ELC('EL7')" onmouseout="ELU('EL7')" 
+		id="EL7"  class="LD" style="display:none">	
+		<!-- on click, load the specified page, onmouseover - change styleing-->
+			<h4>Download this site</h4>
+			<p>Downloads as a text file</p>
+		</div>		
+	
+	
+	</div>
+	
+	<div id="expandation"><!--Only needed cause I cannot be bothered to delete other stuff--></div>
+	
+	<div id="login" style="display:none">
+		<h1>Log <span onclick="r('This should not be clickable?')"></span>in Page</h1>
+		<p>Enter the Correct Username and Password to be able to alter the Highscores</p>
+		<form target="dump"  id="LIF" name="LIF" class="form2" method="POST" onsubmit="setNewuser()">
+			<input type="text" name="user" placeholder="Username" autocomplete="off"></input>
+			
+			<input type="password" name="password" placeholder="Password" autocomplete="off"></input>
+			
+			<input type="submit" onclick="" id="loginButton" value="Log In"></input>
+		</form>
+		<br>
+		<p id="formOutput"><i style="color:red"></i></p>
+		
+		
+		<iframe name="dump" style="display:none"></iframe>
+		
+	</div>
+	
+	<div id="pHp" style="display:none">
+		<section id="phpTitle">
+			<h1>php Webiste</h1>
+			<p>
+				As well as making this webiste, I also did a bit with pHp, server side scripting for websites.
+				I wanted to make this webiste in pHp, but never got time to do so. This page is a short description of 
+				How I made that website and a short list of things that I would have wanted to add to it.
+			</p>
+		
+		
+		</section>
+		<br>
+		<section id="codeDescription">
+			<h3>Code Description</h3>
+		
+		
+			<section id="template_001">
+				<img src="" style="float:right;width:49%">
+				<section style="float:left;width:49%;">
+					<p>
+					
+					</p>
+				</section>
+			</section>
+			
+			
+		</section>
+		<br>
+		<section id="pHpFuture">
+			<h3>The future</h3>
+			<p>
+				A check out page<br>A proper page for when you click 'Buy Now'. when I left it, it doesnt go anywhere.
+				This would include a form or link to paypal (but no purcahses are ever made from it).
+			</p>
+			<p>
+				On the actual shop page, I really wanted to improve this bit. The page would show, say, 3 per row on a full page.
+				However, as you decrease the page width, Ideally, it would show less per row, such as 2 or 1. The navigational bar
+				could also do with some improvment when the window width is not full. <br> The Shop page would also Ideally load 
+				a box for each and every item in the database. When I left it, it could only show a set number (12) items.
+			</p>
+			<p>
+				On W3 school, after I made this site, I found a way to create a filter box. You could start entering a name and 
+				it would hide all thoughs that do not match. This I think could be used to search through the shop`s items, especially 
+				when it gets big. <a href="https://www.w3schools.com/howto/howto_js_filter_table.asp">Click here to go to it</a>
+			
+			</p>
+			<p>
+				A way to log in as an admin account would be handy, so a user-freindly way of viewing the database could be implemented.
+				Editing of records could also be added here. 
+			</p>
+			<p>
+				Again, having this website on a server would make it that extra bit better. 
+			
+			</p>
+		</section>
+		
+	</div>
+	
+	<div id="otherSites" style="display:none">
+		<section id="StudentCooking"  onclick="r('The student Cooking site is a very boring site.I highly recomend staying here')">
+			<h3>Student Cooking Website</h3>
+			<p>
+				This was a website that was the Higher Computing HTML task. It has Good examples of the float
+				propertt of images and Divs.
+			</p>
+		</section>	
+	</div>
+	
+	<div id="feedback_TCS">
+		<h1>Feedback</h1>
+		<br>
+		<p>Do you wish to report a bug? <br>Or complain about something (to do with my website)</p>
+		<p>Perhaps you want to start making your own JavaScript games and are looking for some help?</p>
+		<section id="formFeedback">
+			<h4>To give feedback, please fill out this <a href="https://docs.google.com/forms/d/e/1FAIpQLSfDSsAInsvfj3wpyMIqZwYErqKaRujQqKOF1gGL3u4oYZFJUw/viewform?usp=sf_link"> google form</a></h4>
+			<br>
+			<p>Also fill out this form if you think there is a 5-letter word missing from my version of Wordle</p>
+		</section>
+		<br>
+		<section id="emailFeedback" style="display:block">
+			<h4>Alternatively, email me at <i>
+				<a href="mailto:matthews.html.css.js.games@gmail.com?subject=Feedback">
+			<!-- https://www.w3schools.com/html/tryit.asp?filename=tryhtml_links_mailto_subject    is a useful link for this!-->				
+				matthews.html.css.js.games@gmail.com</a></i></h4>	
+			
+			<p>
+				I would ask that you do not send me anything other than emails related to this website. 
+				The email address that it is being sent to is separate from my personal one
+				<br><br>
+				Also note. If you are repeatably sending me '<span onclick="r('
+				<h3>Page 23</h3
+				><p>A page not easily found</p>
+				<br>
+				<p>
+					Please enter all your personal information
+				</p>
+				<textArea></textArea>
+				<br>
+				<button>Click to enter</button>
+				')"
+				>nonsense</span>
+				', i.e., stuff that is not 
+				related to the website, I will likely block your email address / send it to my spam 
+				folder and if you end up asking a genuine question, I will not see it.
+			</p>
+			<br>
+			<div id="privacy_Policy">
+				<h3>Privacy Policy</h3>
+				<p>I don`t know if I need one, but as you are emailing me, with a email address, I`ll include one for that</p>
+		
+				<p>
+					The only data that I would store about you would be your email address, and anything that you emailed to me.
+					Images, perhaps of errors, would also be stored. 
+				</p>
+				
+				<h4>Use of Your data</h4>
+				<p>I store data from you for the following reasons;</p>
+				<ol>
+					<li>To allow me to respond to users who reported a Bug</li>
+					<li>To allow me to respond to users who gave <span onclick="r('FEEDACK')">feedback</span> to me, such as things they like about it</li>
+					<li>To allow me to respond to users who sent me Constructive criticism, to help me improve the site for further use</li>
+					<li>I may not be able to fix the issue instantly, so the message would be stored to allow me to work on it another time</li>
+				</ol>
+				<br>
+				<h4>Your rights</h4>
+				<p></p>
+				<ol>
+					<li>
+						Any Information sent to me will be kept indefinitely, unless you ask for it to be deleted. <sup>1</sup>
+					</li>
+					<li>
+						Under the GDPR (Which I`ve learned too much about through Cyber Security), 
+						you are legal have;
+						<br>
+							<ul>
+								<li>The right to be informed                                      </li>
+								<li>The right of access                                           </li>
+								<li>The right to rectification                                    </li>
+								<li>The right to erasure                                          </li>
+								<li>The right to restrict processing                              </li>
+								<li>The right to data portability                                 </li>
+								<li>The right to object											  </li>
+								<li>The right to prevent automated decision making and -profiling.</li>
+							</ul>
+						<br>
+						The above basically means that you are allowed to edit or delete your data, and be informed if it is going anywhere
+						<br>
+						If you wish for your data to be deleted, send me an email saying that. Then I will delete every email from you. Images 
+						and downloaded files would also be included.<sup>2</sup>
+					</li>
+					<li>
+						I will not share this information that you sent me, again, in accordance to the GDPR / DPA 2018.
+					</li>
+				
+				</ol>
+				<p>As I am using Gmail, their privacy policy also applies</p>
+				
+				<section id="PP_notes">
+					<h4>Notes</h4>
+					<p>
+						<sup>1</sup> = I may delete it if my inbox gets too full
+					</p>
+					<p>
+						<sup>2</sup> = I`m not going to give a specific timescale, but I would like to think that it 
+						would be within 5 minutes for emails. Anything that I was required to download to view, such 
+						as an image, may take longer to find again. If you emailed about a bug, and I fixed that bug, 
+						it will remain fixed. I will not undo any adjustments to my Site based from a note from you.
+						<br>If you have asked for your data to be deleted as soon as you have reported a bug, for 
+						example, I will not do it instantly as I still need the information to where the bug is
+
+					</p>
+					
+					<p>
+						<br>
+						For more information about GDPR or how your information should be kept, visit the 
+						<a href="https://ico.org.uk/your-data-matters/">Information Commissioner’s Office (ICO)</a>
+					</p>
+				</section>
+			</div>
+			<br><br>
+		</section>
+		
+
+	</div>
+	
+	<div id="STEM_write_up" style="display:none;padding:5px;">
+		<h1>Write up for STEM</h1><br>
+		
+		<section id="stem_concept">
+			<h3>Project concept</h3>
+			<p><i>See the <span onclick="about()">About Us</span> page for more detail</i></p>
+			
+			<p>
+				This idea was first started in June 2021, when I was experimenting with Microbits and made a very basic game on them. It was a dodging game, similar to not-so-flappy Dot. 
+				I started to expand it, but was unable to due to the file size limit on the Microbits. 
+			</p>
+			<p>
+				I came back to it after the October holidays and tried to make the same game on a website. it took some time to get started - changing the colour of a particular table cell
+				proved more difficult than I expected. I have a bad habit with my programming in that I do not stop adding stuff to it, which often leads to there being aspects that are 
+				useless, or not needed. Not-so-flappy Dot did get that. There are many things in it that are not required to work. Probably the best addition was the addition of Highscores. 
+				This then needed a way of displaying the highscores, so an additional website was made. This site then evolved to become the main site today.
+			</p>
+			<p>
+				For the other games, I started making them because I wanted to improve my own programming skills. Tetris was for moving a collection of dots together. Minesweeper has the 
+				only use of a function that could call itself that I could think of. Dotman had the ghosts, which were meant to be kind of smart to move towards you.
+			</p>
+			<p>
+				I’m interested in this project because it is programming, but I can display it in a nice way with HTML and CSS. Compared to many of the other programming languages that are
+				used in the real world, JavaScript was accessible for me and had a nice way of outputting what it is doing. Python may have been able to do this, but it was harder to get started. 
+			</p>
+			<p>
+				The games are more about me trying to think around major programming aspects. Minesweeper makes use of recurring function (functions that call themselves), Tetris is about 
+				objects moving together (an object exists in more than one table cell, a concept I had not tried before now), and Dot Man (Pac Man) has Ghosts / NPCs / the computer has to 
+				think to go towards you. Not-so-flappy-Dot was more about the idea of getting a JavaScript game to work.
+			</p>
+		</section>
+		
+		<br><br>
+		
+		<section id="stem_process">
+			<h3>Project process</h3>
+			<p>
+				When it says ‘finish the game’ or make it a game, it includes adding a way to finish the game (ie You win message), a way to lose the game (i.e. you died), a way to 
+				start the game (a start button usually). Often also includes scores or lives, timer to make the game move forward.
+			</p>
+			<p>
+				There was not really a ‘plan’ as such to the project. It started off as way to expand a Microbit project and new parts were added when I though of them
+			</p>
+			<p>
+				Create Game 1 (not-so-flappy Dot) 
+				<ul>
+					<li>create table with ids for every cell</li>
+					<li>create function that will change the specified ID to a different colour</li>
+					<li>get Cells to change on a timer, then in a nice order</li>
+					<li>create player</li>
+					<li>put it all together and add final functions to make it a game</li>
+				</ul>
+				Create Website
+				<ul>
+					<li>Nav bars</li>
+					<li>Title / header</li>
+					<li>Highscores page</li>
+					<li>About us page - contains the history / diary of website</li>
+					<li>log in aspect.</li>
+				</ul>
+				Create Dot man
+				<ul>
+					<li>get Table and player working (similar to steps for not-so-flappy Dot)</li>
+					<li>get NPCs working</li>
+					<li>put all together</li>
+				</ul>
+				Create Minesweeper
+				<ul>
+					<li>get the cascading uncover function working</li>
+					<li>get the numberings working</li>
+					<li>get the hiding mines function to be working</li>
+					<li>finish the game</li>
+				</ul>
+				Create Tetris
+				<ul>
+					<li>Get the objects to move as one</li>
+					<li>get the objects to rotate</li>
+					<li>move them down each time</li>
+					<li>get them to stop on the boundaries (important - could cause error if it is trying to plot an id that does not exists) and other places blocks</li>
+					<li>make it a game</li>
+				</ul>
+			</p>
+			<p>
+				The website however, is constantly under development. The highscores, Adjustable nav bar and feedback aspect were all added later on. 
+			</p>
+		
+		</section>
+		
+		<br><br>
+		
+		<section id="stem_skills">
+			<h3>21st Century Employability & Future Skills</h3>
+			<p>
+				Throughout this project, I developed several skills, although I had them already, they got better. One of these my ICT skills, as it was an ICT project. 
+				Logical thinking was also critical, and most likely one of the most improved ones as I had to think what the code would do in a logical manner. Adaptability 
+				was also improved because although I have had previous programming skills with Visual Basic, Scratch and Python, I have not had much experience with JavaScript. 
+				Although I may have covered some of it in S4, it was not until the end of S5 that I started to understand it and this project required me to learn more. 
+			</p>
+			<p>
+				In terms of self-motivation, resilience and perseverance, I found this to be quite easy. I became quite enthusiastic with this project and would happily 
+				spend time on it, to the point that I was not doing the revision I should when I was expanding this project. This also lead to me having to develop my time 
+				management skills in order to allow me to do some revision each day.
+			</p>
+			<p>
+				On Christmas eve I was out walking the dog when I came up with the first solution for the ghost`s code for Dotman, and I spent time that day and the next 
+				trying to get it to work. By New Year’s Day, the orange ghost ‘born’, and the others were made in early 2022. Often when there is an error that I cannot seem to fix,
+				I leave it and go do something else for a bit which may be another aspect of the project. 
+			</p>
+			<p>
+				There was not very much team work or communication skills involved, as most of my peers and teachers had very little knowledge of JavaScript. Andrew Twigg has helped me
+				with a bit of code that reduced the amount of code that I have by a very large amount. He also has found a way for the project to be online.
+			</p>
+			<p>
+				For my problem-solving skills, there were several problems that I have had to find ways round. Sometimes they are big problems, like how to make a major aspect of the 
+				game (such as Tetris’s rotating blocks and moving the dots together) or it could be something small, like a syntax error. 
+			</p>
+			<p>
+				One issue that had been persistent was in Dotman, the orange ghost often would go straight into the walls. this would cause the game to crash originally. I could not 
+				find the error and put additional code in the ghost, which enabled the game to continue but a hole would appear where the ghost was. Only fairly recently did I find the 
+				error. Turns out I was allowing the ghost to move without checking if there was a wall there. This bit was only for a few scenarios, which rarely came up.
+			</p>
+			<p>
+				Originally, the ‘timers’ or the way to keep things moving was done by using the setInterval() function. This worked, but to stop them I had to refresh the page, which
+				was OK until I tried to put everything in the same document and you would keep going back to the home screen. 
+			</p>
+			<p>
+				For minesweeper, I experimented with setTimeOut(). This would call the function once after a period of time, rather than repeatable forever. Minesweeper made use of 
+				this, defining it in a variable and clearing the timer when it is to stop. After this, I went to my other games and found a different way to get around it. 
+			</p>
+			<p>
+				There is a function, that when called, will run each aspect of the games to make them run. Once it has run one ‘tick’ of the game, it will call itself via a setTimeOut()
+				function. This line however, is within an If statement that checks to see if the Boolean value for storing if the game is still playing is true. If true, wait a period then
+				run again. If false, the function will reach its end and nothing else will start after it, ending the timer.
+			</p>
+			<p>
+				Initiative and organisational skills were also improved. This was a mostly independent project and I had to make all the decisions about it. However, for the design layout, I asked other people what they thought of it. Organisational skills were also improved because this is a very large project with around 23 thousand lines of code, I had to be organised. The project is divided up into the games and the main website each having a folder of their own (however, for convenience, the HTML page for the website is not in the folders). In each folder is a HTML file, a CSS file and a JavaScript file. 
+			</p>
+			<p>
+				The CSS file is for the styling of the HTML page, and I will be honest and say that none of them are particularly organised. But I think I get away with it as they are all relatively small. The JavaScript files are for the code. Often functions that work together, such as ones for the player or the plotting functions are found together, which is me moving them about to organise them. Realistically, I made these function together and they naturally appeared near each other.
+			</p>
+			<p>
+				For my communication and literacy skills, this is most likely the largest part of the project that Involves them, unless you count what’s in the About Us page and the instructions. Finally, my research skills were also improved as I often ‘researched’ how each of the games were meant to work. (Most of the time I had to play them) Looking through W3 Schools for the pre-defined functions that I needed was also research.
+			</p>
+		
+		</section>
+		
+		<br>
+		
+		<section id="stem_dotman">
+		<h3>Dotman creation</h3>
+			<p>
+				The creation of Dotman is an example of my logical thinking, problem solving and to some extent my numeracy skills.
+			</p>
+			<p>
+				To start, I Knew that I had to create a HTML table that originally filled the entire page. To do it manually would take too long, so I made 
+				another JavaScript program that does it for me. I can input the height and width of the table, along with a class name for each table cell,
+				and a function for what to do on a right or left click of the mouse. The program then runs a For loop in a For loop and outputs the html code 
+				into a text box, which can be copied. I also found a way for it to be downloaded. 
+			</p>
+			<p>
+				Once the HTML and CSS was made, I moved on to making the JavaScript. Firstly, It was the plotting function, the functions that receive a 
+				coordinate point on the table to change to their colour. As each table cell has a unique ID in the form ‘btnY_X’, I can use the x and y points 
+				given to create the ID of the table cell to change. I then remove every CSS class from the given cell and replace it with the one that I want 
+				to use. There is a total of 8 of these plotting functions. The benefits of using the classList.add and .remove is that I can alter more than
+				just its colour the Circular Dotman and ghosts is done by setting the border radius to half of its height/width.
+			</p>
+			<p>
+				I then also create the function whichButton(). This is activated when a keyboard key is pressed and takes the value of the key pressed through a
+				Large If statement to see what the program should do. This is how the arrow keys / WASD work, as the player's direction is altered. This function
+				is also useful for testing certain aspect of the program. 
+			</p>
+			<p>
+				The next step was to be able to save the entire background that the game has. This is done in a record (array of arrays) and a number representing
+				what is there is stored in the record. 0 is empty, 1 is a wall. The record itself is stored outside the functions so that is is a global record,
+				being accessed by every function. A function that then goes through this large record and calls the relevant plotting function was also created.
+			</p>
+			<p>
+				After that, I started working on the player, which required the use of a few more global variables, the players X and Y coordinates and the players
+				direction, as pac man would not stop until you change direction. the function that moves the player, movePlayer() starts by unpotting the current 
+				player position, using one of the plotting functions mentioned above. Then it goes through a if statement which basically looks to see which 
+				direction the player is going and if it would still be within the boundaries of the game. It then also runs a test with the function testPosition() 
+				of where the player would be if the statement was to return true. if all the statements are true, then the pliers X and Y values will change. 
+			</p>
+			<p>
+				The function testPosition() is used a lot later, but it is used to determine if the given coordinates are a wall or if it is a passable place. 
+				It looks at the containers in the record that stores what the background of the game is to see if it has the value of 1. if it does it returns 
+				false, meaning that a character cannot exist there. 
+			</p>
+			<p>
+				The function collision() is also called whilst moving the player and it looks to see if the player is colliding with a ghost, if it is, then the 
+				player dies by calling the DIE() function. Unless of course the Boolean variable that states whether the player has the power up effect on is 
+				active, then the player's score increases by 50, and the ghost that got eaten is sent back to the start.
+			</p>
+
+			<p>
+				Collision() also detects whether or not the player is touching a coin, if so increasing the score by 1 at altering the record for where the coin is 
+				to be 0, empty. If the player is not touching a coin, then it might be touching a power up. If so, then the Boolean variable that states if the power 
+				up is not or not is set to true and a timer is called to turn the variable back to false after a certain amount of time. This is the reason that the 
+				power ups cannot be stacked. the function that returns it to false cannot be altered once it has started.
+			</p>
+			<p>
+				After collision(), the movePLayer() function calls tp(), teleport. this is for when the player is at the edge of the screen, it sends it to the 
+				other side. It merely changes the players X and or Y coordinates, as the player is still not showing since the unplot() function was called at 
+				the beginning. The player comes back on the next and final line, which re-plots the player at the players X and Y coordinates, which may have 
+				altered during the course of the function running. 
+			</p>
+			<p>
+				The ghosts’ properties, such as coordinates, direction and colour are saved in a record, with each category of the record is the ghost, and 
+				the array within that part is that ghost's properties. Whenever this record is used, its length is never really in the code, meaning that I
+				can easily add more ghosts, or reduce the number of ghosts. 
+			</p>
+			<p>
+				Each of the functions that moves the ghosts are very similar, but each is slightly different. The code for the orange one, the first to move, 
+				is mostly random, hence it will not usually follow you. However, if you get within 6 or so table cells and are directly in a straight line 
+				towards you, it will follow you. This is where there are some bugs relating to the orange one being capable of going through walls. For the 
+				following bit, M  = gradient between the ghost and the player. The red one takes the shortest route towards you. if in a straight line, M = 0
+				or M = undefined, the ghost will move towards you directly, unless it is at a junction where it cannot go in your direction, then it will pick
+				a random direction perpendicular to you. If the gradient is between -1 and 1, I will move towards you along the X axis. If the gradient is less 
+				than -1 or greater than 1, then it will move along the Y axis. This is assuming that is is able to do so. If it is at a corner or a straight line,
+				then it will continue ‘forward’. A dead end is treated like a junction, except it can only go in one direction.
+			</p>
+			<p>
+				The pink ghost is very similar to the red ghost, except at junctions. Where the option is available, the pink ghost favours going along the
+				Y axis rather than the X axis when the gradient is between -1 and 1, and favours the X axis when the red would go along the Y. These two then 
+				create an aspect of the ghosts being able to cut you off. The blue ghost however, is a combination of the red and pink ghost. Each time its
+				functions run, it picks (at random) which function to use - the one for red or the one for pink. This is handy as there where / are areas of
+				the game where the red and pink ghosts would end up getting stuck and going in loops should you stay still. The blue ghosts may take a while,
+				but will get to you eventually, ensuring you can't keep going forever.
+			</p>
+			<p>
+				The ghosts, particularly the orange one, makes use of several functions that support the decision-making process. They mostly just see 
+				if the ghosts can exist at a certain position, or return a list of directions that the ghosts is allowed to go. One of them is IsCorner(),
+				and it returns the number of positions that the ghost could go. if it is 2, then the ghosts will look further to see if it is a corner or
+				straight line. if it is 1, then it will move backwards as it must be dead end. 3 or 4 are junctions and makes the above decisions to decide 
+				which way to go
+			</p>
+			<p>
+				When you click the play button, it runs a function that is only executed at the beginning of the game, and it ensures that the game is not
+				already running. (There were glitches for some time that if you clicked the play button too many times, the ghosts would end up going faster.) 
+				The main purpose of this start function is to set the default values to the global variables and then start two functions which once they are
+				finished, set a timer to recall themselves. these two are the functions that run the player and the ghosts. When, for example, the player function runs,
+				it calls the move player function. (The move player function does not call itself because it's easier to control. It also means that I can call that
+				function more often without sleeping the game up.) Move player also then calls the function that updates the display, which ensures that the
+				score is up to date. 
+			</p>
+			<p>
+				When it calls itself, it can only do so if the Boolean value that shows weather or not the game is still active is true. Once this value is set to 
+				false, the game will end as the functions that keep the game going will end and not restart. This means that you do not have to refresh the page to
+				stop the timers, unlike some of my other games
+			</p>
+		</section>
+		
+		<br><br>
+			
+		<section id="stem_outcome">
+			<h3>Outcome</h3>
+			<p>
+				One of the aspects of my website, which is good in some ways, but negative in others, is the fact that the ‘Website’ part exists all in the same webpage. I tried to do this because the Navigation bar, The footer, The header, and several other lines of code working in the background would be the same, only the content would need to change. So, I made each of these ‘pages’ actually a different <div> tag, and made them show (and hide the rest) when you click to access that ‘page’. Good aspects about it include the fact it saves time, and any edits to the nav bar don`t have to be copied 10 times, which could lead to inconsistencies and it not working on some pages. 
+			</p>
+			<p>
+				The negative is mainly when you refresh the page, you would always come back to the home screen. In the intended use of the site, it does not cause any real issues, but when testing I may make small changes to one of the other pages and I had to keep changing to this page. I would cause an issue when I tried to add all my games to the same document with the site. As there are timers running, all but one of them make use of refreshing the page to stop these timers. If people are playing not-so-flappy dot and die, then they would have to navigate back to the game.
+			</p>
+			<p>
+				Thinking about it, I could have a local storage container for the ‘page’, which would storage what page you are on. Then whenever the page loads, which is does after a refresh, it would check to see which page it should be on, according to the local storage… 
+			</p>
+			<p>
+				Dotman, I think turned out very good. The code is designed to operate on any map, and there are other ones coded into the game, but only the one that is very similar to the real game is active. It’s this map that I was happy with. No other one I made I liked. 
+			</p>
+			<p>
+				The ghosts have turned out to be very good, at catching you and running away. I had to have you start with 10 lives to give anyone a change to get to level two, although I have done a whole level in 1 life before. The ghosts also have a useful ‘glitch’ in them that I don`t bother to fix. As they have no way of knowing if they are going down a dead end, that you are not there for, they will repeatable go up and down at the beginning of the game. This means you can press play, but it is not until you press and arrow key to move away that they start coming for you.
+			</p>
+			<p>
+				For Tetris, I feel that I cheated. The objects do not rotate, when you rotate, the original shape is lost and a new shape is generated at the same position, assuming that it does not collide with anything else.
+			</p>
+			<p>
+				One this that I would say to people to encourage them to make their own games like these is that they; 
+				<br>a) don`t require internet if you have the files, and;
+				<br>b) They require a lot of ‘testing’ to ensure that it works correctly
+			</p>
+		</section>
+	
+	
+	</div>
+		
+		<br>
+	</div>
+
+</div>
+
+<div id="footer"  onclick="r('That was the footer...<br><br><br>There is nothing there')">	
+	<br>
+	<br>
+</div>
+
+</body>
+
+</html>

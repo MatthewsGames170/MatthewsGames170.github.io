@@ -1,0 +1,202 @@
+<html>
+	<link rel="shortcut Icon" href="../Z_Images/favicon.ico">	
+<header>
+	<link rel="shortcut Icon" href="../Z_Images/favicon.ico">	
+	<title>Table Maker</title>
+	<!--<script type="text/javascript" src="Inscripts.js"></script>-->
+	<style>
+		.b{
+			width:99%;
+			height:3rem;
+			font-size:20px;
+			padding:5px;
+			border:3px solid blue;
+			border-radius:3px;
+			
+			background-color:#00aaff;
+			
+		}
+		.b:hover{
+			background-color:#ffaaff;
+		}
+
+		#textOutput{
+			width:99%;
+			padding:3px;
+			max-width:99%;
+		}
+
+		#left{
+			width:49%;
+			float:left;
+			padding:1px;
+
+		}
+		#right{
+			width:49%;
+			float:right;
+			padding:1px;
+			
+		}
+
+	</style>
+</header>
+
+<body>
+
+	<h1>Fill in the form below</h1>
+	<p>The HTML Code for the resulting table will be displayed to your right</p>
+	<p>The maxium limit for height and width is 1024, but note it will take a while to complete its task</p>
+	<br>
+	<p>Once the program is complete, copy the code that is produced in the box to your right into your HTML page</p>
+	<div id="right">
+		<textarea name="output" id="textOutput" rows="5" Cols="100" maxlength="0" style="height:100%;"></textarea>
+	</div>
+	
+	<div id="left">
+
+		<form name="inputForm" id="inputForm" onsubmit="createTable()">
+
+			<!--<input type="submit" value="SUBMIT" onclick="">-->
+			<table>
+				<tr style="display:none">
+					<td>abcdefghijklmnopqrstuv</td>
+					<td>abcdefghijklmnopqrstuv</td>
+					<td>abcdefghijklmnopqrstuv</td>
+				</tr>
+				<tr>
+					<td>Enter Height</td>
+					<td>            </td>
+					<td><input type="number" name="n1" id="n1Input" max="1024" min="0" required></td>
+				</tr>
+				<tr>
+					<td>Enter Width</td>
+					<td>           </td>
+					<td><input type="number" name="n2" id="n2Input" max="1024" min="0" required></td>
+				</tr>	
+				<tr>
+					<td>Enter Class Name</td>
+					<td></td>
+					<td><input type="text" name="t1" id="t1Input" required></td>
+				</tr>	
+				<tr>
+					<td>Enter (left) Function Name</td>
+					<td></td>
+					<td><input type="text" name="t2" id="t2Input"></td>
+				</tr>
+				<tr>
+					<td>Enter (right) Function Name</td>
+					<td></td>
+					<td><input type="text" name="t3" id="t3Input"></td>
+				</tr>					
+			</table>
+			
+		</form>
+		
+		<br><br>
+		<button class="B" id="subButton" onclick="createTable()">Click me</button>
+		<br><br>
+		
+		<script>
+			
+			function createTable(){
+			
+				var rows = document.getElementById("n1Input").value;
+				var columns = document.getElementById("n2Input").value;		
+				var className = document.getElementById("t1Input").value;		
+				var functionName = document.getElementById("t2Input").value;	
+				var LFname = document.getElementById("t3Input").value;
+				
+				var id  = "";
+				var out = "<table>\n";
+				
+				var Y = parseInt(rows) + 1;
+				var X = parseInt(columns) + 1;
+				//the error is that it is trating teh numbers as strings, so 3 + 1 becomes 31
+					
+				for(var C = 1;C<Y;C++){
+					
+					out = out.concat("<tr id='row" + C + "'>\n");
+					//<td class="" id="" onclick="()"></td>
+					
+					for(var i = 1;i<X;i++){
+					
+						out = out.concat("<td class='");
+						out = out.concat(className);		
+						out = out.concat("' id='");
+						out = out.concat(createId(i,C));
+						out = out.concat("'> ");
+						
+						if(functionName == "none"){
+						
+						}else{
+							out = out.concat("' onclick='");
+							out = out.concat(functionName);
+							out = out.concat("(");
+							out = out.concat(createId(i,C));
+							out = out.concat("')");
+						}
+						
+						if(LFname=="none"){
+						
+						}else{
+							out = out.concat("' oncontextmenu='");
+							out = out.concat(LFname);
+							out = out.concat("(");
+							out = out.concat(createId(i,C));
+							out = out.concat(")' >1");
+						}
+						
+						out = out.concat("</td>\n");					
+					}
+					out = out.concat("</tr>\n");
+				}
+				out = out.concat("</table>");
+				alert(
+				"Printing Table with; \nColumns: " + columns + "\nRows: " + rows +"\nRows + 1: "+Y+"\nColumns+1: " + X);
+				
+				if(confirm("Would you like a copy downloaded?")==true){
+					//alert(out);
+					var fileName = "Code_for_table_R" + rows + "_C" + columns + "_CN" + className;				
+					saveCode(out,fileName);
+				}			
+				
+				
+				document.getElementById("outDiv").innerHTML = out;
+				document.getElementById("textOutput").value = out;
+				out = "";
+				//main Error - get the html to print, not what the html could create
+	
+			}
+			function createId(x,y){return "btn" + y + "_" + x;		}
+
+			function saveCode(toSave,fileName){
+				
+				var textToSave = toSave;
+				var fileNameToSaveAs = fileName;
+				
+				var textToSaveAsBlob = new Blob([textToSave], {type:"text/plain"});
+				var textToSaveAsURL = window.URL.createObjectURL(textToSaveAsBlob);
+
+			 
+				var downloadLink = document.createElement("a");
+				downloadLink.download = fileNameToSaveAs;
+				downloadLink.innerHTML = "Download File";
+				downloadLink.href = textToSaveAsURL;
+				downloadLink.onclick = destroyClickedElement;
+				downloadLink.style.display = "none";
+				document.body.appendChild(downloadLink);
+			 
+				downloadLink.click();
+			}
+			
+			function destroyClickedElement(event){document.body.removeChild(event.target);  }
+		</script>
+		
+		<div id="outDiv" style="display:none"></div>
+	</div>
+	
+
+
+</body>
+</html>

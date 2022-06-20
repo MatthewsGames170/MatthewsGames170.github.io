@@ -1,0 +1,56 @@
+.WDL_letterInputs{
+	background-color:#c0ffee;
+	border:none;
+	font-size:28px;
+	width:48px;
+	height:48px;
+	text-align:center;
+}
+.WDL_guessInputs{
+	background-color:;
+	border:none;
+	font-size:20px;
+	width:150px;
+	height:48px;
+	text-align:center;	
+	border-radius:5px;
+	color:black;
+}
+.WDL_guessInputs:hover{
+	background-color:red;
+	color:white;
+	
+}
+#WDL_wordleGameArea{
+	margin-left:auto;
+	margin-right:auto;
+	width:430px;
+	border:2px solid black;
+	padding:10px;
+}
+#WDL_NGBtn{
+	background-color:;
+	border:none;
+	font-size:20px;
+	width:100%;
+	height:50px;
+	text-align:center;	
+	border-radius:5px;
+	color:black;
+}
+#WDL_NGBtn:hover{
+	background-color:red;
+	color:white;
+}
+.guessNo{
+	margin-top:1px;
+}
+.guessRow{
+	margin-top:1px;
+}
+#outputArea{
+	color:red;
+	text-align:center;
+	font-family:Calibri ;
+	
+}

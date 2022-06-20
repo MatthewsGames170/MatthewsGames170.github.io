@@ -1,0 +1,81 @@
+<html  style="font-size: 1.3vw;" class="stdfont" onload="OnL()">
+	<link rel="shortcut Icon" href="../Z_Images/favicon.ico">	
+<header>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<title>Space Shooter</title>
+	<script type="text/javascript" src="spaceShooterScripts.js"></script>
+	<link rel="stylesheet" type="text/css" href="spaceShooterStyles.css">	
+</header>
+
+<body onkeydown="whichButton()">
+
+<div id="controls">
+	<br>
+	<br>
+	<button id="playButton" onclick="playGame()">Click to play</button>
+	<table>
+		<tr>
+			<td>Score: </td>
+			<td id="scoreBox">0</td>
+		</tr>
+		<tr>
+			<td>Lives: </td>
+			<td id="livesBox">5</td>
+		</tr>
+		<tr>
+			<td>High score: </td>
+			<td id="HighscoreBox">0</td>
+		</tr>		
+	</table>
+	<h4>Instructions</h4>
+	<p>
+		Use the mouse pointer to move the Space ship. Dodge the incoming asteriods or left-click to
+		fire your wepon and attempt to destroy them. Your score will then increase
+	
+	</p>
+	<div id="outMessageArea">
+	
+	</div>
+</div>
+
+
+
+<div id="playBox" onmousemove="mouseAction()" onclick="fire()">
+		
+	<div id="PS_div_1"  style="z-index:46;"  class="positionSetters">  <div id="player1" class="players"></div>  </div>	
+	<div id="PS_div_2"  style="z-index:44;"  class="positionSetters">  <div id="player2" class="players"></div>  </div>
+	
+	<div id="PS_div_3"  style="z-index:18;"  class="positionSetters">  <div id="O1" class="objects"></div>   </div>
+	<div id="PS_div_4"  style="z-index:16;"  class="positionSetters">  <div id="O2" class="objects"></div>   </div>
+	<div id="PS_div_5"  style="z-index:14;"  class="positionSetters">  <div id="O3" class="objects"></div>   </div>
+	<div id="PS_div_6"  style="z-index:12;"  class="positionSetters">  <div id="O4" class="objects"></div>   </div>
+	<div id="PS_div_7"  style="z-index:10;"  class="positionSetters">  <div id="O5" class="objects"></div>   </div>
+	<div id="PS_div_8"  style="z-index:8;"  class="positionSetters">  <div id="O6" class="objects"></div>   </div>
+	
+	<div id="PS_div_10" style="z-index:42;"  class="positionSetters">  <div id="A1" class="amo"></div>   </div>
+	<div id="PS_div_11" style="z-index:40;"  class="positionSetters">  <div id="A2" class="amo"></div>   </div>
+	<div id="PS_div_12" style="z-index:38;"  class="positionSetters">  <div id="A3" class="amo"></div>   </div>
+	<div id="PS_div_13" style="z-index:36;"  class="positionSetters">  <div id="A4" class="amo"></div>   </div>
+	<div id="PS_div_14" style="z-index:34;"  class="positionSetters">  <div id="A5" class="amo"></div>   </div>
+	<div id="PS_div_15" style="z-index:32;"  class="positionSetters">  <div id="A6" class="amo"></div>   </div>
+	<div id="PS_div_16" style="z-index:30;"  class="positionSetters">  <div id="A7" class="amo"></div>   </div>
+	<div id="PS_div_17" style="z-index:28;"  class="positionSetters">  <div id="A8" class="amo"></div>   </div>
+	<div id="PS_div_18" style="z-index:26;"  class="positionSetters">  <div id="A9" class="amo"></div>   </div>
+	<div id="PS_div_19" style="z-index:24;"  class="positionSetters">  <div id="A10" class="amo"></div>  </div>
+	<div id="PS_div_20" style="z-index:22;"  class="positionSetters">  <div id="A11" class="amo"></div>  </div>
+	<div id="PS_div_21" style="z-index:20;"  class="positionSetters">  <div id="A12" class="amo"></div>  </div>
+	
+	<div id="PS_div_9"  style="z-index:6;"  class="positionSetters">  <div id="O7" class="objects"></div>   </div>
+	<div id="PS_div_22" style="z-index:5;"  class="positionSetters">  <div id="O8" class="objects"></div>  </div>
+	<div id="PS_div_23" style="z-index:4;"  class="positionSetters">  <div id="O9" class="objects"></div>  </div>
+</div>
+
+
+
+
+
+
+
+
+</body>
+</html>
